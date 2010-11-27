@@ -11,6 +11,7 @@
 *.ind
 *.ist
 *.log
+*.lol
 *.out
 *.toc
 *.fdb_latexmk
