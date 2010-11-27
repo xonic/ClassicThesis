@@ -71,7 +71,7 @@ Unglücklicherweise zeigten die Tests auch, dass ein Maus basierendes System fü
 Das Paper befasst sich mit dem prototypisch implementierten Meeting Support Tool >>We-Met<<. Dieses verwendet ein stiftbasiertes Interface, das durch digitales Skizzieren der Benutzer die Kommunikation während Meetings fördern und die nachträgliche Auswertung der angefertigten Zeichnungen erleichtern soll.
 
 \subsection{We-Met}
-We-Met kann bei face-to-face Meetings als auch bei geographisch entfernten Meetings zusammen mit einer Telefonkonferenz eingesetzt werden. Jeder Teilnehmer benötigt einen Computer mit einem Bildschirm und einem stiftbasierten Eingabetablett. Die Geräte werden über ein lokales LAN Netzwerk verbunden. Das Interface bietet mehrere gemeinsame Bereiche für Skizzen und Zeichnungen, die nach jedem vollendeten Strich eines Benutzers aktualisiert werden. Somit sehen alle Teilnehmer die Zeichnungen der anderen nahezu in Echtzeit.
+We-Met \cite{Wolf:1997p75} kann bei face-to-face Meetings als auch bei geographisch entfernten Meetings zusammen mit einer Telefonkonferenz eingesetzt werden. Jeder Teilnehmer benötigt einen Computer mit einem Bildschirm und einem stiftbasierten Eingabetablett. Die Geräte werden über ein lokales LAN Netzwerk verbunden. Das Interface bietet mehrere gemeinsame Bereiche für Skizzen und Zeichnungen, die nach jedem vollendeten Strich eines Benutzers aktualisiert werden. Somit sehen alle Teilnehmer die Zeichnungen der anderen nahezu in Echtzeit.
 
 Alle Meetings werden aufgezeichnet und können während dessen oder nach Abschluss der Sitzung aufgearbeitet werden. Jeder Zeichenstrich wird mit einem Zeitstempel versehen, sodass der Zeichenprozess Schritt für Schritt vor- und zurückgespult werden kann. Außerdem erlaubt We-Met bestimmte zeitliche und räumliche Zustände der Skizzen mit Tags zu versehen, sodass sie leichter zwischen diesen hin und her springen können. Die Form der Tags ist an Markierungen angelehnt, die Personen auch in ihren echten Notizbüchern verwenden, denn sie können nicht nur aus Textelementen, sondern auch aus handgezeichneten Schnörkeln, Kügelchen oder Sternchen bestehen, wodurch das Anlegen von Tags einfacher und intuitiver wird.
 
@@ -118,10 +118,40 @@ Schon während der Entwicklung von Prototypen ist es wichtig, das Konzept so fr�
 Die Studie, durchgeführt mit dem Prototypen des We-Met stiftbasierten Interfacekonzepts, zeigt deutliche Verbesserungen im Kommunikationsprozess während der kreativen Phase der Ideenfindung. We-Met erlaubt verschiedene Formen der Interaktion und ist dadurch sehr flexibel. Neben diesen Vorteilen sind auch sehr konkrete Schwachpunkte des Systems zum Vorschein gekommen. Ein unendlich großer Arbeitsbereich, der auf LCD Monitoren nur stark eingeschränkt dargestellt werden kann, und die Tatsache, dass jeder Benutzer unabhängig scrollen kann, bringt einige Schwierigkeiten in der Gruppenkoordination mit sich.
 
 
-\section{TEAM STORM}
-TEAM STORM ist ein groupware System, das die Möglichkeit bietet, parallel an mehreren Ideen zu arbeiten. Es kommt bei Meetings in frühen Konzeptionsphasen zum Einsatz und fördert Kreativität innerhalb der Gruppe. Es konzentriert sich auf das Skizzieren von Ideen und bietet private und gemeinsame Arbeitsflächen, auf denen die Designer arbeiten können.
+\section{Team Storm}
+Team Storm \cite{Hailpern:2007p113} ist ein groupware System, das die Möglichkeit bietet, parallel an mehreren Ideen zu arbeiten. Es kommt bei Meetings in frühen Konzeptionsphasen zum Einsatz und fördert Kreativität innerhalb der Gruppe. Es konzentriert sich auf das Skizzieren von Ideen und bietet private und gemeinsame Arbeitsflächen, auf denen die Designer arbeiten können.
 
-Das System besteht aus drei Hauptkomponenten: den sogenannten Canvases und den privaten sowie gemeinsamen Arbeitsbereichen. Eine 
+Das System besteht aus drei Hauptkomponenten: den sogenannten Canvases und den privaten sowie gemeinsamen Arbeitsbereichen. Eine Skizze, bzw. ein Design repräsentiert einen Canvas. Die Benutzer können eine beliebige Anzahl an Skizzen erstellen, dabei verwenden sie entweder Tablet-PCs oder andere stiftbasierte Eingabegeräte. 
+
+Zeichnungen werden durch Icons dargestellt, die beliebig auf der privaten Arbeitsfläche (\autoref{fig:teamStorm}, unteres Fenster) positioniert und skaliert werden können. Diese Darstellung bietet deutliche Vorteile: Designer können Relevanz und Fortschritt selbst definieren und die Skizzen dementsprechend anordnen bzw. skalieren. Durch diese Freiheit können ebenso semantisch verknüpfte Zeichnungen zu Gruppen zusammen geordnet werden. Der Nachteil dieser Methode ist der hohe Platzbedarf auf dem Monitor oder dem Tablet-PC.
+
+Auf der gemeinsamen Arbeitsfläche (\autoref{fig:teamStorm}, oberes Fenster), können Designer ihre Canvases mit den anderen Sitzungsteilnehmern teilen, diskutieren, überarbeiten und organisieren. Dieser Bereich, der für jeden vollständig sichtbar ist, bietet allen Benutzern die selben Möglichkeiten wie der private Arbeitsbereich. \autoref{fig:teamStorm} zeigt im oberen Programmfenster eine exemplarische Anordnung mehrerer Skizzen, die von verschiedenen Designern angefertigt und mit den anderen geteilt wurden. \\
+
+\begin{figure}[bth]
+	\includegraphics[width=\linewidth]{gfx/teamStormPrivateWorkspace.png}
+	\caption{Gemeinsame und private Arbeitsbereiche in Team Storm. Designer können ihre Skizzen räumlich anordnen und die Größe anpassen.}
+	\label{fig:teamStorm}
+\end{figure}
+
+Während ein Designer eine Skizze innerhalb des gemeinsamen Arbeitsbereichs überarbeitet oder ergänzt, sehen alle anderen Teilnehmer unmittelbar seine Änderungen. Die Gruppe kann auch gleichzeitig an unterschiedlichen Skizzen im gemeinsamen Bereich arbeiten.
+
+Der gemeinsame Bereich wird nicht nur auf den Tablet-PCs der Designer, sondern auch auf einem großen, für alle sichtbaren Monitor dargestellt. Ähnlich wie ein Whiteboard, lädt diese Form der Darstellung dazu ein, sich davor hin zu stellen und Konzepte mit Hilfe zusätzlicher Kommunikationsformen, wie Gestik und Mimik, zu artikulieren. \autoref{fig:teamStormDisplayInteraction} zeigt, wie einer der Designer sich vor den Monitor stellt, um eine seiner Ideen zu erläutern.\\
+
+\begin{figure}[bth]
+	\includegraphics[width=\linewidth]{gfx/teamStormDisplayInteraction.png}
+	\caption{Designer bei der Ausarbeitung von Konzepten mit Team Storm.}
+	\label{fig:teamStormDisplayInteraction}
+\end{figure}
+
+Skizzen, die von einem Teilnehmer aus seinem privaten Arbeitsbereich in den gemeinsamen Bereich gezogen werden, befinden sich standardmäßig im Ausstellungsmodus. Das bedeutet, dass alle Designer die Zeichnung sehen, sie positionieren und skalieren, jedoch nicht ändern können. Sollte der Urheber der Skizze nicht wünschen, dass Größe und Position von seinen Kollegen nicht verändert werden dürfen, so kann er den Zugriff sperren. Er kann die Zeichnung jedoch auch ganz freigeben, sodass nicht nur Skalierung und Position für die Kollegen veränderbar sind. Um eine Zeichnung vom gemeinsamen Bereich zu entfernen, zieht der Designer sie wieder zurück in seinen privaten Arbeitsbereich.
+
+Designer können freigegebene Skizzen direkt auf der gemeinsamen Arbeitsfläche modifizieren, damit die anderen Teilnehmer die Änderungen live mitverfolgen können. Zusätzlich gibt es die Möglichkeit, sich eine private Kopie zu erstellen, die ohne Einsicht der anderen Teilnehmer editiert werden kann. Dadurch können Designs in mehreren Iterationen editiert und verfeinert werden. Die unterschiedlichen Versionen nebeneinander angereiht zeigen die Evolution einer bestimmten Idee.
+
+Die an Team Storm durchgeführte Studie \cite{Hailpern:2007p113} zeigt, dass Designer, die das erste Mal mit dem System arbeiteten, einen sehr einfachen und direkten Zugang zu dieser Groupware fanden. Es wurden sehr viele Ideen generiert und die Teilnehmer nutzten sehr stark die Features zur Organisation der Konzepte und Designs. Unterschiedliche Charaktere brachten unterschiedliche Arbeitsweisen zum Vorschein: einige Designer teilten offen jeden ihrer gezeichneten Striche mit, während andere es bevorzugten, Skizzen erst im privaten Bereich anzufertigen, um sie selbst zu evaluieren bevor sie sie herzeigten.
+
+Die Gruppen nutzten das System auf sehr individuelle Art und Weise. Während manche hauptsächlich gemeinsam an einzelnen Designs arbeiteten, zogen andere es vor, parallel an verschiedenen Konzepten zu arbeiten, die dann gemeinsam evaluiert wurden.
+
+Neben diesen positiven Eindrücken, kristallisierten sich auch einige mögliche Optimierungen des Systems heraus. Die Designer wünschten sich, Konzepte in Gruppen zu organisieren, die sie dann als Einheit positioniert, skaliert und hergezeigt hätten. Die Navigation wurde von vielen bei steigender Anzahl von Skizzen als ineffizient empfunden. Das System sah nur Scrolling und Zooming vor, die Teilnehmer wünschten sich hier weitere Möglichkeiten. Zusätzlich kam das Bedürfnis auf, andere digitale Artefakte (z. B. Bilder und Webseiten) einzubinden und dadurch Skizzen anzureichern.
 
 %*****************************************
 %*****************************************
