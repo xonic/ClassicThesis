@@ -160,7 +160,7 @@ Die Gruppen nutzten das System auf sehr individuelle Art und Weise. Während man
 Neben diesen positiven Eindrücken, kristallisierten sich auch einige mögliche Optimierungen des Systems heraus. Die Designer wünschten sich, Konzepte in Gruppen zu organisieren, die sie dann als Einheit positioniert, skaliert und hergezeigt hätten. Die Navigation wurde von vielen bei steigender Anzahl von Skizzen als ineffizient empfunden. Das System sah nur Scrolling und Zooming vor, die Teilnehmer wünschten sich hier weitere Möglichkeiten. Zusätzlich kam das Bedürfnis auf, andere digitale Artefakte (z. B. Bilder und Webseiten) einzubinden und dadurch Skizzen anzureichern.
 
 \section{Human and technical factors of distributed group drawing tools}
-Greenberg, Roseman, Webster und Bohnet untersuchen in ihrer Studie \cite{Greenberg:1992p207} die menschlichen und technischen Faktoren, denen beim Design von multi-user Software hohe Relevanz zukommt. Sie haben für ihre Untersuchungen vier Systeme entwickelt (GroupSketch, XGroupSketch, GroupDraw und GroupKit), die kollaboratives Skizzieren in einer räumlich verteilten Gruppe ermöglichen. Beim Design dieser Applikationen, versuchte man sich möglichst genau an das deskriptive Framework von Tang (1989) \cite{TangJC:1989} zu halten, welches wir in einem späteren Kapitel noch genauer erörtern werden.
+Greenberg et al. untersuchen in einer Studie \cite{Greenberg:1992p207} die menschlichen und technischen Faktoren, denen beim Design von multi-user Software hohe Relevanz zukommt. Sie haben für ihre Untersuchungen vier Systeme entwickelt (GroupSketch, XGroupSketch, GroupDraw und GroupKit), die kollaboratives Skizzieren in einer räumlich verteilten Gruppe ermöglichen. Beim Design dieser Applikationen, versuchte man sich möglichst genau an das deskriptive Framework von Tang (1989) \cite{TangJC:1989} zu halten, welches wir in einem späteren Kapitel noch genauer erörtern werden.
 
 TODO: Referenz zu späterem Kapitel einfügen.
 
@@ -204,8 +204,33 @@ Die Praxiserfahrungen mit GroupSketch, XGroupSketch und GroupDraw zeigen, dass n
 	\item
 	Die Notwendigkeit einer höheren Telepräsenz
 	\item
-	
+	Die Möglichkeit nahtloser Übergänge zwischen lokalen, privaten Daten und gemeinsam erstellten Arbeiten zu bieten
+	\item
+	Berücksichtigung der Anzahl der Benutzer in der Gruppe
 \end{itemize}
+
+Die Recherchen \cite{Greenberg:1992p207} haben gezeigt, dass GroupSketch und GroupDraw während der Zusammenarbeit von räumlich distanzierten Gruppen eine ausreichend hohe Telepräsenz gewährleisten, solange Zeichnen und Skizzieren im Mittelpunkt der Konzeption stehen. Saß die Gruppe im selben Raum, so wandte sich die Aufmerksamkeit vom Computer ab und die Teilnehmer gingen über zu face-to-face Kommunikation, sobald die Skizzen nicht mehr zentrales Thema der Diskussion waren. 
+
+Ferner weisen die Autoren \cite{Greenberg:1992p207} darauf hin, dass es zur Zeit der Untersuchungen (1992) noch zu hohe Barrieren zwischen virtuellen und realen Artefakten gibt. Im Zuge eines Meetings ist es nicht ohne weiteres möglich, echte Artefakte zu digitalisieren und mit anderen zu teilen.
+
+Letztlich ist die Anzahl der Benutzer ein kritischer Faktor für die Art und Weise, wie eine gemeinsame Zeichenfläche genutzt wird. Die vorgestellten Systeme GroupSketch und GroupDraw funktionieren gut im Einsatz mit Gruppen die aus zwei bis vier Personen bestehen. Sehr häufig arbeiten aber weitaus mehr Menschen zusammen und es bleibt die Frage im Raum, ob die Systeme dementsprechend skalieren. Ein Test mit acht Teilnehmern hat bereits einige Problemstellen entlarvt. Das Konzept der multiplen Cursor kann sehr schnell dazu führen, dass der Bildschirm überfüllt wirkt und die vielen Bewegungen mögen etwas irritierend sein. Um diesem Phänomen entgegen zu wirken, verkleinern sich die Cursor entsprechend ihrer Anzahl. Wenn Benutzer bestimmte Aktionen durchführen, vergrößert sich der jeweilige Cursor während dessen wieder auf normale Größe, damit Interaktionen gut erkennbar bleiben. 
+
+\section{Why CSCW applications fail: problems in the design and evaluation of organizational interfaces}
+
+In seiner Studie über die Schwierigkeit des Designs und der Evaluierung von CSCW-Applikationen \cite{Grudin:1988p126}, nennt Jonathan Grudin drei grundlegende Problemfelder:
+
+\begin{itemize}
+	\item
+	Das Missverhältnis zwischen denen, die einen zusätzlichen Aufwand betreiben müssen und jenen die einen tatsächlichen Nutzen haben
+	\item
+	Das Treffen von Entscheidungen durch leitende Personen, basierend auf ihrer Intuition
+	\item
+	Das Unterschätzen der Schwierigkeiten, die mit einer Evaluierung von CSCW-Systemen verbunden sind
+\end{itemize}
+
+Am Beispiel einer Software zur automatischen Planung von Sitzungen zeigt Grudin wie ein ungleiches Verhältnis zwischen einzelnen Nutzern einer CSCW-Applikation entstehen kann. 
+
+Wenn ein Mitarbeiter eine Sitzung mit anderen vereinbaren möchte, so muss er der Software nur die gewünschten Teilnehmer mitteilen. Das Programm vergleicht dann eigenständig die elektronischen Kalender dieser Personen und bucht einen Termin zu jener Zeit, in der noch alle Teilnehmer frei sind. Voraussetzung hierfür ist dementsprechend, dass jeder Mitarbeiter im Unternehmen einen elektronischen Kalender führt. Jene Personen, die in leitenden Positionen tätig sind, führen sehr wahrscheinlich einen Kalender oder haben eine Sekretärin, die diese Aufgabe übernimmt. Probleme ergeben sich dann, wenn leitende Mitarbeiter Termine mit Angestellten vereinbaren möchten, da diese häufig keinen elektronischen Kalender führen. Das System glaubt daher, dass ein Termin zu jeder Zeit möglich wäre und bucht unter Umständen einen ungünstigen Zeitpunkt für entsprechende Teilnehmer. Um dieser Problematik vorzubeugen, müssten alle Mitarbeiter, vom einfachen Angestellten bis hin zum Geschäftsführer, einen elektronischen Kalender führen. Angestellte hätten dadurch einen zusätzlichen Aufwand, jedoch wenig bis gar keinen Nutzen vom System. Diese Tatsache kann sehr leicht zum Scheitern einer solchen Software in der Praxis führen.
 
 %*****************************************
 %*****************************************
