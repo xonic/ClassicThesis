@@ -1,0 +1,55 @@
+//
+// Schreibweise von Zahlen
+// ------------------------------------------------//	
+	- Einstellige Zahlen werden als Wort geschrieben (Bsp: zwei)
+	- Mehrstellige Zahlen werden als Ziffern geschrieben (Bsp: 43)
+	- Zahlenbereiche werden als Ziffern geschrieben (Bsp: 2-4)
+	
+
+//
+// Namen für Abbildungen
+// ------------------------------------------------//
+	- Dateinamen der Bilder sollen folgendes Format haben: autorBeschreibung.suffix (Bsp: tangTeamStormDisplayInteraction.png)
+	- Latex interne Labels sollen den Dateinamen ohne Suffix tragen
+	
+	
+//
+// Anführungszeichen / Zitate
+// ------------------------------------------------//
+	-  Zitate und spezielle Ausdrücke werden durch >>Zitat<< gekennzeichnet, nicht durch Anführungszeichen
+	
+	
+//
+// Kommentare am Seitenrand
+// ------------------------------------------------//
+	- Kommentare sind keine Auszüge aus dem Haupttext, können aber eine Kurzzusammenfassung dessen sein
+	- Kommentare stellen relevante Anmerkungen bzw. Erkenntnisse in Bezug auf Scribbler dar
+	- Kommentare sollen eine maximale Länge von 1-2 Sätzen haben
+
+
+//
+// Fußnoten
+// ------------------------------------------------//
+	- werden verwendet, um Abkürzungen zu erläutern
+	- Bei Verwendung von Fremdtexten unbedingt die Quelle dazuschreiben (Bsp: \cite{Quelle})
+	- Nach Möglichkeit Fremdtexte selbst formulieren, nicht kopieren und Quelle weg lassen
+	
+	
+//
+// Applikationen und Systeme
+// ------------------------------------------------//
+	- werden durch \emph hervorgehoben (Bsp:\emph{GroupDraw})
+	
+	
+//
+// Englisch übernommene Wörter
+// ------------------------------------------------//
+	- werden klein geschrieben wenn es sich um Adjektive bzw. Verben handelt
+	- werden groß geschrieben wenn es sich um Nomen handelt
+	- werden mit Bindestrich geschrieben, wenn sie nicht im Deutschen existieren, ansonsten zusammen (Bsp. für zusammen: Scrollbalken)
+	
+	
+//
+// Abkürzungen
+// ------------------------------------------------//
+	- et al. wird verwendet wenn es sich um mehr als 2 Autoren handelt
