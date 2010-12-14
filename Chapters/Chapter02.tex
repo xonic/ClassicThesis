@@ -203,6 +203,7 @@ Neben diesen positiven Eindrücken, kristallisierten sich auch einige mögliche 
 
 %\section{Human and technical factors of distributed group drawing tools}
 %Greenberg et al. untersuchen in einer Studie \citep{Greenberg:1992p207} die menschlichen und technischen Faktoren, denen beim Design von multi-user Software hohe Relevanz zukommt. Sie haben für ihre Untersuchungen vier Systeme entwickelt (GroupSketch, XGroupSketch, GroupDraw und GroupKit), die kollaboratives Skizzieren in einer räumlich verteilten Gruppe ermöglichen. Beim Design dieser Applikationen, versuchte man sich möglichst genau an das deskriptive Framework von Tang (1989) \citep{TangJC:1989} zu halten, welches wir in einem späteren Kapitel noch genauer erörtern werden.\\ \color{red}{TODO: Referenz zu späterem Kapitel einfügen.}\\
+
 \subsection{GroupSketch} 
 % --- von brnas:
 \bigskip Tangs und Blys Observationen animierten auch Greenberg et al. \emph{Group Drawing Tools} zu erstellen. In \citep{Greenberg:1992p83} beschreiben sie die Probleme und Erfahrungen die sie mit dem Design von zwei Systemen gemacht haben, die realtime Online Gruppenarbeit ermöglichen: \emph{GroupSketch}, ein Multiuser Skizziertool; und \emph{GroupDraw}, ein objektbasiertes Multiuser Zeichenpaket.
@@ -381,7 +382,39 @@ Am Beispiel einer Software zur automatischen Planung von Sitzungen zeigt Grudin 
 
 Wenn ein Mitarbeiter eine Sitzung mit anderen vereinbaren möchte, so muss er der Software nur die gewünschten Teilnehmer mitteilen. Das Programm vergleicht dann eigenständig die elektronischen Kalender dieser Personen und bucht einen Termin zu jener Zeit, in der noch alle Teilnehmer frei sind. Voraussetzung hierfür ist dementsprechend, dass jeder Mitarbeiter im Unternehmen einen elektronischen Kalender führt. Jene Personen, die in leitenden Positionen tätig sind, führen sehr wahrscheinlich einen Kalender oder haben eine Sekretärin, die diese Aufgabe übernimmt. Probleme ergeben sich dann, wenn leitende Mitarbeiter Termine mit Angestellten vereinbaren möchten, da diese häufig keinen elektronischen Kalender führen. Das System glaubt daher, dass ein Termin zu jeder Zeit möglich wäre und bucht unter Umständen einen ungünstigen Zeitpunkt für entsprechende Teilnehmer. Um dieser Problematik vorzubeugen, müssten alle Mitarbeiter, vom einfachen Angestellten bis hin zum Geschäftsführer, einen elektronischen Kalender führen. \graffito{CSCW Software muss so konzipiert werden, dass jeder User einen Nutzen hat und zusätzliche Aufwände so gering wie möglich ausfallen.} Angestellte hätten dadurch einen zusätzlichen Aufwand, jedoch wenig bis gar keinen Nutzen vom System. Dieser Umstand kann sehr leicht dazu führen, dass die Software in der Praxis keine Akzeptanz unter den Benutzern findet und dadurch scheitert.
 
-Beim Design von multi-user Software verlassen sich laut Butler et al. \citep{ButlerK:1987} Entscheidungsträger häufig auf ihre Intuition, die wiederum auf persönlichen Erfahrungen, zumeist im single-user Bereich, beruht. 
+\medskip Beim Design von multi-user Software verlassen sich laut Butler et al. \citep{ButlerK:1987} Entscheidungsträger häufig auf ihre Intuition, die wiederum auf persönlichen Erfahrungen, zumeist im single-user Bereich, beruht. Es mag relativ einfach sein, ein Gespür dafür zu entwickeln, wie gut die User-Experience eines Textverarbeitungs- oder Tabellenkalkulationsprogramm ausfällt, jedoch wird CSCW Software von einem breiten Spektrum an Personen verwendet und alle diese Benutzer haben unterschiedliche Hintergründe und Berufe, ungleiches technisches Know-How und abweichende Zugänge zum Programm. Die Software wird sehr wahrscheinlich scheitern, wenn die Intuition der Entscheidungsträger die Komplexität ignoriert, die durch solch eine Gruppendynamik zustande kommt. 
+
+Die von Grudin \citep{Grudin:1988p126} angeführte Software zur automatischen Planung von Sitzungen bezeichnet er selbst als anfällig für ein solches Scheitern durch falsche Intuition von leitenden Mitarbeitern. Er begründet dies so, dass jene leitenden Mitarbeiter selbst mit großer Wahrscheinlichkeit bereits einen elektronischen Kalender führen und daher vordergründig nur den eigenen Nutzen erkennen. Mangelnde Empathie kann zu Folge haben, dass der zusätzliche Aufwand, der einfachen Angestellten entsteht, nicht berücksichtigt wird. 
+
+\medskip Die Evaluierung von CSCW Software erfordert eine spezielle Vorgangsweise, basierend den Methodiken der Psychologie und Anthropologie \citep{Grudin:1988p126}. Laut Grudin fehlen diese Fähigkeiten zum Zeitpunkt der Untersuchung (1988) in den meisten Entwicklungs- und Forschungsteams, da qualifizierte Personen aus den Bereichen \emph{Human Factors Engineering}\footnote{Als \emph{Human Factors Engineering} bezeichnet man jene Disziplin, die sich mit den Fähigkeiten und Grenzen des Menschen beschäftigt und diese Erkenntnisse auf das Design von Produkten, Prozessen, Systemen und Arbeitsplätzen anwendet. Dazu gehört das Überprüfen auf \emph{Usability}, das Erstellen von Nutzerprofilen und die Entwicklung von Benutzerdokumentation und Trainingsprogrammen.} und kognitiver Psychologie noch selten vertreten sind. Zusätzlich ist der mit der Evaluierung verbundene zeitliche und finanzielle Aufwand erheblich höher, da immer ganze Gruppen an Probanden getestet werden müssen.
+
+\section{Concepts that Support Collocated CSCW}
+Auf der Suche nach Konzepten, zur Förderung der kreativen Zusammenarbeit von Industriedesigner in gemeinsamen Meetings, halten Wang und Blevis \citep{Wang:2004p110} sich an die Methode des \emph{human centered design}\footnote{Beim \emph{human centered design} steht der potenzielle Benutzer eines Produktes im Mittelpunkt des Entwicklungsprozesses. Seine Aufgaben, Ziele, Fähigkeiten und Eigenschaften werden analysiert und gelten als Maßstab bei der Gestaltung des Produkts. \emph{Human centered design} zielt darauf ab, möglichst benutzerfreundliche Produkte zu schaffen.} und führen zuerst eine ethnographische Studie an der Zielgruppe durch. Ausgehend von den so erlangten Erkenntnissen, entwickeln sie vier unterschiedliche Konzepte, die speziell darauf abzielen die konkrete Arbeitsweise der Industriedesigner zu unterstützen. Diese Konzepte sind aus technischer Sicht nicht unbedingt innovativ, dafür aber für ihre Zielgruppe besonders gut geeignet.
+
+In ihrer Studie konzentrieren sich Wang und Blevis \citep{Wang:2004p110} darauf, die Interaktionen zwischen den Designern zu beobachten und nicht die Interaktion mit speziellen interaktiven Geräten. Ferner observieren die Forscher die verschiedenen nicht technologischen Artefakte und Geräte, sowie deren Orientierung und Gebrauchsweise, die bei der Zusammenarbeit zum Einsatz kommen. Davon ausgehend versuchen sie, möglichst ganzheitliche Konzepte zu entwickeln. Den letzten Fokus der Studie bildet das Identifizieren der Unterschiede zwischen privaten und gemeinsamen Arbeitsbereichen im kollaborativen Prozess.
+
+Die folgenden relevanten Punkte haben sich aus dieser Studie heraus kristallisiert und fließen als Designkriterien in die danach vorgestellten Konzepte mit ein.
+
+\begin{itemize} 
+	\item{\emph{Sitzordnung}}\\
+	Augenkontakt ist eine der wichtigsten Formen der Kommunikation bei der Zusammenarbeit in Gruppen. Daher bevorzugen die Teilnehmer, um einen Tisch herum zu sitzen, damit sie alle direkt ansehen können.
+	\item{\emph{Reichweite}}\\
+	Es ist besonders wichtig, dass alle Objekte für jeden Teilnehmer in Reich- und Sichtweite liegen. Durch die Interaktion mit den Objekten, können Teilnehmer sich in den Fokus der Aufmerksamkeit stellen und besser kommunizieren. Rechteckige Tische bieten Nachteile für jene Personen, die an den Ecken sitzen, weshalb runde Tische bevorzugt werden.
+	\item{\emph{Simultanität}}\\
+	Häufig interagieren mehrere Benutzer gleichzeitig mit den Objekten im Arbeitsbereich und fast immer sind viele verschiedene Artefakte präsent. Ein gutes Konzept muss daher diese Gleichzeitigkeit gewährleisten können, um die Effizienz durch paralleles Arbeiten nicht zu gefährden.
+	\item{\emph{Gebrauch physischer Objekte}}\\
+	In der direkten face-to-face Kommunikation bevorzugen Personen physische Objekte, da sie im direkten Gespräch effizienter genutzt werden können als digitale Objekte.
+	\item{\emph{Große Arbeitsflächen, viele Blätter, Wiederfindung und Vergleich}}\\
+	Designer benötigen sehr große Arbeitsflächen im Zuge der kreativen Ideenfindung. Sie verteilen die verschiedenen Konzepte darauf und Anordnung und Gruppierung spielen eine wichtige Rolle. Um einzelne Ideen leichter wieder zu finden und untereinander zu vergleichen, zeichnen sie üblicherweise nur eine davon auf ein gesamtes Blatt Papier.
+	\item{\emph{Privatsphäre}}\\
+	Die Teilnehmer benötigen private Arbeitsbereiche, in denen sie Konzepte ausarbeiten und selbst evaluieren können, und sie brauchen gemeinsame Arbeitsbereiche, auf denen sie alle zusammen die Entwicklung vorantreiben.
+	\item{\emph{Ausrichtung von Objekten}}\\
+	Die Ausrichtung von Objekten ist Teil der Privatsphäre. Sind Objekte zu einer bestimmten Person hin ausgerichtet, so gelten diese als privat, wenn sie hingegen zur Gruppe hin gerichtet sind, finden alle Teilnehmer einen Zugang.
+\end{itemize}
+
+
+
+
 
 %*****************************************
 %*****************************************
