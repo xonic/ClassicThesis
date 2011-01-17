@@ -17,6 +17,7 @@
 // Anführungszeichen / Zitate
 // ------------------------------------------------//
 	-  Zitate und spezielle Ausdrücke werden durch >>Zitat<< gekennzeichnet, nicht durch Anführungszeichen
+	- Spezielle Begriffe, z.B. >>User Experience<<
 	
 	
 //
@@ -53,3 +54,11 @@
 // Abkürzungen
 // ------------------------------------------------//
 	- et al. wird verwendet wenn es sich um mehr als 2 Autoren handelt
+	
+//
+// Kursivschrift
+// ------------------------------------------------//
+	- Anmerkungen
+	- Zitate
+	- Namen von Systemen und Technologien
+	- Überschriften von Listenelementen
