@@ -363,20 +363,33 @@ Neben diesen positiven Eindrücken, kristallisierten sich auch einige mögliche 
 \section{CSCW und Groupware}
 >>Computer Supported Cooperative Work<< ist jene Wissenschaft, die sich der Erforschung von kooperativer Zusammenarbeit mehrerer Personen widmet, um folglich Applikationen und Systeme zur Verbesserung selbiger zu konzipieren \citep{Bannon:1990p244}. Der Fokus liegt darin, die Natur der kooperativen Arbeit besser zu verstehen und daraus Designkriterien abzuleiten, die es ermöglichen, effizientere Systeme zur Unterstützung dieses komplexen Prozesses zu entwickeln. 
 
-\begin{figure}[bth]
-	\includegraphics[width=\textwidth]{gfx/ramaCSCWQuadranten.png}
-	\caption{Rama und Bishop \citep{Rama:2006p245} illustrieren in dieser Grafik die Unterteilung von CSCW in vier Kategorien, die sich durch ihre räumlichen und zeitlichen Eigenschaften unterscheiden. Der Faktor Zeit definiert, ob Zusammenarbeit in einer Gruppe synchron oder asynchron passiert und der Faktor Raum definiert, ob sie am selben oder an geographisch distanzierten Orten passiert.}
-	\label{fig:ramaCSCW}
-\end{figure}
-
 Dem gegenüber steht der Begriff Groupware, auch bekannt als >>kollaborative Software<< \citep{Bannon:1990p244}, die mehreren Personen ermöglicht, gemeinsam am selben Projekt zu arbeiten. Groupware ist die technisch fokussierte Anwendung der Erkenntnisse, welche die Erforschung von CSCW hervorgebracht hat. Diese bestimmte Art von Software zielt darauf ab, gruppendynamische Prozesse zu vereinfachen und die Kommunikation innerhalb kooperierender Gruppen zu ermöglichen, beziehungsweise zu fördern. Der zusätzliche Koordinationsaufwand soll minimiert und das Lösen von Problemstellungen in Teams optimiert werden \citep{Rama:2006p245}. Gerlicher und Ansgar \citep{Gerlicher:2007p241} unterteilen Groupware in synchrone, asynchrone und multisynchrone Systeme.
 
-\subsection{Weitere spezifische Systeme}
+\bigskip \emph{Anmerkung: \graffito{\(\clubsuit\)} Eine ausführlichere Definition und Begriffserklärung folgt im Kapitel \nameref{ch:CSCWDesign}.}
 
-\emph{Anmerkung: \graffito{\(\clubsuit\)} Es folgen verschiedene kollaborative Systeme, die nicht unbedingt mit Skizzieren in Verbindung gebracht werden, aber das Prinzip von CSCW veranschaulichen.}
+\subsection{ROOMWARE}
 
+Mit dem \emph{ROOMWARE} Konzept versuchen Streitz et al. \citep{Streitz:2001p213, Streitz:2002p214, Tandler:2002p219}, die komplette Einrichtung eines Sitzungsraums als elektronische Geräte umzufunktionieren, um Teamarbeit möglichst effizient zu gestalten. Das Setting der ersten Generation von \emph{ROOMWARE} \citep{Streitz:2001p213} umfasst die \emph{DynaWall}, die \emph{CommChairs}, den \emph{InteracTable} und den \emph{ConnecTable}, welche im folgenden genauer beschrieben werden.
 
-\subsection{Konzepte zur Kooperation am selben Ort}
+\subsubsection{DynaWall}
+
+\emph{DynaWall} ist eine interaktive, elektronische Wand, die aus drei Segmenten besteht, welche alle über ein Rückprojektionssystem zur Darstellung von digitalen Inhalten und einer berührungsempfindlichen Oberfläche verfügen. So kommt eine Displaygröße von 4,50m x 1,10m zustande. Jedes dieser Segmente ist mit einem eigenen Computer verbunden, jedoch vereint die zugehörige Software \emph{BEACH} \citep{Tandler:2000p238} diese nahtlos und bietet dadurch eine homogene, ganzheitliche Arbeitsfläche. Es können zwei oder mehr Personen gemeinsam oder parallel mit der \emph{DynaWall} interagieren. 
+
+Die außerordentliche Größe dieses Gerätes bringt nicht nur Vorteile, sondern auch große Herausforderungen an die darunter liegende Software mit sich. Beispielsweise wäre es äußerst umständlich, ein digitales Objekt mit einem Finger von einem Ende des Bildschirms an das andere, 4,50m entfernte Ende zu ziehen. Daher haben die Entwickler das sogenannte >>take and put<< (nehmen und ablegen) Konzept implementiert, das ähnlich funktioniert wie das Ausschneiden und wieder Einfügen auf herkömmlichen Desktopcomputern. Zusätzlich ist es möglich, Objekte herumzuschubsen. Ein Benutzer kann so ein beliebiges Objekt zu einem anderen Benutzer hin schubsen. Das Erstellen, Bewegen und Löschen von Objekten und ihren Inhalten basiert auf Gestenerkennung und erfordert daher keine Auswahl eines bestimmten Modus (siehe \nameref{sec:ModusProblem}).
+
+\subsubsection{CommChairs}
+
+Bei den \emph{CommChairs} handelt es sich um mobile Stühle mit eingebautem Tablet-PC. Sie ermöglichen die Kommunikation und den Austausch von Informationen mit anderen Benutzern, die ebenfalls in einem \emph{CommChair} sitzen, oder andere Roomware, beispielsweise die \emph{DynaWall} verwenden. Man kann am Tablet-PC persönliche Notizen auf einem eigenen privaten digitalen Bereich machen, aber auch direkt auf die \emph{DynaWall} schreiben und dadurch mit digitalen Objekten auf verschiedenen Geräten interagieren. Die Applikation \emph{BEACH} \citep{Tandler:2000p238}, die ebenso auf den \emph{CommChairs} läuft, ermöglicht diesen nahtlosen Übergang zwischen den Roomwarekomponenten. Die Kommunikation läuft über ein drahtloses Netzwerk und jeder Stuhl ist mit einer eigenen Stromversorgung ausgestattet, um volle Mobilität zu gewährleisten.
+
+\subsubsection{InteracTable}
+
+Für bis zu sechs Personen geeignet, ist der \emph{InteracTable} ein gutes Hilfsmittel bei der Konzeption, Evaluierung und Ausarbeitung von kreativen Ideen. Es handelt sich dabei um einen Tisch mit einem in die Oberfläche integrierten Display, der Benutzereingaben von einem speziellen Stift, den Fingern oder einer kabellosen Tastatur entgegennimmt \citep{Streitz:2001p213}. Da die Benutzer in einem Kreis um den \emph{InteracTable} stehen, gibt es — anders als bei herkömmlichen vertikalen Displays — weder Unten und Oben, noch Rechts oder Links. \emph{BEACH} unterstützt spezielle Gesten, die dazu dienen, Objekte am Display beliebig auszurichten. Somit können Benutzer aus jeder Perspektive eine gute Sicht auf die Objekte erlangen. Zusätzlich können für jedes Objekt mehrere >>Views<< (Ansichten) angelegt und jede zu einem beliebigen Benutzer hin ausgerichtet werden. 
+
+\subsubsection{ConnecTable}
+
+Der \emph{ConnecTable} kam erst in der zweiten Generation von \emph{ROOMWARE} zur Ausstattung hinzu \citep{Streitz:2002p214}. Dieser Tisch, ebenfalls mit eingebautem Display, wurde so konzipiert, dass man individuell oder zusammen mit Anderen daran arbeiten kann. Seine Höhe ist stufenlos verstellbar und kann daher im Stehen als auch im Sitzen verwendet werden. Die Neigung des Displays kann darüber hinaus ebenso verstellt werden. Mehrere \emph{ConnecTables} zusammengestellt erkennen sich automatisch gegenseitig und ihre Displays fungieren als ein großer Darstellungsbereich. Die Interaktion mit dem Tisch funktioniert in gleicher Weise, wie die mit dem \emph{InteracTable} und durch eine drahtlose Netzwerkverbindung und eigene Stromversorgung, sind die \emph{ConnecTables} genauso mobil wie die \emph{CommChairs}.
+
+\subsection{Weitere Konzepte zur Kooperation im selben Raum}
 
 Auf der Suche nach Konzepten, zur Förderung der kreativen Zusammenarbeit von Industriedesigner in gemeinsamen Meetings, halten Wang und Blevis \citep{Wang:2004p110} sich an die Methode des >>human centered design<<\footnote{Beim human centered design steht der potenzielle Benutzer eines Produktes im Mittelpunkt des Entwicklungsprozesses. Seine Aufgaben, Ziele, Fähigkeiten und Eigenschaften werden analysiert und gelten als Maßstab bei der Gestaltung des Produkts. Human centered design zielt darauf ab, möglichst benutzerfreundliche Produkte zu schaffen.} und führen zuerst eine ethnographische Studie an der Zielgruppe durch. Ausgehend von den so erlangten Erkenntnissen, entwickeln sie vier unterschiedliche Konzepte, die speziell darauf abzielen die konkrete Arbeitsweise der Industriedesigner zu unterstützen. Diese Konzepte sind aus technischer Sicht nicht unbedingt innovativ, dafür aber für ihre Zielgruppe besonders gut geeignet.
 
@@ -428,7 +441,7 @@ Auf diesen Erkenntnissen aufbauend, haben Wang und Blevis \citep{Wang:2004p110} 
 
 \subsubsection{Multi-user ClearBoard mit MiniNavigator}
 
-Das \emph{Multi-user ClearBoard mit MiniNavigator} (\autoref{fig:wangConcepts}) ist eine Weiterentwicklung des von Hiroshi Ishii et al. konzipierten \emph{ClearBoard}\citep{Ishii:1994p243}. Alle Benutzer sitzen an einem Tisch und vor ihnen wird ein großes Bild auf die Wand projiziert. Auf diesem werden die digitale Arbeitsfläche und ein Videobild der Teilnehmer übereinander gelegt, sodass jeder die Gestiken und Mimiken der anderen Kollegen, als auch die digitalen Artefakte sehen kann. Zusätzlich verfügt jeder Benutzer über ein eigenes Touch-Display. Auf diesem wird ebenfalls dasselbe Bild wie an der Wand angezeigt und dient zur Interaktion mit den digitalen Elementen auf der Arbeitsfläche.
+Das \emph{Multi-user ClearBoard mit MiniNavigator} (\autoref{fig:wangConcepts}) ist eine Weiterentwicklung des von Hiroshi Ishii et al. konzipierten \emph{ClearBoard} \citep{Ishii:1994p243}. Alle Benutzer sitzen an einem Tisch und vor ihnen wird ein großes Bild auf die Wand projiziert. Auf diesem werden die digitale Arbeitsfläche und ein Videobild der Teilnehmer übereinander gelegt, sodass jeder die Gestiken und Mimiken der anderen Kollegen, als auch die digitalen Artefakte sehen kann. Zusätzlich verfügt jeder Benutzer über ein eigenes Touch-Display. Auf diesem wird ebenfalls dasselbe Bild wie an der Wand angezeigt und dient zur Interaktion mit den digitalen Elementen auf der Arbeitsfläche.
 
 \subsubsection{3-D Navigator}
 
