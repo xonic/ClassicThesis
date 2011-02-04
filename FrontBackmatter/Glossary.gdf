@@ -1,0 +1,10 @@
+@entry{AD, AD, Active Directory}
+
+@entry{MS, MS, Microsoft}
+
+@entry{Active Directory,\ac{AD}, Active Directory} Active Directory ist in einem Windows 2000/" "Windows Server 2003-Netzwerk der Verzeichnisdienst, der die zentrale Organisation und Verwaltung aller Netzwerkressourcen erlaubt. Es ermöglicht den Benutzern über eine einzige zentrale Anmeldung den Zugriff auf alle Ressourcen und den Administratoren die zentral organisierte Verwaltung, transparent von der Netzwerktopologie und den eingesetzten Netzwerkprotokollen. Das dafür benötigte Betriebssystem ist entweder \gdq{Windows 2000 Server} oder \gdq{Windows Server 2003}, welches auf dem zentralen Domänencontroller installiert wird. Dieser hält alle Daten des Active Directory vor, wie z.B. Benutzernamen und Kennwörter. \newline
+Quelle: \href{http://de.wikipedia.org/wiki/Active_Directory}{Wikipedia}
+
+@entry{Antwortdatei} Zur Durchführung einer Systeminstallation können alle Parameter in einer Antwortdatei gespeichert werden. Damit können Installationen umbeaufsichtigt ausgeführt werden.
+
+@entry{User Interface} Blablab

@@ -188,6 +188,38 @@
 }
 
 %********************************************************************
+%Citation aliasing
+%*******************************************************
+\defcitealias{Sellen:2003}{The Myth of the Paperless Office}
+\defcitealias{Johnson:2006}{Flow Selection}
+
+%********************************************************************
+% Glossar
+%*******************************************************
+%\usepackage{glossary}%{glosstex}
+
+%********************************************************************
+% Extract environment
+%*******************************************************
+%\newenvironment{extract}{\par\tiny}{\par}
+\newcounter{extract}
+\newenvironment{extract}[2][]{
+	\refstepcounter{extract}
+	\par\bigskip\bigskip\noindent%
+	\framebox[\textwidth]{\makebox[\textwidth]{#2}}
+	\noindent
+	\newlength{\extlength}
+	\settowidth{\extlength}{Auszug~\arabic{extract}:}
+	%\addtolength{\extlength}{5pt}
+	\begin{tabularx}{\textwidth}{@{}p{\extlength}@{}X@{}}%
+		\\ [-13pt]
+	\small{Auszug~\arabic{extract}:} & \small{#1}
+	\end{tabularx}
+	\rmfamily 
+}{\bigskip\bigskip}
+\newcommand{\extref}[1]{\hyperref[#1]{Auszug \ref{#1}}}
+
+%********************************************************************
 % Hyphenation
 %*******************************************************
 %\hyphenation{put special hyphenation here}
@@ -242,6 +274,7 @@
 % Other Stuff in the Back
 %*******************************************************
 \cleardoublepage\include{FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Glossary}
 \cleardoublepage\include{FrontBackmatter/Colophon}
 \cleardoublepage\include{FrontBackmatter/Declaration}
 % ********************************************************************
