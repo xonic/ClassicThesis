@@ -205,12 +205,12 @@
 %*******************************************************
 %\newenvironment{extract}{\par\tiny}{\par}
 \newcounter{extract}
+\newlength{\extlength}
 \newenvironment{extract}[2][]{
 	\refstepcounter{extract}
 	\par\bigskip\bigskip\noindent%
 	\framebox[\textwidth]{\makebox[\textwidth]{#2}}
 	\noindent
-	\newlength{\extlength}
 	\settowidth{\extlength}{Auszug~\arabic{extract}:}
 	%\addtolength{\extlength}{5pt}
 	\begin{tabularx}{\textwidth}{@{}p{\extlength}@{}X@{}}%
