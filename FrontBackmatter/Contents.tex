@@ -11,7 +11,9 @@
 \tableofcontents 
 \automark[section]{chapter}
 \renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}%*******************************************************
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+
+%*******************************************************
 % List of Figures and of the Tables
 %*******************************************************
 \clearpage
@@ -59,14 +61,27 @@
     %*******************************************************
     %\phantomsection 
     \refstepcounter{dummy}
-    \pdfbookmark[1]{Acronyms}{acronyms}
+    \pdfbookmark[1]{Akronyme}{acronyms}
     \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
-    \chapter*{Acronyms}
+    \chapter*{Akronyme}
     \begin{acronym}[UML]
         \acro{DRY}{Don't Repeat Yourself}
         \acro{API}{Application Programming Interface}
         \acro{UML}{Unified Modeling Language}
-    \end{acronym}                     
+    \end{acronym}
+
+	\vspace*{8ex}
+       
+    %*******************************************************
+    % Extracts
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Ausz\"uge}{extracts}
+    %\markboth{\spacedlowsmallcaps{Extracts}}{\spacedlowsmallcaps{Extracts}}
+    %\chapter*{Extracts}
+	\listofextracts
+                         
 \endgroup
 
 \cleardoublepage
