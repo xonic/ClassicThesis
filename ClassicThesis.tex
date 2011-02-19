@@ -90,7 +90,7 @@
 % subfig nochapters beramono eulermath parts minionpro pdfspacing 
 % listings dottedtoc minionprospacing manychapters
 \usepackage[eulerchapternumbers,%drafting,
-						listings,listsseparated,%pdfspacing,%listings,
+						listings,dottedtoc,listsseparated,%pdfspacing,%listings,
 						subfig,beramono,eulermath,parts]{classicthesis}
 
 %*******************************************************
@@ -203,6 +203,7 @@
 %********************************************************************
 % Extract environment
 %*******************************************************
+\usepackage{tocloft}
 %\newenvironment{extract}{\par\tiny}{\par}
 \newcounter{extract}
 \newlength{\extlength}
@@ -220,6 +221,17 @@
 	\rmfamily 
 }{\bigskip}
 \newcommand{\extref}[1]{\hyperref[#1]{Auszug \ref{#1}}}
+
+\newcommand{\listXname}{Ausz\"uge}
+\newlistof{captionX}{ex}{\listXname}
+\newcommand{\captionX}[1]{%
+\refstepcounter{captionX}
+%\par\noindent\textbf{optionale Unterschrift vom Auszug}
+\protect\addcontentsline{ex}{captionX}{
+{Auzug \theextract}\hspace*{1cm}#1}\par
+}
+
+\newcommand{\listofextracts}{\listofcaptionX}
 
 %********************************************************************
 % Hyphenation
