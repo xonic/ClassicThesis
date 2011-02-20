@@ -228,10 +228,20 @@
 \refstepcounter{captionX}
 %\par\noindent\textbf{optionale Unterschrift vom Auszug}
 \protect\addcontentsline{ex}{captionX}{
-{Auzug \theextract}\hspace*{1cm}#1}\par
+{Auszug \theextract}\hspace*{1cm}#1}\par
 }
 
 \newcommand{\listofextracts}{\listofcaptionX}
+
+
+%********************************************************************
+% Create Name Logograms
+%*******************************************************
+\newcommand*\cs[0]{\unitlength1ex\begin{picture}(2.55,2.55)%
+\put(0.75,0.75){\circle{2.5}}\put(0.75,0.75){\makebox(0,0){cs}}\end{picture}}
+
+\newcommand*\tn[0]{\unitlength1ex\begin{picture}(2.55,2.55)%
+\put(0.75,0.75){\circle{2.5}}\put(0.75,0.85){\makebox(0,0){tn}}\end{picture}}
 
 %********************************************************************
 % Hyphenation
@@ -251,7 +261,7 @@
 %********************************************************************
 % Frontmatter
 %*******************************************************
-\include{FrontBackmatter/DirtyTitlepage}
+%\include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Titleback}
 \cleardoublepage\include{FrontBackmatter/Dedication}
