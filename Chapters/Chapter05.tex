@@ -44,7 +44,7 @@ Wir arbeiten mit Dokumenten in zwei verschiedenen Welten: der elektronischen Wel
         \subfloat[Geschriebene Darstellung (in der Wortebene).]
         {\includegraphics[width=.48\linewidth]{gfx/johnsonDarstellungsformenB}} \quad
         \subfloat[Graphische (schematische) Darstellung.]
-        {\label{fig:basteaEvaluationSketchingInput}%
+        {\label{fig:johnsonDarstellungsformenB}%
          \includegraphics[width=.48\linewidth]{gfx/johnsonDarstellungsformen}} \\
         \caption[Darstellungsformen]{Die schematische Darstellung (a) und die Darstellung in der Wortebene (b) eines mathematischen Verhältnisses. Beide Darstellungsformen zeigen die gleiche Information. }\label{fig:johnsonDarstellungsformen}
 \end{figure}
@@ -132,7 +132,7 @@ Bei der Entwicklung neuer Technologien ist es wichtig das Ausmaß der kognitiven
 
 \medskip Hinckley et al. \citep{Hinckley:2005} empfiehlt die Benutzung von \emph{Begrenzer} um Kontextmenüs aufzurufen. \emph{Begrenzer} sind Eingaben, die Benutzer normalerweise nicht zeichnen würden aber dennoch leicht zu merken sind. Ein Beispiel zeigt ihr System Scriboli, in dem ein >>Rattenschwanz<< (eine Schleife am Ende einer Selektionsgeste) als Begrenzer benutzt wird. Diese flüssige Bewegung lässt den Benutzer Zielobjekte kennzeichnen um auf sie anschließend ein Kommando anwenden zu können.
 
-\medskip Wieder andere haben Interface Idiome\footnote{siehe \nameref{sec:designPatterns}} zur Unterstützung von Stift- \& Skizzeneingaben entwickelt. \emph{Gedrics} sind auf Gesten basierende Icons für stiftbasierte Applikationen \citep{Geissler:1995}. Jedes Gedric ist mit einer Klasse an Aufgaben, wie >>ändere die Schriftarteigenschaften<< in einem Texteditor, verknüpft. Um ein Kommando durchzuführen, muss der Benutzer eine Geste auf ein Gedric zeichnen. Das System erkennt die Geste und gibt dem Icon anschließend die auf die Geste verknüpfte Bedeutung, welche durch Darauftippen aktiviert wird. Zeichnet man z.B. eine schräge Linie auf einem >>Schriftart<<-Gedric stellt das System einen markierten Text kursiv. Zeichnet man eine vertikale Linie von unten nach oben, wird die Schriftgröße erhöht. \\ So komfortabel Operationen auf Gedrics auch wirken, erfordern sie trotzdem eine Eingewöhnungsphase, in der Benutzer lernen müssen ihre Absichten in Gesten umzuwandeln. (vgl. \autoref{fig:geisslerGedric}) 
+\medskip Wieder andere haben Interface Idiome\footnote{TODO} zur Unterstützung von Stift- \& Skizzeneingaben entwickelt. \emph{Gedrics} sind auf Gesten basierende Icons für stiftbasierte Applikationen \citep{Geissler:1995}. Jedes Gedric ist mit einer Klasse an Aufgaben, wie >>ändere die Schriftarteigenschaften<< in einem Texteditor, verknüpft. Um ein Kommando durchzuführen, muss der Benutzer eine Geste auf ein Gedric zeichnen. Das System erkennt die Geste und gibt dem Icon anschließend die auf die Geste verknüpfte Bedeutung, welche durch Darauftippen aktiviert wird. Zeichnet man z.B. eine schräge Linie auf einem >>Schriftart<<-Gedric stellt das System einen markierten Text kursiv. Zeichnet man eine vertikale Linie von unten nach oben, wird die Schriftgröße erhöht. \\ So komfortabel Operationen auf Gedrics auch wirken, erfordern sie trotzdem eine Eingewöhnungsphase, in der Benutzer lernen müssen ihre Absichten in Gesten umzuwandeln. (vgl. \autoref{fig:geisslerGedric}) 
 
 \begin{figure}
         \myfloatalign
@@ -226,7 +226,7 @@ Interessanterweise, \graffito{Explizite Modiwechsel durch physikalische Buttons 
 
 \medskip Bei Skizziersystemen tritt das Modusproblem vorwiegend auf, da es mehrere Typen an Stifteingaben gibt. Manche Eingaben sollen auf einer Seite angezeigt werden, da sie Wörter, Zeichnungen oder andere Modellelemente (\emph{Model Operations}) darstellen, andere sollen im Hintergrund weiterverarbeitet werden, da sie Selektionen oder Kommandos (\emph{Environment Operations}) angeben.
 
-\medskip \emph{Flow Selection} \citep{Johnson:2006} erlaubt Benutzern mit Hilfe der Rast-Geste nahtlos vom Zeichen- zum Selektionsmodus zu wechseln. Anschließende Operationen, wie Verschieben eines Teilabschnitts einer Linie, werden durch Bewegung des Stiftes ausgeführt -- ohne den Stift vorher abzusetzen. Wieviel Einzelpunkte vom darunter liegenden Objekt selektiert werden - man spricht dabei auch von der Selektionstärke - hängt vom Abstand zur Stiftposition ab und wie lange der Benutzer den Stift an der selben Stelle ruhen lässt. Die Selektionstärek wird bei Operationen wie Verschieben oder Glättung verwendet (vgl. \autoref{fig:johnsonFlowSelection2}).
+\medskip \emph{Flow Selection} \citep{Johnson:2006} erlaubt Benutzern mit Hilfe der Rast-Geste nahtlos vom Zeichen- zum Selektionsmodus zu wechseln. Anschließende Operationen, wie Verschieben eines Teilabschnitts einer Linie, werden durch Bewegung des Stiftes ausgeführt -- ohne den Stift vorher abzusetzen. Wieviel Einzelpunkte vom darunter liegenden Objekt selektiert werden - man spricht dabei auch von der Selektionstärke - hängt vom Abstand zur Stiftposition ab und wie lange der Benutzer den Stift an der selben Stelle ruhen lässt. Die Selektionstärek wird bei Operationen wie Verschieben oder Glättung verwendet (vgl. \autoref{fig:johnsonFlowSelection3}).
 
 \begin{figure}
         \myfloatalign
@@ -238,9 +238,9 @@ Interessanterweise, \graffito{Explizite Modiwechsel durch physikalische Buttons 
 		\subfloat[ ]
         {\includegraphics[width=.22\linewidth]{gfx/johnsonFlowSelection3}} \quad
         \subfloat[ ]
-        {\label{fig:johnsonFlowSelection1}%
+        {\label{fig:johnsonFlowSelection2}%
          \includegraphics[width=.22\linewidth]{gfx/johnsonFlowSelection4}} \quad
-        \caption[Modiwechsel]{Modiwechsel der Flow Selection geschehen durch Halten und Bewegen des Stiftes \citep{Johnson:2006}. Der Benutzer positioniert dazu den Stift am gewünschten Objekt (a), bewegt es (b) ohne dabei den Stift zu heben (c). Der Benutzer hält den Stift anschließend an der Position bis die Kurve geglättet wurde (d) bevor er den Prozess durch heben des Stiftes abschließt.}\label{fig:johnsonFlowSelection2}
+        \caption[Modiwechsel]{Modiwechsel der Flow Selection geschehen durch Halten und Bewegen des Stiftes \citep{Johnson:2006}. Der Benutzer positioniert dazu den Stift am gewünschten Objekt (a), bewegt es (b) ohne dabei den Stift zu heben (c). Der Benutzer hält den Stift anschließend an der Position bis die Kurve geglättet wurde (d) bevor er den Prozess durch heben des Stiftes abschließt.}\label{fig:johnsonFlowSelection3}
 \end{figure}
 
 \section{Die Bedeutung von Gestik}
