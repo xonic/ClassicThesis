@@ -1,9 +1,9 @@
 \contentsline {captionX}{ {Auszug 1}\hspace *{1cm}Vorschlag von Kerry}{88}{captionX.1}
 \contentsline {captionX}{ {Auszug 2}\hspace *{1cm}John will die Problematik kl\IeC {\"a}ren}{88}{captionX.2}
-\contentsline {captionX}{ {Auszug 3}\hspace *{1cm}Ein Hinweis}{88}{captionX.3}
+\contentsline {captionX}{ {Auszug 3}\hspace *{1cm}Ein Hinweis}{89}{captionX.3}
 \contentsline {captionX}{ {Auszug 4}\hspace *{1cm}Das Anliegen wird ignoriert}{89}{captionX.4}
 \contentsline {captionX}{ {Auszug 5}\hspace *{1cm}Kerry wird erh\IeC {\"o}rt}{89}{captionX.5}
-\contentsline {captionX}{ {Auszug 6}\hspace *{1cm}Der zeitliche Ablauf}{89}{captionX.6}
+\contentsline {captionX}{ {Auszug 6}\hspace *{1cm}Der zeitliche Ablauf}{90}{captionX.6}
 \contentsline {captionX}{ {Auszug 7}\hspace *{1cm}Best\IeC {\"a}tigung f\IeC {\"u}r Ivan}{90}{captionX.7}
 \contentsline {captionX}{ {Auszug 8}\hspace *{1cm}Planung zuerst}{91}{captionX.8}
 \contentsline {captionX}{ {Auszug 9}\hspace *{1cm}Es ist bereits sp\IeC {\"a}t}{92}{captionX.9}
@@ -25,7 +25,7 @@
 \contentsline {captionX}{ {Auszug 25}\hspace *{1cm}Was erwartet der Benutzer?}{100}{captionX.25}
 \contentsline {captionX}{ {Auszug 26}\hspace *{1cm}Ausformulieren}{101}{captionX.26}
 \contentsline {captionX}{ {Auszug 27}\hspace *{1cm}Eine Idee}{101}{captionX.27}
-\contentsline {captionX}{ {Auszug 28}\hspace *{1cm}Beharren}{101}{captionX.28}
+\contentsline {captionX}{ {Auszug 28}\hspace *{1cm}Beharren}{102}{captionX.28}
 \contentsline {captionX}{ {Auszug 29}\hspace *{1cm}Emotionale Bindung}{102}{captionX.29}
 \contentsline {captionX}{ {Auszug 30}\hspace *{1cm}Auflockerung}{102}{captionX.30}
 \contentsline {captionX}{ {Auszug 31}\hspace *{1cm}Dr\IeC {\"a}ngen}{102}{captionX.31}

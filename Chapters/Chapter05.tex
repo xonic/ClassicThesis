@@ -2,7 +2,7 @@
 \chapter{Design VS Computer}\label{ch:DesignVSComputer}
 %*************************************************************
 
-Wir arbeiten mit Dokumenten in zwei verschiedenen Welten: der elektronischen Welt des Computers und der physikalischen Welt am Schreibtisch. Jede Welt hat ihre Vor- und Nachteile (siehe \autoref{tab:wellnerDokumente}), welche uns dazu bewegen die >>richtige<< für bestimmte Aufgaben zu wählen.
+Wir arbeiten mit Dokumenten in zwei verschiedenen Welten: der elektronischen Welt des Computers und der physikalischen Welt am Schreibtisch. Jede Welt hat ihre Vor- und Nachteile (siehe \autoref{tab:wellnerDokumente}), welche uns dazu bewegen die >>richtige<< für bestimmte Aufgaben zu wählen \citep{Wellner:1993}.
 
 \begin{table}
     \myfloatalign
@@ -35,7 +35,7 @@ Wir arbeiten mit Dokumenten in zwei verschiedenen Welten: der elektronischen Wel
 		\end{itemize}
 	\\  \bottomrule
 \end{tabularx}
-  \caption[Elektronische Dokumente und Papierdokumente]{Gegenüberstellung der Eigenschaften von elektronischen Dokumenten und Papierdokumenten.}
+  \caption[Elektronische Dokumente und Papierdokumente \newline \citep{Wellner:1993}]{Gegenüberstellung der Eigenschaften von elektronischen Dokumenten und Papierdokumenten.}
   \label{tab:wellnerDokumente}
 \end{table}
 
@@ -46,7 +46,7 @@ Wir arbeiten mit Dokumenten in zwei verschiedenen Welten: der elektronischen Wel
         \subfloat[Graphische (schematische) Darstellung.]
         {\label{fig:johnsonDarstellungsformenB}%
          \includegraphics[width=.48\linewidth]{gfx/johnsonDarstellungsformen}} \\
-        \caption[Darstellungsformen]{Die schematische Darstellung (a) und die Darstellung in der Wortebene (b) eines mathematischen Verhältnisses. Beide Darstellungsformen zeigen die gleiche Information. }\label{fig:johnsonDarstellungsformen}
+        \caption[Darstellungsformen \newline \citep{Johnson:2009}]{Die schematische Darstellung (a) und die Darstellung in der Wortebene (b) eines mathematischen Verhältnisses. Beide Darstellungsformen zeigen die gleiche Information. }\label{fig:johnsonDarstellungsformen}
 \end{figure}
 
 \medskip In mancher Hinsicht scheint es aber, als wäre Papier bald obsolet. Manche prophezeien das papierlose Büro schon in wenigen Jahren. Das Eigenartige dabei ist nur, dass sich die Leute ungern von Papier trennen. Studien belegen, dass der Papierkonsum in Büros seit 1970 um das 6-fache anstieg und derzeit jährlich um 20\% steigt \citep{seybold:1992}. Papier hat ebenso wie elektronische Dokumente Eigenschaften, die Menschen nicht aufgeben wollen. Das macht sie in Hinsicht auf computerbasierende Alternativen >>unverwüstlich<<. \citep{Luff:1992} 
@@ -110,7 +110,7 @@ Einige Stifte haben noch zusätzliche Buttons. Während Buttons unentbehrliche B
         \subfloat[Drücken einer Stifttaste erzeugt eine ungewollte Stiftspitzenbewegung.]
         {\label{fig:johnsonButtonPressB}%
          \includegraphics[width=.48\linewidth]{gfx/johnsonStylusPress}} \\
-        \caption[Kräfte bei Buttonklicks.]{Entstehende Kräfte beim Drücken einer Maustaste (a) und einer Stifttaste (b) eines Tablets.}\label{fig:johnsonButtonPress}
+        \caption[Kräfte bei Buttonklicks. \newline \citep{Johnson:2009}]{Entstehende Kräfte beim Drücken einer Maustaste (a) und einer Stifttaste (b) eines Tablets.}\label{fig:johnsonButtonPress}
 \end{figure}
 
 \subsection{Interaktionstechniken für stiftbasierte Skizziersysteme} %5.5
@@ -125,14 +125,14 @@ Bei der Entwicklung neuer Technologien ist es wichtig das Ausmaß der kognitiven
         \subfloat[Autodesk Maya Tortenmenü.]
         {\label{fig:johnsonPieMenuB}%
          \includegraphics[width=.48\linewidth]{gfx/johnsonPieMenuMaya}} \\
-        \caption[Tortenmenüs]{Tortenmenüs in Firefox (a) und Maya (b).}\label{fig:johnsonPieMenu}
+        \caption[Tortenmenüs \newline \citep{Johnson:2009}]{Tortenmenüs in Firefox (a) und Maya (b).}\label{fig:johnsonPieMenu}
 \end{figure}
 
 \medskip Ramos et al. \citep{Ramos:2004} erforschte weiters die Benutzung von Aufpressdruckdaten bei stiftbasierenden Interaktionen. Zu der zweidimensionalen (x,y) Stiftposition kommt die Druckstärke des Stiftes als dritte Dimension hinzu, die der Benutzer frei verändern kann. Zum Beispiel kann ein leichter Druck ein Menü zeigen und ein harter Druck ein anderes Menü. Druck kann eine effektive Eingabeart sein, wenn sie richtig (mit haptischen und visuellen Feedback) eingesetzt wird.
 
 \medskip Hinckley et al. \citep{Hinckley:2005} empfiehlt die Benutzung von \emph{Begrenzer} um Kontextmenüs aufzurufen. \emph{Begrenzer} sind Eingaben, die Benutzer normalerweise nicht zeichnen würden aber dennoch leicht zu merken sind. Ein Beispiel zeigt ihr System Scriboli, in dem ein >>Rattenschwanz<< (eine Schleife am Ende einer Selektionsgeste) als Begrenzer benutzt wird. Diese flüssige Bewegung lässt den Benutzer Zielobjekte kennzeichnen um auf sie anschließend ein Kommando anwenden zu können.
 
-\medskip Wieder andere haben Interface Idiome\footnote{TODO} zur Unterstützung von Stift- \& Skizzeneingaben entwickelt. \emph{Gedrics} sind auf Gesten basierende Icons für stiftbasierte Applikationen \citep{Geissler:1995}. Jedes Gedric ist mit einer Klasse an Aufgaben, wie >>ändere die Schriftarteigenschaften<< in einem Texteditor, verknüpft. Um ein Kommando durchzuführen, muss der Benutzer eine Geste auf ein Gedric zeichnen. Das System erkennt die Geste und gibt dem Icon anschließend die auf die Geste verknüpfte Bedeutung, welche durch Darauftippen aktiviert wird. Zeichnet man z.B. eine schräge Linie auf einem >>Schriftart<<-Gedric stellt das System einen markierten Text kursiv. Zeichnet man eine vertikale Linie von unten nach oben, wird die Schriftgröße erhöht. \\ So komfortabel Operationen auf Gedrics auch wirken, erfordern sie trotzdem eine Eingewöhnungsphase, in der Benutzer lernen müssen ihre Absichten in Gesten umzuwandeln. (vgl. \autoref{fig:geisslerGedric}) 
+\medskip Wieder andere haben Interface Idiome\footnote{Ein Idiom im Sinne der Softwaretechnik ist ein programmiersprachenspezifisches Muster. Ein Idiom beschreibt, wie man bestimmte Aspekte von Komponenten oder Beziehungen zwischen ihnen mit den Mitteln einer bestimmten Programmiersprache implementiert \citep{Buschmann:1998}.} zur Unterstützung von Stift- \& Skizzeneingaben entwickelt. \emph{Gedrics} sind auf Gesten basierende Icons für stiftbasierte Applikationen \citep{Geissler:1995}. Jedes Gedric ist mit einer Klasse an Aufgaben, wie >>ändere die Schriftarteigenschaften<< in einem Texteditor, verknüpft. Um ein Kommando durchzuführen, muss der Benutzer eine Geste auf ein Gedric zeichnen. Das System erkennt die Geste und gibt dem Icon anschließend die auf die Geste verknüpfte Bedeutung, welche durch Darauftippen aktiviert wird. Zeichnet man z.B. eine schräge Linie auf einem >>Schriftart<<-Gedric stellt das System einen markierten Text kursiv. Zeichnet man eine vertikale Linie von unten nach oben, wird die Schriftgröße erhöht. \\ So komfortabel Operationen auf Gedrics auch wirken, erfordern sie trotzdem eine Eingewöhnungsphase, in der Benutzer lernen müssen ihre Absichten in Gesten umzuwandeln. (vgl. \autoref{fig:geisslerGedric}) 
 
 \begin{figure}
         \myfloatalign
@@ -141,7 +141,7 @@ Bei der Entwicklung neuer Technologien ist es wichtig das Ausmaß der kognitiven
         \subfloat[Layouter Gesten.]
         {\label{fig:geisslerGedricIcons}%
          \includegraphics[width=.58\linewidth]{gfx/geisslerGedricLayouter}} \\
-        \caption[Gedric]{Beispiele für Gedric Icons (a) und Gesten einer Layoutfunktion (b).}\label{fig:geisslerGedric}
+        \caption[Gedric \newline \citep{Geissler:1995}]{Beispiele für Gedric Icons (a) und Gesten einer Layoutfunktion (b).}\label{fig:geisslerGedric}
 \end{figure}
 
 \medskip Während Point \& Click Aktionen für Aufgaben zu Anwendungen, die üblicherweise mit der Maus ausgeführt werden ausgelegt sind, raten Accot und Zhai zur \emph{Kreuzen}-Technik zur Stiftinteraktion \citep{Accot:2002}. Das experimentelle Zeichenprogramm \emph{CrossY} \citep{Apitz:2004} zeigt Interface Widgets\footnote{Widgets (dt. Steuerelemente) sind Interaktionselemente in einer grafischen Benutzeroberfläche (GUI), beispielsweise eine Schaltfläche oder eine Bildlaufleiste.}, die Kreuzen erlauben. Um ein CrossY Button zu aktivieren, muss der Benutzer eine Linie von einer Seite des Buttons zur anderen zeichnen, und somit den Button überqueren. Kreuzen macht es möglich mehrere Aktionen in einer flüssigen Bewegung abzuhandeln. Zum Beispiel kann man die Farbe und Stärke der Electronic Ink des Stiftes gleichzeitig ändern, in dem man den Stift über benachbarte CrossY Widgets bewegt (siehe \autoref{fig:accotCrossY}).
@@ -150,7 +150,7 @@ Bei der Entwicklung neuer Technologien ist es wichtig das Ausmaß der kognitiven
 	\begin{center}
 	
 	{\includegraphics[width=0.3\linewidth]{gfx/accotCrossY}}
-	\caption[CrossY]{CrossY Interface Widgets erlauben Benutzer mehrere Parameter mit einer einzigen Bewegung zu ändern -- in diesem Beispiel die Stiftfarbe und -stärke.}
+	\caption[CrossY \newline \citep{Johnson:2009}]{CrossY Interface Widgets erlauben Benutzer mehrere Parameter mit einer einzigen Bewegung zu ändern -- in diesem Beispiel die Stiftfarbe und -stärke.}
 	\label{fig:accotCrossY}
 	\end{center}
 \end{figure}
@@ -165,7 +165,7 @@ Tsang et al. benutzten ein Empfehlungssystem in ihrem Programm, das Formen wie F
 	\begin{center}
 	
 	\includegraphics[width=0.7\linewidth]{gfx/baeILoveSketch}
-	\caption[ILoveSketch]{ILoveSketch zeigt ein >>natürliches<< Skizziersystem, welches mehrere kaligraphische Interaktionstechniken miteinander vereint \citep{Bae:2008}.}
+	\caption[ILoveSketch \newline \citep{Johnson:2009}]{ILoveSketch zeigt ein >>natürliches<< Skizziersystem, welches mehrere kaligraphische Interaktionstechniken miteinander vereint \citep{Bae:2008}.}
 	\label{fig:baeILoveSketch}
 	\end{center}
 \end{figure}
@@ -191,7 +191,7 @@ Oft interpretiert das User Interface Eingaben unterschiedlich - je nach dem in w
 
 \begin{figure}[bth]
 	{\includegraphics[width=\linewidth]{gfx/ellisSketchpad}}
-	\caption[Sketchpad]{Sketchpad unterstützt Benutzer beim Erstellen von Designzeichnungen mittels Stift (rechte Hand) und verschiedener Modi/Bedingungen (erreichbar über die Knöpfe auf der linken Seite).}
+	\caption[Sketchpad \newline \citep{Johnson:2009}]{Sketchpad unterstützt Benutzer beim Erstellen von Designzeichnungen mittels Stift (rechte Hand) und verschiedener Modi/Bedingungen (erreichbar über die Knöpfe auf der linken Seite).}
 	\label{fig:ellisSketchpad}
 \end{figure}
 
@@ -202,7 +202,7 @@ Oft interpretiert das User Interface Eingaben unterschiedlich - je nach dem in w
         \subfloat[Output]
         {\label{fig:ellisGRAILinput}%
          \includegraphics[width=.48\linewidth]{gfx/ellisGRAILoutput}} \\
-        \caption[GRAIL Funktionalität]{GRAIL analysiert die Benutzereingaben (a) und errechnet automatisch die bestimmungsgemäße Information (b) - hier z.B. ein Rechteck.}\label{fig:ellisGRAILoutput}
+        \caption[GRAIL Funktionalität \newline \citep{Johnson:2009}]{GRAIL analysiert die Benutzereingaben (a) und errechnet automatisch die bestimmungsgemäße Information (b) - hier z.B. ein Rechteck.}\label{fig:ellisGRAILoutput}
 \end{figure}
 
 \medskip Im \emph{GRAIL}\footnote{RAND's GRAIL (GRAphical Input Language) System aus dem Jahr 1968, interpretierte Stifteingaben in einer besonderen visuellen Programmiersprache, um Flussdiagramme zu erstellen \citep{Ellis:1969}. Benutzer konnten via Eingabetablet semantisch wertvolle Modelldaten (Rechtecke, Pfeile, Schrift) und Kommandos (Lösche eine Linie, Bewege ein Rechteck, etc.) zeichnen und GRAIL errechnete anschließend automatisch die bestimmungsgemäße Information.} System können Benutzer nicht explizit in einen anderen Modus wechseln, um Text und Grafiken zu bearbeiten. Stattdessen versucht das System die Absichten des Benutzers aus einer Analyse des Gezeichneten bzw. dessen Kontext zu erschließen (siehe \autoref{fig:ellisGRAILoutput}) \citep{Ellis:1969}. 
@@ -240,7 +240,7 @@ Interessanterweise, \graffito{Explizite Modiwechsel durch physikalische Buttons 
         \subfloat[ ]
         {\label{fig:johnsonFlowSelection2}%
          \includegraphics[width=.22\linewidth]{gfx/johnsonFlowSelection4}} \quad
-        \caption[Modiwechsel]{Modiwechsel der Flow Selection geschehen durch Halten und Bewegen des Stiftes \citep{Johnson:2006}. Der Benutzer positioniert dazu den Stift am gewünschten Objekt (a), bewegt es (b) ohne dabei den Stift zu heben (c). Der Benutzer hält den Stift anschließend an der Position bis die Kurve geglättet wurde (d) bevor er den Prozess durch heben des Stiftes abschließt.}\label{fig:johnsonFlowSelection3}
+        \caption[Modiwechsel \newline \citep{Johnson:2009}]{Modiwechsel der Flow Selection geschehen durch Halten und Bewegen des Stiftes \citep{Johnson:2006}. Der Benutzer positioniert dazu den Stift am gewünschten Objekt (a), bewegt es (b) ohne dabei den Stift zu heben (c). Der Benutzer hält den Stift anschließend an der Position bis die Kurve geglättet wurde (d) bevor er den Prozess durch heben des Stiftes abschließt.}\label{fig:johnsonFlowSelection3}
 \end{figure}
 
 \section{Die Bedeutung von Gestik}
@@ -305,7 +305,7 @@ Im folgenden beschäftigen wir uns mit einer dieser fünf: Illustratoren - auch 
 
 \begin{figure}[bth]
 	{\includegraphics[width=\linewidth]{gfx/tangVideoDraw}}
-	\caption[VideoDraw]{Schematische Darstellung von VideoDraw in einem Zwei-Personen-Szenario an verschiedenen Orten.}
+	\caption[VideoDraw \newline \citep{Tang:1991p28}]{Schematische Darstellung von VideoDraw in einem Zwei-Personen-Szenario an verschiedenen Orten.}
 	\label{fig:tangVideoDraw}
 \end{figure}
 
@@ -345,7 +345,7 @@ VideoDraw erlaubt Teilnehmer gewohnte Tätigkeiten auf eine neue Art zu erleben.
 
 \begin{figure}[bth]
 	{\includegraphics[width=\linewidth]{gfx/hinckleyPaperNotebook}}
-	\caption[Designstudie über die Benutzung von Notizbüchern]{Verhaltensweisen bei der Benutzung von Notitzbüchern. \begin{inparaenum}[\itshape a\upshape)] \textbf{\item} Benutzer klemmen Stifte zwischen ihre finger, während sie Objekte bearbeiten. \textbf{\item} Daumen und Zeigefinger halten ein Objekt fest, während darauf geschrieben wird. \textbf{\item} Papierschnipsel fallen auf die Arbeitsfläche. \textbf{\item} Benutzer greifen oft nach Hilfsmitteln und neuen Inhalten, die über dem Notizbuch liegen. \textbf{\item} Zeichnen eines Rahmens mit einer Schablone, durch Halten der Schablone mit der Hilfshand und Nachfahren der Kanten mit dem Stift. \textbf{\item} Reißen einer Seite durch Festhalten des Papiers mit dem Daumen und Ziehen mit den Fingern der anderen Hand. Der Stift ist währenddessen wiederum zwischen den Fingern eingeklemmt. \end{inparaenum}}
+	\caption[Designstudie über die Benutzung von Notizbüchern \newline \citep{Hinckley:2010}]{Verhaltensweisen bei der Benutzung von Notitzbüchern. \begin{inparaenum}[\itshape a\upshape)] \textbf{\item} Benutzer klemmen Stifte zwischen ihre finger, während sie Objekte bearbeiten. \textbf{\item} Daumen und Zeigefinger halten ein Objekt fest, während darauf geschrieben wird. \textbf{\item} Papierschnipsel fallen auf die Arbeitsfläche. \textbf{\item} Benutzer greifen oft nach Hilfsmitteln und neuen Inhalten, die über dem Notizbuch liegen. \textbf{\item} Zeichnen eines Rahmens mit einer Schablone, durch Halten der Schablone mit der Hilfshand und Nachfahren der Kanten mit dem Stift. \textbf{\item} Reißen einer Seite durch Festhalten des Papiers mit dem Daumen und Ziehen mit den Fingern der anderen Hand. Der Stift ist währenddessen wiederum zwischen den Fingern eingeklemmt. \end{inparaenum}}
 	\label{fig:hinckleyPaperNotebook}
 \end{figure}
 
