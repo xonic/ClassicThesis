@@ -54,8 +54,241 @@ end;
 \subsection{GUI Design}
 
 \section{User Review}
+Der Prototyp von \emph{Scribbler} wurde von uns mit verschiedenen potenziellen Nutzern getestet. Darunter drei Designer aus den Bereichen Produkt-, Interaction-, und User Experience Design, die sich an \emph{Scribbler} in einem reduzierten Setting, sprich mit nur einem Tablet versuchten. Zusätzlich setzte eine Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien \emph{Scribbler} in einem kollaborativen Setting bei einem Projekt-Meeting ein. 
 
-\section{Acievements}
+Bei allen drei Sitzungen wurden die Aktionen der Testpersonen durch eine Videokamera gefilmt und ihre Kommentare auf einem Tonträger festgehalten. Die drei Designer wurden zusätzlich von uns interviewt und die Transkripte sind im Appendix im Kapitel \nameref{cha:interviews} zu finden.
+
+In den folgenden Abschnitten betrachten wir nun positives und kritisches Feedback, das aus diesen Tests hervorgegangen ist.
+
+\section{Positives Feedback}
+
+\emph{Scribbler} wurde von den Testpersonen durchwegs positiv aufgenommen und alle waren interessiert an Konzept und Funktionsweise. Die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien konnte den Prototypen produktiv bei ihrem Projekt-Meeting einsetzen und die Idee hinter \emph{Scribbler} wurde als sinnvoll erachtet. 
+
+Peter, seines Zeichens Produktdesigner und Dozent an der Universität für angewandte Kunst Wien, konnte sich sehr schnell mit \emph{Scribbler} anfreunden und bewertete das Konzept sehr gut.
+
+\begin{extract}[Peter, Produktdesigner, über \emph{Scribbler}.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+    		Peter  & Für mich ist das auf jeden Fall eine Traumsituation, da ich jetzt schon Notizen zu Präsentationen mache. Nur das Problem ist eben jetzt, dass ich die Notizen auf Zetteln mache und mir dazuschreiben muss, zu welcher Zeichnung die Notizen gehören, damit ich sie nachträglich wieder zuordnen kann.
+		\end{tabularx}
+	}
+	\captionX{Traumsituation}
+\end{extract}
+
+Er könnte sich vorstellen, das Tool im Unterricht im kollaborativen Setting einzusetzen und erklärt, in welchen spezifischen Situationen \emph{Scribbler} nützlich wäre und in welchen nicht.
+
+\begin{extract}[Peter über den Einsatz von \emph{Scribbler} im Unterricht.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+    		Peter & Ja das wäre super, wenn ich das im Unterricht einsetzen könnte. Es wäre spitze wenn jeder die Möglichkeit hätte, mitzuarbeiten. Wobei ich nicht ganz sicher bin ob Darstellungstechnik das passende Unterrichtsfach für \emph{Scribbler} ist, weil da geht es konkret um das Zeichnen und dann reichen Grobskizzen leider nicht aus, sondern man muss schon detaillierte Zeichnungen anfertigen. Anders sieht es da bei Designvisualisierungen aus, die auch in meinem Unterricht vorkommen. Da wäre es wirklich cool, die Studenten direkt einzubinden. Jeder könnte auch Stichworte dazuschreiben und ähnlich einem Brainstorming vernetzen. Das könnte ich mir gut vorstellen. 
+		\end{tabularx}
+	}
+	\captionX{Einsatz im Unterricht}
+\end{extract}
+
+Jedem Stift eine eigene Farbe zuzuweisen findet Peter gut. Für seine Zwecke benötigt er mehr als nur eine Farbe und erscheint ihm eine gute Lösung. Er weist jedoch auch darauf hin, dass er gerne Kontextmenüs in Zeichenprogrammen verwendet und so schneller zwischen verschiedenen Farben wechseln kann.
+
+\begin{extract}[Jedem Stift wird eine eigene Farbe zugewiesen.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+    		Clemens & Du zeichnest derzeit mit der Farbe Magenta. Du hast vorher gemeint für Grobskizzen reicht dir eine Farbe oder?\\
+
+			Peter & Also wenn ich in der Strukturierungsphase bin, wäre es schon gut wenn ich mehrere Farben hätte.\\
+
+			Clemens & Ok. Dazu haben wir eigentlich mehrere Stifte mit unterschiedlichen Farben angedacht.\\
+
+			Peter & Wirklich wahr?\\
+
+			 & \emph{(Peter greift zu einem anderen Stift und probiert ihn aus)}\\
+
+			Peter & Wahnsinn. Ja, das finde ich super wenn man das so löst.\\
+
+			Thomas & Wir haben uns gedacht wir halten uns daran, möglichst realitätsnahe zu bleiben. Beim Zeichnen auf Papier würdest du auch einen anderen Stift zur Hand nehmen.\\
+
+			Peter & Verstehe. Was ich irrsinnig gerne verwende sind Untermenüs bzw. Popupmenüs. Das gibt es bei verschiedenen Programmen. Wenn ich z.B. auf die Stifttaste drücke geht ein Untermenü auf. So wie bei >>Autodesk Maya<< oder >>Sketchbook<<. Das sind Programme in denen ich z.B. immer zeichne. Und da hätte man im Untermenü auch die Möglichkeit auf eine Farbpalette, oder vielleicht auch 2-3 verschiedene Strichstärken. Dazu drück ich auf die Stifttaste, fahre mit dem Stift auf das Menü, lass wieder aus, das Menü ist wieder weg und ich habe die neue Einstellung. Beim Zeichnen ist das super; das ist etwas was mir z.B. in Photoshop abgeht.
+		\end{tabularx}
+	}
+	\captionX{Farben}
+\end{extract}
+
+Das Whiteboard, das in \emph{Scribbler} eingeblendet werden kann und dazu dient, auf eine weiße Fläche statt einem bestimmten Fenster zu zeichnen, wurde von allen Testpersonen positiv bewertet. Es gibt Situationen, in denen man schnell etwas aufkritzeln möchte, das nicht mit dem Fensterkontext in Verbindung steht, beispielsweise eine spontane Idee für ein Konzept oder ein Design. In diesen Momenten bietet \emph{Scribbler} die passende Funktion und die Idee kann so abseits vom aktuellen Geschehen festgehalten und später wieder abgerufen werden.
+
+Durch \emph{Scribbler} ist es möglich, auf mehrere nebeneinander angeordnete Fenster des Desktops zu zeichnen und dadurch semantische Verbindungen herzustellen. Dadurch können Inhalte auf eine ganz neue Art und Weise präsentiert werden. Momentan ist es so, dass Zeichnungen sich immer an das aktive Fenster, beispielsweise das Browserfenster heften und ihre Position relativ zur Fenster- und Scrollposition mitbewegen.
+
+\begin{extract}[Zeichnungen heften sich an das aktive Fenster, auch wenn außerhalb dessen gezeichnet wird.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+    		Thomas & Habe ich es richtig verstanden, dass du es gerne so hättest, dass wenn mehrere gleichzeitig zeichnen, jeder auf sein eigenes Fenster zeichnet und die jeweiligen Zeichnungen auf dem eigenen Fenster kleben bleiben? Momentan hängen alle Zeichnungen - egal von wem gezeichnet - nur auf dem aktivem Fenster. Sobald du das Fenster verschiebst, verschiebst du die Zeichnungen mit.\\
+
+			 & \emph{(Peter denkt nach)}\\
+
+			Peter & Weiß ich nicht. Also für mich funktioniert das derzeit von der Überlegung her recht gut. Aber ich müsste es erst länger ausprobieren, um auch die wirklichen Stärken zu finden.
+		\end{tabularx}
+	}
+	\captionX{Zugehörigkeit}
+\end{extract}
+
+Als Produktdesigner zeichnet Peter wahnsinnig gerne und tut dies auch während er Besprechungen hält. Das Zeichnen hilft ihm mit den anderen zu kommunizieren und bringt seine Kreativität in Schwung. 
+
+\begin{extract}[Zeichnen um besser zu kommunizieren.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Peter & Was hier [in \emph{Scribbler}] auch gut funktioniert, ist das Verdeutlichen von Ideen. Ich bin jemand, der irrsinnig gerne zeichnet zum Reden. Ich könnte so z.B. ein paar Punkte rausholen und einen Teil, der hier im Bereich unten schwer zu erkennen ist, noch einmal rauszeichnen.
+		\end{tabularx}
+	}
+	\captionX{Kommunikation}
+\end{extract}
+
+Deshalb sieht er für \emph{Scribbler} gute Einsatzmöglichkeiten bei Brainstormings und in Ideenfindungsphasen. Dadurch können Konzepte und Ideen schnell und effizient vermittelt und Inspiration gefördert werden. Ebenfalls denkbar wäre für ihn der Einsatz von \emph{Scribbler} in Graphic-Recording-Meetings. Es handelt sich dabei um Sitzungen, bei denen eine Person jegliche verbale Kommunikation in der Gruppe als Skizzen festhält.
+
+\begin{extract}[Ein Einsatz bei Graphic-Recordings wäre denkbar.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Peter & Das ist eine recht interessante Geschichte. Es handelt sich um Leute, die Meetings mit zeichnen. Das passiert analog auf einem Blatt Papier mit Stift. Nehmen wir an da sitzen mehrere Techniker und andere in ein Projekt verwickelte Personen, die Konzepte verbal besprechen und dann gibt es einen Zeichner, der, während die Leute ihre Ideen artikulieren, diese direkt zu Papier bringt und aufzeichnet. Darauf baut dann die Diskussion weiter auf und die Teilnehmer können gleich auf die Skizzen eingehen und sie weiter entwickeln oder verwerfen. Am Ende kann man anhand der Bilder nachvollziehen, worüber gesprochen worden ist. Das wäre sicherlich auch ein Gebiet, bei dem man \emph{Scribbler} oder ähnliche Anwendungen zum Einsatz bringen könnte.
+		\end{tabularx}
+	}
+	\captionX{Graphic-Recording}
+\end{extract}
+
+\section{Kritisches Feedback}
+Die Tests mit den potentiellen Benutzern haben nicht nur positive, sondern auch kritische Aspekte von \emph{Scribbler} enthüllt. Einige davon waren uns bereits vor dem Testen bewusst und wurden durch die Tests und Interviews bestätigt, andere waren komplett neue Einsichten und haben uns auf wichtige Dinge aufmerksam gemacht. Die einzelnen Punkte haben unterschiedliche Gründe und werden im folgenden verschiedenen Kategorien zugeordnet, um ein besseres Verständnis zu bieten.
+
+\subsection{Unvollständigkeit des Prototypen}
+Als die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung \emph{Scribbler} in einem kollaborativen Setting beim Meeting einsetzte, war die erste Aktion der Benutzer logischerweise das Zeichnen. Alle griffen sofort zum Stift und wollten loslegen. Die Enttäuschung war groß, als sie realisierten, dass der Prototyp jeweils nur einem Benutzer zu zeichnen erlaubt, andere müssen warten, bis sie dran kommen. Uns war von Anfang an bewusst, dass dies eines der wichtigsten Features von \emph{Scribbler} sein würde, aber leider war es uns nicht möglich, dieses in der kurzen Entwicklungszeit zu implementieren. Dieses Feature erfordert die Implementierung von multiplen Cursor und ist technisch aufwändig. Fehlt es jedoch, kommt es zu einem Flaschenhalseffekt, der die Effizienz von Meetings stark einschränkt. Personen können nicht parallel zeichnen, bzw. arbeiten und sind so ständig gezwungen, die Aktionen der anderen abzuwarten. Hinzu kommt ein erhöhter Aufwand der Absprache untereinander zur Koordination der Tätigkeiten. Der Test hat gezeigt, dass die Teilnehmer des Meetings sich ständig absprechen müssen, wer wann zeichnen kann. Dies ist eine Aktivität, die in herkömmlichen Meetings überhaupt nicht notwendig ist und stellt einen Nachteil gegenüber der Effizienz der Sitzung dar. Die Befürchtung, die wir bereits vor dem Test hatten, wurde sehr schnell bestätigt. Bei einer Weiterentwicklung von \emph{Scribbler} muss diesem kritischen Feature höchste Priorität zugeordnet werden, denn es entscheidet über Erfolg oder Misserfolg des gesamten Systems.
+
+\medskip Häufig kam es vor, dass Testpersonen unabsichtlich den Kippschalter am Stift drückten. Dies führte dazu, dass die letzte Aktion rückgängig gemacht wurde. Dieses Problem war uns schon während der Implementierungsphase bei internen Tests aufgefallen. Gerade Personen, die selten oder nie Tablet und Stift als Eingabegerät verwenden, passiert dieses unabsichtliche Drücken der Undo-Taste immer wieder. Der Produktdesigner, der täglich mit dem Tablet arbeitet, hatte hingegen keine Schwierigkeiten in dieser Hinsicht. Um \emph{Scribbler} für eine breite Masse benutzbar zu machen, muss bei einer Weiterentwicklung darauf geachtet werden, dass den Tasten des Stifts keine Funktionen zugewiesen werden. Stattdessen sollten diese sinnvoll auf den Tasten des Tablets selbst angeordnet werden.
+
+\medskip Es wurde sehr schnell deutlich, dass die Einsatzmöglichkeiten von \emph{Scribbler} begrenzt sind. Die wenigen Zeichenfunktionen reichen lediglich für grobe Skizzen und Kritzeleien aus. \emph{Scribbler} muss hier gezielt an Funktionalität angereichert werden und zumindest optional Features wie Strichstärke oder Druckempfindlichkeit anbieten.
+
+\begin{extract}[Die Einsatzmöglichkeiten sind begrenzt.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Thomas & Sind diese primitiven Zeichenmöglichkeiten ausreichend, oder fehlt dir da was?\\
+			Peter & Nein, für Darstellungstechnik reichen diese Möglichkeiten bei weitem nicht aus. Man braucht da Dinge wie Strichstärke, gerade Linien, etc. Das sind Sachen, die Photoshop kann und die sind auch wirklich notwendig. Aber bei solchen groben Sachen, wie ich sie hier jetzt am Screen gezeichnet habe kann das schon reichen. Wichtig ist natürlich auch die Transparenz von Linien. Beim Skizzieren beginnt man ja mit ganz leichten Strichen, die das grobe Grundgerüst darstellen und zeichnet dann mit mehr Druckstärke drüber, sodass die Linien deutlicher werden und die Skizze konkreter wird.
+		\end{tabularx}
+	}
+	\captionX{Fehlende Funktionalität}
+\end{extract}
+
+Der Prototyp war noch anfällig für Fehler und manchmal passierte es, dass das Programm komplett abstürzte oder unerwartetes Verhalten zeigte. Dies wurde zwar von den Teilnehmern bemängelt, jedoch zeigten alle Verständnis für die unfertige Teilimplementierung. Es ist jedoch klar, dass \emph{Scribbler} in einer finalen Releaseversion absolut stabil laufen muss und nie Daten verlieren darf.
+
+
+\subsection{Technische Probleme}
+Eine große technische Hürde stellt für \emph{Scribbler} das Speichern von Daten zur späteren Wiederverwendung dar. \emph{Scribbler} hat natürlich keinen Einfluss auf andere Programme, hängt aber voll und ganz von deren Kontext ab. Das bedeutet, dass Zeichnungen in \emph{Scribbler} nur dann sinnvoll sind, wenn die Fenster von Drittprogrammen darunter liegen. Die Problematik der Abspeicherung wird hier sehr schnell deutlich: \emph{Scribbler} kann die Fenster und Anordnung von Drittprogrammen nicht speichern. Im Prototypen gibt es eine Funktion, die ein Bild vom Desktop mit allen Zeichnungen macht und in einer Datei am Schreibtisch ablegt. Dies ist natürlich ein Rasterbild und kann außer zum Ansehen kaum weiterverwendet werden. Zudem müssen bei längerem Arbeiten mit \emph{Scribbler} sehr viele Bilder angefertigt werden, um alle Zeichnungen abzubilden. Dabei füllt sich der Desktop sehr schnell und zu einem späteren Zeitpunkt müssen Benutzer sich mit unzähligen Dateien plagen. Es muss hier dringend ein passendes Konzept gefunden werden, das die Bedürfnisse besser deckt als einfache Rasterbilder. 
+
+\medskip Das Schreiben ist eine weitere Schwäche von \emph{Scribbler}. Die prototypische Implementierung ist technisch nicht optimiert und das System zeichnet nur wenige Bewegungspunkte des Stifts am Tablet auf. Dadurch entstehen ungenaue Linien und Handschrift wird deutlich unlesbar. Gerade wenn Benutzer versuchen, auf kleine Flächen zu schreiben, scheitern sie in den meisten Fällen. \emph{Scribbler} und der darunter liegende Code muss soweit optimiert werden, dass es möglich wird, auf Fenster in annehmbarer Größe zu schreiben, da dies ein sehr übliches Szenario darstellt.
+
+\medskip Die Entscheidung, Tablets ohne integriertes Display als Hardware für \emph{Scribbler} zu benutzen, fiel aus der Annahme heraus, dass Personen in kollaborativen Settings weniger miteinander interagieren würden, wenn jeder auf seinen eigenen Bildschirm starrt. Ziel war der Einsatz eines einzelnen großen Displays, um eine größere Gemeinsamkeit zu schaffen und Teamwork zu fördern. Vielen Benutzern fällt jedoch die Abstraktion von Tablet hin zu einem entfernten Display schwer. Sie schaffen es nur sehr schwer, ihre Bewegungen mit dem Stift am Tablet so zu koordinieren, dass am Display auch tatsächlich die beabsichtigten Striche gezeichnet werden. Bereits das Einkreisen von gewissen Elementen am Bildschirm kann quälend schwierig erscheinen und viel Frust beim Benutzer erzeugen. Diese Problematik verschärft sich, wenn das Display sich nicht frontal, sondern seitlich zum Benutzer befindet. Sitzt dieser dann auch noch schief vor dem Tablet, wird es schier unmöglich \emph{Scribbler} sinnvoll zu nutzen.
+
+\subsection{Konzeptionelle Probleme}
+\emph{Scribbler} setzt den Einsatz von spezieller Hardware voraus. Benötigt wird ein großes Display oder ein Beamer, ein starker Rechner mit dem Betriebssystem OS X und mehrere Wacom Tablets. Diese Komponenten sind zum einen teuer und zum anderen keine üblichen Geräte, die die meisten Betriebe im Inventar führen. Daher ist der Einsatz von \emph{Scribbler} nicht ohne weiteres möglich, schon gar nicht vor Ort beim Kunden. Die ganze Ausrüstung dort hin zu transportieren stellt einen Aufwand dar, der in keinem Verhältnis zum effektiven Nutzen innerhalb eines Meetings steht.
+
+\begin{extract}[Notwendige Hardware schränkt ein.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Zed & \emph{[...]} Beim kollaborativen Zusammenarbeiten mit dem Kunden glaub ich nicht dass es funktionieren würde. Der Kunde kann das nicht bedienen, allein der Umgang mit dem Tablett ist eher komplex. Hinzu kommt die notwendige Hardware, die ja auch erst ein mal angeschafft werden muss und transportiert werden muss. Man benötigt dann ja mehrere Tabletts. 
+		\end{tabularx}
+	}
+	\captionX{Transport und Kosten}
+\end{extract}
+
+Für die Interaction- und User Experience Designer scheint \emph{Scribbler} keine wirklich brauchbaren Szenarios und Einsatzmöglichkeiten zu bieten.
+
+\begin{extract}[Der praktische Nutzen erschließt sich nicht jedem.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Zed & Aber ich kann mir auch den praktischen Nutzen nicht so recht vorstellen. Zu sagen, ich würde das System wirklich irgendwo einsetzen... ich weiß nicht. Das Szenario fehlt mir. Beim Kunden fällt das nämlich komplett flach.
+		\end{tabularx}
+	}
+	\captionX{Nutzen}
+\end{extract}
+
+Gewisse zusätzliche Features und Optimierungen würden das \emph{Scribbler} Konzept jedoch interessanter für sie erscheinen lassen.
+
+\begin{extract}[Der praktische Nutzen erschließt sich nicht jedem.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Thomas & Was wäre notwendig, um es für dich nutzbar zu machen?\\
+			Zed & Dieser komischer Hovereffekt des Stifts am Tablett bereitet mir Schwierigkeiten. Das müsste man auf jeden Fall irgendwie lösen. Sodass man das Gefühl bekommt, dass man wirklich exakt arbeiten kann mit dem Ding. Das fehlt mir. Schön wäre natürlich auch, wenn man die Übersetzung von Tablett auf Screen lösen könnte, wobei das natürlich nur dann geht, wenn der Screen im Tablett integriert ist. Auch cool wäre, wenn man über das Internet zusammenarbeiten könnte, denn so ist man an dieses Setting im Raum gebunden, nicht mal über ein lokales Netzwerk hat man da irgendwelche Freiheiten.
+		\end{tabularx}
+	}
+	\captionX{Nutzen}
+\end{extract}
+
+Die Entscheidung, Linien in \emph{Scribbler} als Vektorobjekte zu speichern, hat auch einige negative Nebenwirkungen mit sich gebracht. So ist zum Beispiel die Radiergummifunktion eingeschränkt. \emph{Scribbler} kann immer nur eine ganze Linie komplett löschen. Das bedeutet, dass Striche mit dem Radiergummi nicht kürzer gemacht, sondern komplett gelöscht werden. Angenommen der Benutzer möchte wirklich nur eine Linie kürzen, die etwas zu lang geworden ist, so muss er sie löschen und neu zeichnen. 
+
+\begin{extract}[Der Radierer löscht nur ganze Linien.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Clemens & \emph{[...]} Die Möglichkeit zu Radieren gibt es eigentlich auch - die hintere Taste am Stift dient dazu. Doch da das Programm vektorbasierend ist, radiert es nur den letzten Strich. Ist diese Funktion zu wenig für deinen Gebrauch?\\
+			Peter & Also wenn ich wirklich an einem Produkt arbeite, um eine Form herauszuarbeiten, wäre es zu wenig ja. Aber um einfache Sachen, wie z.B Notizen einzufügen oder Ideen zu formulieren, funktioniert es schon. Man müsste aber vielleicht anfangen das Programm häufiger zu verwenden, um ein gutes Feedback abgeben zu können.
+		\end{tabularx}
+	}
+	\captionX{Radieren}
+\end{extract}
+
+\subsection{Wünsche der Benutzer}
+Offensichtliche Verbesserungen, wie Druckempfindlichkeit, Strichstärke und generell konkretere Zeichenmöglichkeiten wurden von fast allen Teilnehmern angesprochen. Zusätzlich gab es einige Einwände und Ideen zu Features, die das Nutzungserlebnis von \emph{Scribbler} verbessern könnten. Essenziell für ein effizientes Arbeiten mit \emph{Scribbler} erscheint die Möglichkeit, Zeichnungen nachträglich am Bildschirm noch verschieben zu können. So können erst Ideen generiert und danach Ordnung und Struktur geschaffen werden.
+
+\begin{extract}[Es wäre gut, wenn man Zeichnungen verschieben könnte.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Thomas & Ich habe gesehen, du würdest dir auch wünschen dass du einzelne Teile von Zeichnungen wo anders hinschieben könntest oder? Also dass du einen bestimmten Bereich ausschneiden und verschieben könntest.\\
+			Peter & Ja, das wäre vielleicht speziell bei der Ideenfindung, wo alles durcheinander steht, oder auch bei Skizzen in einem Brainstorming technischer Natur interessant. Weil meistens ist der zweite Schritt dann der, dass ich anfange die Ideen zu ordnen. Also es wäre gut, um den ersten Prozess der Ideenfindung nicht zu stoppen bzw. ihm eine Hürde zu geben, sondern gleich weiterarbeiten zu können. Und da ist es eben notwendig das Ganze in eine Ordnung zu bringen. Dann hätte ich wirklich eine Lösung wo alle gemeinsam arbeiten können.
+		\end{tabularx}
+	}
+	\captionX{Verschieben}
+\end{extract}
+
+Pi und Zed hatten die Idee, zusätzlich ein Trackpad anstatt einer Maus zusammen mit dem Tablet als Eingabegeräte zu nutzen. Das Tablet wäre nur für Schreiben und Zeichnen zuständig, während das Trackpad zu Positionierung des Cursors genutzt werden könnte. Eventuell würde man so die Steuerung für Benutzer optimieren, die im Umgang mit Tablets ungeübt sind.
+
+\begin{extract}[Ein Trackpad statt einer Maus könnte die Eingabe erleichtern.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Pi & Vielleicht ist die relative Projektion des Tabletts dann sinnvoll, wenn man zwei Eingabegeräte verwendet. Dann setze ich mit der Maus den Zeiger dorthin, wo ich ihn möchte und kann sofort dort los zeichnen, egal wo am Tablett sich mein Stift befindet. \emph{[...]} Oder man könnte auch überhaupt zwei Tablets haben, das eine zur Steuerung mit Gesten und das andere zum Zeichnen.\\
+			 & \emph{[...]}\\
+			Zed & Da würde sich doch das Magic Pad von Apple anbieten.
+		\end{tabularx}
+	}
+	\captionX{Trackpad}
+\end{extract}
+
+Von allen drei Designern wurde der Wunsch nach einer Online-Funktion geäußert. Sie alle haben schon öfter die Erfahrung gemacht, mit anderen Kollegen über das Internet zusammenzuarbeiten und es würde sich anbieten, \emph{Scribbler} dafür zu nutzen. Für die lokale Benutzung würden sich die beiden auch wünschen, dass nicht nur die Zeichnungen des aktiven Fensters sondern jene von inaktiven Fenstern im Hintergrund angezeigt werden. Um Chaos auf dem Bildschirm zu vermeiden könnte man beispielsweise Zeichnungen im Hintergrund in Grau und mit verschiedenen Alpha-Werten, entsprechend dem Z-Index des zugehörigen Fensters anzeigen.
+
+\begin{extract}[Es sollten nicht nur Zeichnungen des aktiven Fensters dargestellt werden.]
+	{
+		\myfloatalign
+		\begin{tabularx}{\textwidth}{p{1cm}X}
+			Zed & Das heißt es hängt alles an einem Fenster dran... hmmm, kannst du mal bitte das hintere Fenster aktivieren und es so verschieben, dass man die Fenster und Zeichnungen dahinter sieht?\\
+			Thomas & Hmm, das geht so nicht. Es werden immer nur die Zeichnungen auf dem aktiven Fenster angezeigt.\\
+			Zed & Ah, hmm. Ich glaub das irritiert mich, dass die Zeichnungen verschwinden. Vielleicht sollte man die ausgegraut anzeigen, so wie die inaktiven Fenster selbst.\\
+			Clemens & Es besteht dann die Gefahr, dass ein Chaos entsteht, wenn zu viele Linien angezeigt werden.\\
+			Zed & Ja stimmt, aber man könnte doch mit verschiedenen Alpha-Werten arbeiten, je nach dem, wie weit hinten sich ein Fenster befindet.\\
+			Thomas & Oh, ja das klingt nach einer guten Idee.\\
+			Pi & Man könnte dadurch den Kontext wahren und sehen was man bereits gemacht hat.
+		\end{tabularx}
+	}
+	\captionX{Inaktive Fenster}
+\end{extract}
+
+Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkeit von Zeichnungen zu Fenstern auf. Eine Idee wäre Farbe dafür einzusetzen, jedoch würde dies wiederum die Freiheit beim Zeichnen einschränken, da keine beliebigen Farben mehr gewählt werden können. Auch eine Darstellung, wer welche Zeichnungen gemacht hat, sollte es geben. Im Testsetting, das die Arbeitsgruppe an der Universität eingesetzt hat, wurde dies so gelöst, dass jedem Tablet eine Farbe zugewiesen wurde. Zu jedem gab es mehrere Stifte, die unterschiedliche Helligkeitswerte mit dem Farbwert des Tablets kombinierten. So konnte zumindest etwas Variation eingebracht werden. Im kollaborativen Setting wäre es ebenfalls wünschenswert, wenn mehrere Benutzer gleichzeitig auf verschiedene Fenster zeichnen könnten und die Zeichnungen dem jeweiligen darunter liegenden Fenster zugeordnet werden könnten. Dies stellt natürlich eine große technische Hürde dar und bei einer Weiterentwicklung von \emph{Scribbler} muss die Machbarkeit erst exploriert werden.
+
+Peter, der Produktdesigner, würde außerdem ein Kontextmenü benötigen, das ihm ein paar Optionen anbietet. Gängige Skizzierprogramme bieten diese Funktion an und ermöglichen so eine sehr hohe Effizienz bei der Arbeit.
+
+\section{Achievements}
 
 \section*{Zusammenfassung}
 lorem ipsum
