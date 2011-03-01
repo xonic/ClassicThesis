@@ -16,7 +16,7 @@ Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm
 
 \medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen.
 
-\section{Anforderungen an kollaborative Skizziersysteme}
+\section{Anforderungen an kollaborative Skizziersysteme} \label{sec:anforderungen}
 Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren}. \autoref{fig:scribblerKollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren.
 
 \begin{figure}
@@ -109,7 +109,7 @@ Durch die erstellten Prototypen vor der Implementierung des Programms, war es m�
 
 \section{Scribbler at a Glance}
 
-\subsection{Technik}
+\subsection{Technik} \label{sec:technik}
 \begin{lstlisting}[float,caption=A scribbler code snippet]
 for i:=maxint to 0 do
 begin
@@ -355,6 +355,24 @@ Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkei
 Peter, der Produktdesigner, würde außerdem ein Kontextmenü benötigen, das ihm ein paar Optionen anbietet. Gängige Skizzierprogramme bieten diese Funktion an und ermöglichen so eine sehr hohe Effizienz bei der Arbeit.
 
 \section{Achievements}
+Abschließend wollen wir nun kurz die in \autoref{sec:anforderungen} beschriebenen Anforderungen an ein kollaboratives Skizziertool, mit den umgesetzten Merkmalen von Scribbler gegenüberstellen und somit auswerten. Wiederum teilten wir die Merkmale von Scribbler in die vier Einflussfaktoren: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren}.  \autoref{fig:scribblerAnforderungsauswertung} veranschaulicht diese durch eine farbliche Kennzeichnung der ursprünglichen Erkenntnisse aus der Literatur. In Grün gehaltene Erkenntnisse wurden in der Betaversion von \scribbler bereits behandelt, rot eingefärbte konnten (noch) nicht umgesetzt werden.
+
+\medskip Wie die Abbildung erkennen lässt, konnte ein Großteil der Anforderungen umgesetzt werden - um genau zu sein 17 (77,27\%). Die restlichen 5 (22,73\%) blieben vorwiegend durch technische Probleme bis dato ungelöst.
+
+\medskip \emph{Hardware} Durch das Benutzen von Grafiktablets in Verbindung mit einem Flatscreen, schufen wir laut Lee ein solides Setting für unser System und legten die Weichen für unsere Whiteboardfunktion. Die zwei Hauptmodi von \scribbler - der \emph{Skizziermodus} und der \emph{Mausmodus} - können explizit durch Tabletbuttons gewechselt werden. Beobachtungen zeigten uns, dass dies den Arbeitsfluss beschleunigte.\\
+Der derzeit größte Stolperstein in \scribbler ist jedoch die Tatsache, dass das System nur einem Benutzer erlaubt, digitale Inhalte zu bearbeiten und nicht allen gleichzeitig. Unsere Userreviews zeigten ganz klar den Wunsch nach dieser Funktion. Nur so können Koordinationsschwierigkeiten vermindert werden. \\
+Ebenso erkannten wir, dass besonders Benutzer mit wenig Tableterfahrung, Probleme bei der Benutzung der Buttons an den Tabletstiften haben.
+
+\medskip \emph{Software} Wir haben versucht \scribbler so simpel wie möglich aufzubauen, indem wir uns funktionell auf Freihandzeichnungen beschränkten. Somit soll sicher gestellt werden, dass die Aufmerksamkeit bei der Benutzung auf das Designproblem an sich und nicht auf das System fällt. \\
+Durch die \emph{Accessibility} Funktion von \emph{Mac OS X} (vgl. \ref{sec:technik} \nameref{sec:technik}) hatten wir ein universelles Medium, um auf beliebigen Content zu zeichnen. Somit konnten wir ein universelles Annotierungsprogramm entwickeln. \\ 
+Das Umschalten der Modi kann wie vorher beschrieben explizit durch Tabletbuttons geschehen, oder auch implizit durch das Wechseln zwischen der Maus und einem Tabletstift. Die implizite Methode führte zu keinerlei Problemen. Für den expliziten Wechsel führten wir die Kennzeichnung des Modus durch eine farbliche Fensterumrandung ein. Da die Umrandung aber erst erschien, wenn ein Stift in der Nähe des Tablets war, kam es trotzdem zu Verwirrungen. \\
+Schlussendlich bietet \scribbler eine Undofunktion die sich im Gegensatz zur Radierfunktion als äußerst hilfreich herausstellte.
+
+\medskip \emph{Kollaboration} Durch die hardwarespezifischen Einschränkungen war es unmöglich allen Benutzern einen Nutzen zuzuteilen. Die Koordinationsaufwände stiegen dadurch ebenfalls. Aus diesem Grund war es aber stets klar, wer gerade auf einem digitalen Artefakt zeichnet, womit alle über die Tätigkeiten der anderen im Bilde waren.\\
+Durch das Fehlen unnötiger Paletten oder Menüs konnten wir ebenfalls einen flüssigeren Ablauf von Aktivitäten sichern. Da sich alle Mitglieder der jeweiligen Testsessions im selben Raum aufhielten und durchgehend Sichtkontakt behielten, waren Gesten fortwährend vorhanden und konnten so zur Lösung eines Problems beitragen.
+
+\medskip \emph{Skizzieren} Unser System ist ein unstrukturiertes Skizziertool. Durch die Verbindung mit den Grafiktablets kommt es durchaus an die Schnelligkeit von Papier-und-Stift Skizzen heran. Während der Laufzeit von \scribbler wird stets der Kontext zu den Skizzen bewahrt. Somit stellt Scrolling auch kein Problem dar. \\
+Gerade die Tests am Beginners' Day zeigten, dass durchaus Hemmungen beim Erstellen von Zeichnungen auftreten. Private Zeichenflächen könnten dagegen helfen, fehlen derzeit aber noch in unserem Prototypen.
 
 \begin{figure}
 	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/scribblerAnforderungsauswertung}}
