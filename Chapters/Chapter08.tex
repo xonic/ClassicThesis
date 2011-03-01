@@ -4,24 +4,24 @@
 
 In den vergangenen Kapitel zeigten wir mit etlichen Beispielen wie und mit welchen Hilfsmitteln Gruppenmeetings abgehalten werden können. Sind es traditionelle Medien wie Papier und Filpcharts, oder elektronische Medien wie computerunterstützte Whiteboardsysteme - sie alle finden Einsatz in Designsessions und bieten verschiedenste Vor- und Nachteile.
 
-\medskip Im Folgenden wollen wir \emph{Scribbler} vorstellen, ein elektronisches Interface, das die kollaborative Arbeit an virtuellen Artefakten unterstützen soll. Ähnlich wie die Autoren der bereits im ersten Kapitel beschriebenen Systeme, versuchten wir ein System zu kreieren, das die beiden Design-Arbeitswelten - geprägt durch traditionelle und elektronische Medien - mit einander verbindet und ihre Vorteile herausarbeitet. Im Gegensatz zu den bisherigen Ansätzen jedoch, ist \emph{Scribbler} ein elektronisches Skizziersystem, welches ein barrierefreies Arbeiten ermöglicht.
+\medskip Im Folgenden wollen wir \scribbler vorstellen, ein elektronisches Interface, das die kollaborative Arbeit an virtuellen Artefakten unterstützen soll. Ähnlich wie die Autoren der bereits im ersten Kapitel beschriebenen Systeme, versuchten wir ein System zu kreieren, das die beiden Design-Arbeitswelten - geprägt durch traditionelle und elektronische Medien - mit einander verbindet und ihre Vorteile herausarbeitet. Im Gegensatz zu den bisherigen Ansätzen jedoch, ist \scribbler ein elektronisches Skizziersystem, welches ein barrierefreies Arbeiten ermöglicht.
 
-\medskip Um dies zu zeigen, wollen wir vorerst, nach einer kurzen Beschreibung unserer Ausgangsituation, die Anforderungen eines kollaborativen Skizziersystems, die wir durch unsere Literaturrecherche gesammelt haben, zusammengefasst präsentieren. Danach werden wir die Vorgehensweise zur Erstellung unseres Prototyps schildern, welche selbst einige Designmethoden aus \autoref{ch:designTheorie} beinhaltet. Anschließend präsentieren wir die simple Oberfläche von \emph{Scribbler} und dessen Funktionsumfang mit technischen Hintergründen. Zu guter Letzt stellen wir die Anforderungen und Merkmale gegenüber und beschreiben gewonnene Erkenntnisse aus Benutzererfahrungen.
+\medskip Um dies zu zeigen, wollen wir vorerst, nach einer kurzen Beschreibung unserer Ausgangsituation, die Anforderungen eines kollaborativen Skizziersystems, die wir durch unsere Literaturrecherche gesammelt haben, zusammengefasst präsentieren. Danach werden wir die Vorgehensweise zur Erstellung unseres Prototyps schildern, welche selbst einige Designmethoden aus \autoref{ch:designTheorie} beinhaltet. Anschließend präsentieren wir die simple Oberfläche von \scribbler und dessen Funktionsumfang mit technischen Hintergründen. Zu guter Letzt stellen wir die Anforderungen und Merkmale gegenüber und beschreiben gewonnene Erkenntnisse aus Benutzererfahrungen.
 
-\section{Ausgangsituation \& Rahmenbedingungen}
+\section{Ausgangssituation \& Rahmenbedingungen} \label{sec:ausgangssituation}
 Die Technisierung vieler Berufe führte dazu, dass gewisse Arbeitsgegenstände ein elektronisches Abbild bekamen. Grafikdesigner beispielsweise fertigen heutzutage Präsentationszeichnungen, im Gegensatz zu früher, digital an. Neuere Berufsparten wie Interfacedesign setzen die tagtägliche Arbeit mit digitalen Artefakten vorraus. Wie schon in den vorigen Kapitel erwähnt, ist (im Besonderen) Design eine kollaborative Tätigkeit, wofür sich Gruppen zu Meetings treffen um gemeinsam neue Lösungen zu erarbeiten. Ein bewährtes und wichtiges Instrument dazu sind Stifte zur Erstellung von Skizzen, um Gedanken zu manifestieren.\\
 Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm oder Projektor, der als Präsentationsmittel verwendet wird. Zudem ist meistens eine Zeichenfläche vorhanden, wie z.B. Whiteboards oder Flip-Charts, um kollaborativ erarbeitete Ideen festzuhalten und neue Ideen zu explorieren.
 
 \medskip Das Institut für Gestaltungs- und Wirkungsforschung an der TU Wien verfügt über so einen Meetingraum. Er besteht aus mehreren Tischen, die in der Mitte des Raumes zusammen gestellt wurden und um denen sich Sitzmöglichkeiten befinden. Neben einem Flip-Chart befindet sich ein {52\dq} großer Bildschirm in der Mitte einer Wand, auf den alle Meetingteilnehmer, von ihren Sitzplätzen aus, blicken können. Mit dem Screen ist ein Computer (Apple Mac Mini) verbunden, auf den Daten über ein drahtlos Netzwerk gespielt werden können. Eine zusätzliche drahtlose Tastatur und Maus ermöglichen eine bequeme Steuerung. Zusätzliche Peripherie kann auf der Hinterseite des Computers angeschlossen werden.
 
-\medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \emph{Scribbler} soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen.
+\medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen.
 
-\section{Anforderungen eines kollaborativen Skizziersystems}
-Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren}. \autoref{fig:kollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren.
+\section{Anforderungen an kollaborative Skizziersysteme}
+Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren}. \autoref{fig:scribblerKollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren.
 
 \begin{figure}
-	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/kollaborativesSkizziersystem}}
-		\caption[Anforderungen eines kollaborativen Skizzersystems]{Anforderungen eines kollaborativen Skizzersystems, bestehend aus den vier Einflussfaktoren: Hardware, Software, Kollaboration \& Skizzieren.}\label{fig:kollaborativesSkizziersystem}
+	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/scribblerKollaborativesSkizziersystem}}
+		\caption[Anforderungen eines kollaborativen Skizzersystems]{Anforderungen eines kollaborativen Skizzersystems, bestehend aus den vier Einflussfaktoren: Hardware, Software, Kollaboration \& Skizzieren.}\label{fig:scribblerKollaborativesSkizziersystem}
 \end{figure}
 
 \medskip \emph{Hardware} Ein ideales Setting für ein kollaboratives Skizziertool wäre laut Lee ein Grafiktablet in Verbindung mit einem Flatscreen. Dies wäre die bestmöglichste Annäherung zu einer Technologie, die Stift und Papier ersetzen könnte. Sie würde ebenso zur Umsetzung eines Whiteboard Systems beitragen, was einen wichtigen Bestandteil kollaborativen Arbeitens ausmacht. Buttons an Tabletstiften können schwer benutzbar sein und sich auf längere Zeit unangenehm auswirken, deswegen sollte davon abgeraten werden diese mit einer Funktion zu belegen. 
@@ -35,11 +35,77 @@ Will man ein universelles Annotierungstool schaffen, das über alle verwendeten 
 \medskip \emph{Skizzieren} Das Zeichnen mit einem strukturierten Softwaretool kommt nicht an die Schnelligkeit von unstrukturierten Papier- und-Stift Skizzen heran. Eine >>auf dem Bildschirm kritzeln<< Metapher ist somit einfach und universell einsetzbar. Skizzen verlieren außerhalb des Kontextes ihre Bedeutung. Somit muss darauf geachtet werden, dass der Kontext stets bewahrt wird. Scrolling befördert z.B. einen Teil des Annotierungskontextes aus dem Blickfeld und benötigt somit zusätzliche Aufmerksamkeit bei der Umsetzung. Zudem könnte eine zusätzliche private Zeichenfläche mögliche Zeichenhemmungen von Teilnehmern nehmen. Alles in Allem haben wir das kreative Potential - ein Skizziersystem muss sich entsprechend adaptieren können.
 
 \section{Vorgehensweise}
+Nachdem wir erfuhren, dass Bedarf an einem elektronischen Skizziersystem bestand, begaben wir uns auf die Suche nach vergleichbaren Systemen. Dazu trafen wir uns für ein Brainstorming und explorierten verschiedene Begriffe, die uns zu dem Thema einfielen. In diversen Onlinedatenbanken fanden wir zu dazu Unmengen an Literatur und so Hinweise zu bestehenden kollaborativen Skizziertools. Nachdem wir die gesammelten Werke gemeinsam besprachen, erstellten wir ein vorläufiges Anforderungsprofil. \\
+Eine wichtige Designfrage stellte sich schon zu diesem Zeitpunkt. Auf welche Eingabetechnologie sollten wir setzen? \autoref{fig:scribblerVorgehensweise} zeigt unsere Aufzeichnungen zu der wohl wichtigsten hardwarespezifischen Frage. Würden wir Skizzen erst nachträglich digitalisieren, wäre das System unabhängig von notwendigen Gerätschaften, was der Flexibilität des Systems zu Gute kommen würde. Jedoch ist es schwer gezeichnete Objekte nachträglich zu erkennen, wozu Mustererkennung notwendig wäre und das Ergebnis vielleicht nicht dem entspricht, was man eigentlich gezeichnet hat. Würden wir gleich auf digitales Zeichnen setzen, z.B. via Tablets, wäre die Flexibilität des Systems zwar eingeschränkt aber das Ergebnis akkurater. \\
+Wir einigten uns, unter Absprache mit dem Institut, auf die zweite Variante, da Tablets bereits vorhanden waren und für einen ersten Prototypen ausreichen sollten.
+
+\begin{figure}
+	        {\includegraphics[width=1\linewidth]{gfx/scribblerVorgehensweise}}
+		\caption[Aufzeichnung zur frühesten Designfrage]{Aufzeichnung zur frühesten Designfrage. Sollten Skizzen nachträglich digitalisiert werden oder sollte gleich auf digitales Zeichnen gesetzt werden?}\label{fig:scribblerVorgehensweise}
+\end{figure}
+
+Mit einem groben Konzept im Hinterkopf machten wir uns anschließend daran zu verstehen, wie skizziert wird. Dazu spielten wir selbst kreierte Szenarien mittels Skizzen durch. Später bauten wir simple Prototypen und versuchten das Skizzierverhalten unterschiedlicher Probanden zu analysieren. Nach einigen Tests konnten wir unser Konzept gering verfeinern, mussten aber gezwungenerweise frühzeitig damit beginnen, funktionellere Prototypen herzustellen. Da kein Mockup dieses stark verflochtene kollaborative Setting nachstellen könnte, begannen wir mit der Implementierung.
+
+\bigskip \emph{Anmerkung: \graffito{\(\clubsuit\)} An dieser Stelle fiel erstmals der Begriff >>Scribbler<<, den wir weiters als Codenamen in unserem Projekt benutzten.}
+\bigskip
+
+Wir testeten jedoch fortlaufend unseren Prototypen, bis wir zu einem Punkt angelangten, an dem wir eine Betaversion unseres Programms definieren konnten, welches wir abschließend Userreviews unterzogen.
+
+\medskip Wir wollen nun in den folgenden Punkten die angesprochenen verwendeten Designmethoden (vgl. \autoref{sec:designmethoden}) erläutern und mit Bildern untermalen. Sie sollen reichhaltiges Material zu Teilen des Designprozesses bieten, um auch diese durch praktische Beispiele zu konkretisieren.
 
 \subsection{Recherche}
+Recherchen gehören zwar nicht direkt zu Designmethoden, sind aber trotzdem ein wichtiger Teil in der Entwicklung eines Produkts. Durch Recherchen bringt man in Erfahrung, ob es bereits ähnliche Produkte oder Systeme auf dem Markt und in der Forschung gibt und bekommt gegebenenfalls einen Einblick in dessen Funktionsweisen.
+
+\medskip Durch unsere Literaturrecherche fanden wir einige vergleichbare Systeme, mit der großen Einschränkung, dass Content und Input bisher nicht mit einander verknüpft werden. Es gibt zwar Annäherungen, jedoch bringen diese den Inhalt nur in eine statische Scheinbeziehung mit den Eingaben. Dies zeigte uns, dass wir auf dem richtigen Weg waren und der Bedarf eines neuen Skizziersystems, welches dieses Merkmal aufweisen würde, über die Grenzen des Instituts hinausgehen könnte. \\
+Zusätzlich wies Literatur bereits auf Probleme hin, die durch die notwendige Selektion eines Werkzeuges entstehen können (vgl. \ref{sec:ModusProblem} \nameref{sec:ModusProblem}).
+
+\medskip Die Recherchen wiesen uns in die richtige Richtung und ermöglichten uns neue Sichtweisen auf das geplante System, welche schließlich zum vorläufigen Anforderungsprofil führten.
+
 \subsection{Skizzieren}
+Das alleinige bzw. gemeinsame Skizzieren war das wichtigste Instrument in den Anfangsphasen von Scribbler. Skizzen ermöglichten uns Ideen zu veranschaulichen bzw. neue zu generieren und dienten somit auch als Diskussionsbasis. \\
+Bei der Literaturrecherche fungierte meistens einer als Schreiber, der die wichtigsten besprochenen Fakten zusammengefasst in Stichwörter und kurzen Sätzen aufschrieb (vgl. \autoref{fig:scribblerVorgehensweise}). Skizzen wurden manchmal angefertigt um bestimmte Vorgehensweisen aus der Literatur zu illustrieren. Dies führte meist zu kollaborativen Arbeitsvorgängen, bei denen zusammen an einer Skizze gearbeitet wurde. 
+
+\medskip Später wurden wie bereits erwähnt Skizzen zu wichtigen Szenarien erstellt. Eine farbliche Kennzeichnung war dabei oft sehr hilfreich. Zudem konnten Zugehörigkeiten oder zeitliche Abläufe durch Hinzufügen von Nummerierungen leicht angedeutet werden (siehe \autoref{fig:scribblerSzenarien}).
+
+\medskip Abschließend zeigt \autoref{fig:scribblerDetailSkizze} ein Beispiel einer detaillierten Skizze, die dazu verwendet wurde um technische Abläufe zu verstehen. Sie entstand im Laufe der Entwicklung, in der ständig neue Ideen geboren wurden, welche durch Skizzen innerhalb des Teams erforscht wurden.
+
+\begin{figure}
+	\begin{center}
+	        {\includegraphics[width=0.8\linewidth]{gfx/scribblerSzenarien}}
+		\caption[Skizzierte Szenarien in Scribbler]{Skizzierte Szenarien in Scribbler. Zugehörigkeiten wurden durch eine Nummerierung gekennzeichnet.}\label{fig:scribblerSzenarien}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	        {\includegraphics[width=1\linewidth]{gfx/scribblerDetailSkizze}}
+		\caption[Detailskizze eines technischen Ablaufs]{Detaillierte Skizze eines technischen Ablaufs, um diesen besser zu verstehen.}\label{fig:scribblerDetailSkizze}
+\end{figure}
+
 \subsection{Prototyping}
-\subsection{User Testing}
+Das Erarbeiten von Prototypen war keine leichte Aufgabe, da das Setting an sich, durch die verschiedenen Einflussfaktoren, kompliziert erschien. Dennoch konnten wir anfangs simple Prototypen, sog. Mockups bauen, um vorerst detailliertere Szenarien für uns zu erstellen und später das Skizzierverhalten einiger Probanden zu beobachten. Mockups sind low-fidelity Prototypen, wie beispielsweise auch Papierprototypen, die einen Wegwerfcharakter besitzen. Das bedeutet sie sind leicht zu Erstellen und bieten genug Funktionalität um Tests durchführen zu können.
+
+\medskip \autoref{fig:scribblerMockups} zeigt ein Mockup, dass im Wesentlichen nur aus einem Screenshot eines \acs{WIMP}-Systems bestand (in unserem Fall Mac OS X mit zwei offenen Programmfenster) und in Verbindung mit einem Tablet PC benutzt wurde. Die für uns erstellten Szenarien, wurden durch den höheren Detailgrad konkreter, wodurch wir mehrere Funktionen im Voraus planen konnten. Später verwendeten wir diese dann um erste Tests durchzuführen. Der Prototyp beschränkte die Interaktionen der Benutzer auf das Skizzieren. So konnten wir beispielsweise feststellen, welche Plätze zum Zeichnen gesucht werden, wie bestimmte Elemente markiert werden oder Zusammenhänge von Inhalten hergestellt werden.
+
+\begin{figure}
+	        {\includegraphics[width=1\linewidth]{gfx/scribblerMockups}}
+		\caption[Mockups in Scribbler]{Simple Mockups, die durch Screenshots auf einem Tablet PC erstellt wurden.}\label{fig:scribblerMockups}
+\end{figure}
+
+\medskip Darauf folgende Prototypen waren ausprogrammierte Versionen von Scribbler, welche ebenfalls für Tests verwendet wurden.
+
+\subsection{(User-) Testing}
+Durch die erstellten Prototypen vor der Implementierung des Programms, war es möglich einen kleinen Funktionsteil mit Usern zu testen. Wichtige Systemverhaltensweisen bzw. Interaktionen konnten aber nur durch zusätzliche Testdurchgänge, während der Umsetzung, auf Verständlichkeit und Anklang geprüft werden.
+
+\medskip Der Vorteil dieser Testdurchläufe, war die geringe Vorbereitungszeit. Es mussten keine bestimmten Anweisungen oder Aufgaben gestellt werden, da wir erstens die reale Welt um Bezug auf das Skizzieren mit Papier und Stift nachbilden wollten - was jedermann bereits in der Kindheit erlernt - und zweitens keine aufwändigen Aufgaben von Nöten waren. Probanden konnten einfach >>loskritzeln<<.
+
+\medskip Wir hatten zudem die Möglichkeit \scribbler innerhalb einer Gruppe von fünf Personen zu testen, die an einem bestimmten Design arbeiteten und den in \autoref{sec:ausgangssituation} beschriebenen Meetingraum vom Institut dazu nutzten (siehe \autoref{fig:scribblerUserTest}).
+
+\begin{figure}
+	        {\includegraphics[width=1\linewidth]{gfx/scribblerUserTest}}
+		\caption[Scribblertesting in einer Designsession]{Scribblertesting in einer Designsession. Fünf Personen überarbeiten mittels Scribbler ein Designvorschlag.}\label{fig:scribblerUserTest}
+\end{figure}
+
+\medskip Nach Fertigstellung der Betaversion, konnten wir \scribbler zusätzlich am Beginners's Day\footnote{Der beginners' day ist eine Infoveranstaltung für alle Studienanfängerinnen und Studienanfänger in den Informatik-, Wirtschaftsinformatik- und Lehramtsstudien. \citep{TU:2010}} der TU Wien vorführen und mit vielen erstsemestrigen Studenten testen. Abschließend konnten wir auch ausführliche Tests mit Designer durchführen, welche wir in \autoref{sec:userReview} ausführlicher beschreiben werden.
 
 \section{Scribbler at a Glance}
 
@@ -53,20 +119,20 @@ end;
 
 \subsection{GUI Design}
 
-\section{User Review}
-Der Prototyp von \emph{Scribbler} wurde von uns mit verschiedenen potenziellen Nutzern getestet. Darunter drei Designer aus den Bereichen Produkt-, Interaction-, und User Experience Design, die sich an \emph{Scribbler} in einem reduzierten Setting, sprich mit nur einem Tablet versuchten. Zusätzlich setzte eine Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien \emph{Scribbler} in einem kollaborativen Setting bei einem Projekt-Meeting ein. 
+\section{User Review} \label{sec:userReview}
+Der Prototyp von \scribbler wurde von uns mit verschiedenen potenziellen Nutzern getestet. Darunter drei Designer aus den Bereichen Produkt-, Interaction-, und User Experience Design, die sich an \scribbler in einem reduzierten Setting, sprich mit nur einem Tablet versuchten. Zusätzlich setzte eine Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien \scribbler in einem kollaborativen Setting bei einem Projekt-Meeting ein. 
 
-Bei allen drei Sitzungen wurden die Aktionen der Testpersonen durch eine Videokamera gefilmt und ihre Kommentare auf einem Tonträger festgehalten. Die drei Designer wurden zusätzlich von uns interviewt und die Transkripte sind im Appendix im Kapitel \nameref{cha:interviews} zu finden.
+Bei allen drei Sitzungen wurden die Aktionen der Testpersonen durch eine Videokamera gefilmt und ihre Kommentare auf einem Tonträger festgehalten. Die drei Designer wurden zusätzlich von uns interviewt und die Transkripte sind im Appendix im Kapitel \nameref{ch:interviews} zu finden.
 
 In den folgenden Abschnitten betrachten wir nun positives und kritisches Feedback, das aus diesen Tests hervorgegangen ist.
 
-\section{Positives Feedback}
+\subsection{Positives Feedback}
 
-\emph{Scribbler} wurde von den Testpersonen durchwegs positiv aufgenommen und alle waren interessiert an Konzept und Funktionsweise. Die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien konnte den Prototypen produktiv bei ihrem Projekt-Meeting einsetzen und die Idee hinter \emph{Scribbler} wurde als sinnvoll erachtet. 
+\scribbler wurde von den Testpersonen durchwegs positiv aufgenommen und alle waren interessiert an Konzept und Funktionsweise. Die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien konnte den Prototypen produktiv bei ihrem Projekt-Meeting einsetzen und die Idee hinter \scribbler wurde als sinnvoll erachtet. 
 
-Peter, seines Zeichens Produktdesigner und Dozent an der Universität für angewandte Kunst Wien, konnte sich sehr schnell mit \emph{Scribbler} anfreunden und bewertete das Konzept sehr gut.
+Peter, seines Zeichens Produktdesigner und Dozent an der Universität für angewandte Kunst Wien, konnte sich sehr schnell mit \scribbler anfreunden und bewertete das Konzept sehr gut.
 
-\begin{extract}[Peter, Produktdesigner, über \emph{Scribbler}.]
+\begin{extract}[Peter, Produktdesigner, über \scribbler.]
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1cm}X}
@@ -76,13 +142,13 @@ Peter, seines Zeichens Produktdesigner und Dozent an der Universität für angew
 	\captionX{Traumsituation}
 \end{extract}
 
-Er könnte sich vorstellen, das Tool im Unterricht im kollaborativen Setting einzusetzen und erklärt, in welchen spezifischen Situationen \emph{Scribbler} nützlich wäre und in welchen nicht.
+Er könnte sich vorstellen, das Tool im Unterricht im kollaborativen Setting einzusetzen und erklärt, in welchen spezifischen Situationen \scribbler nützlich wäre und in welchen nicht.
 
-\begin{extract}[Peter über den Einsatz von \emph{Scribbler} im Unterricht.]
+\begin{extract}[Peter über den Einsatz von \scribbler im Unterricht.]
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1cm}X}
-    		Peter & Ja das wäre super, wenn ich das im Unterricht einsetzen könnte. Es wäre spitze wenn jeder die Möglichkeit hätte, mitzuarbeiten. Wobei ich nicht ganz sicher bin ob Darstellungstechnik das passende Unterrichtsfach für \emph{Scribbler} ist, weil da geht es konkret um das Zeichnen und dann reichen Grobskizzen leider nicht aus, sondern man muss schon detaillierte Zeichnungen anfertigen. Anders sieht es da bei Designvisualisierungen aus, die auch in meinem Unterricht vorkommen. Da wäre es wirklich cool, die Studenten direkt einzubinden. Jeder könnte auch Stichworte dazuschreiben und ähnlich einem Brainstorming vernetzen. Das könnte ich mir gut vorstellen. 
+    		Peter & Ja das wäre super, wenn ich das im Unterricht einsetzen könnte. Es wäre spitze wenn jeder die Möglichkeit hätte, mitzuarbeiten. Wobei ich nicht ganz sicher bin ob Darstellungstechnik das passende Unterrichtsfach für \scribbler ist, weil da geht es konkret um das Zeichnen und dann reichen Grobskizzen leider nicht aus, sondern man muss schon detaillierte Zeichnungen anfertigen. Anders sieht es da bei Designvisualisierungen aus, die auch in meinem Unterricht vorkommen. Da wäre es wirklich cool, die Studenten direkt einzubinden. Jeder könnte auch Stichworte dazuschreiben und ähnlich einem Brainstorming vernetzen. Das könnte ich mir gut vorstellen. 
 		\end{tabularx}
 	}
 	\captionX{Einsatz im Unterricht}
@@ -114,9 +180,9 @@ Jedem Stift eine eigene Farbe zuzuweisen findet Peter gut. Für seine Zwecke ben
 	\captionX{Farben}
 \end{extract}
 
-Das Whiteboard, das in \emph{Scribbler} eingeblendet werden kann und dazu dient, auf eine weiße Fläche statt einem bestimmten Fenster zu zeichnen, wurde von allen Testpersonen positiv bewertet. Es gibt Situationen, in denen man schnell etwas aufkritzeln möchte, das nicht mit dem Fensterkontext in Verbindung steht, beispielsweise eine spontane Idee für ein Konzept oder ein Design. In diesen Momenten bietet \emph{Scribbler} die passende Funktion und die Idee kann so abseits vom aktuellen Geschehen festgehalten und später wieder abgerufen werden.
+Das Whiteboard, das in \scribbler eingeblendet werden kann und dazu dient, auf eine weiße Fläche statt einem bestimmten Fenster zu zeichnen, wurde von allen Testpersonen positiv bewertet. Es gibt Situationen, in denen man schnell etwas aufkritzeln möchte, das nicht mit dem Fensterkontext in Verbindung steht, beispielsweise eine spontane Idee für ein Konzept oder ein Design. In diesen Momenten bietet \scribbler die passende Funktion und die Idee kann so abseits vom aktuellen Geschehen festgehalten und später wieder abgerufen werden.
 
-Durch \emph{Scribbler} ist es möglich, auf mehrere nebeneinander angeordnete Fenster des Desktops zu zeichnen und dadurch semantische Verbindungen herzustellen. Dadurch können Inhalte auf eine ganz neue Art und Weise präsentiert werden. Momentan ist es so, dass Zeichnungen sich immer an das aktive Fenster, beispielsweise das Browserfenster heften und ihre Position relativ zur Fenster- und Scrollposition mitbewegen.
+Durch \scribbler ist es möglich, auf mehrere nebeneinander angeordnete Fenster des Desktops zu zeichnen und dadurch semantische Verbindungen herzustellen. Dadurch können Inhalte auf eine ganz neue Art und Weise präsentiert werden. Momentan ist es so, dass Zeichnungen sich immer an das aktive Fenster, beispielsweise das Browserfenster heften und ihre Position relativ zur Fenster- und Scrollposition mitbewegen.
 
 \begin{extract}[Zeichnungen heften sich an das aktive Fenster, auch wenn außerhalb dessen gezeichnet wird.]
 	{
@@ -138,33 +204,33 @@ Als Produktdesigner zeichnet Peter wahnsinnig gerne und tut dies auch während e
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1cm}X}
-			Peter & Was hier [in \emph{Scribbler}] auch gut funktioniert, ist das Verdeutlichen von Ideen. Ich bin jemand, der irrsinnig gerne zeichnet zum Reden. Ich könnte so z.B. ein paar Punkte rausholen und einen Teil, der hier im Bereich unten schwer zu erkennen ist, noch einmal rauszeichnen.
+			Peter & Was hier [in \scribbler] auch gut funktioniert, ist das Verdeutlichen von Ideen. Ich bin jemand, der irrsinnig gerne zeichnet zum Reden. Ich könnte so z.B. ein paar Punkte rausholen und einen Teil, der hier im Bereich unten schwer zu erkennen ist, noch einmal rauszeichnen.
 		\end{tabularx}
 	}
 	\captionX{Kommunikation}
 \end{extract}
 
-Deshalb sieht er für \emph{Scribbler} gute Einsatzmöglichkeiten bei Brainstormings und in Ideenfindungsphasen. Dadurch können Konzepte und Ideen schnell und effizient vermittelt und Inspiration gefördert werden. Ebenfalls denkbar wäre für ihn der Einsatz von \emph{Scribbler} in Graphic-Recording-Meetings. Es handelt sich dabei um Sitzungen, bei denen eine Person jegliche verbale Kommunikation in der Gruppe als Skizzen festhält.
+Deshalb sieht er für \scribbler gute Einsatzmöglichkeiten bei Brainstormings und in Ideenfindungsphasen. Dadurch können Konzepte und Ideen schnell und effizient vermittelt und Inspiration gefördert werden. Ebenfalls denkbar wäre für ihn der Einsatz von \scribbler in Graphic-Recording-Meetings. Es handelt sich dabei um Sitzungen, bei denen eine Person jegliche verbale Kommunikation in der Gruppe als Skizzen festhält.
 
 \begin{extract}[Ein Einsatz bei Graphic-Recordings wäre denkbar.]
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1cm}X}
-			Peter & Das ist eine recht interessante Geschichte. Es handelt sich um Leute, die Meetings mit zeichnen. Das passiert analog auf einem Blatt Papier mit Stift. Nehmen wir an da sitzen mehrere Techniker und andere in ein Projekt verwickelte Personen, die Konzepte verbal besprechen und dann gibt es einen Zeichner, der, während die Leute ihre Ideen artikulieren, diese direkt zu Papier bringt und aufzeichnet. Darauf baut dann die Diskussion weiter auf und die Teilnehmer können gleich auf die Skizzen eingehen und sie weiter entwickeln oder verwerfen. Am Ende kann man anhand der Bilder nachvollziehen, worüber gesprochen worden ist. Das wäre sicherlich auch ein Gebiet, bei dem man \emph{Scribbler} oder ähnliche Anwendungen zum Einsatz bringen könnte.
+			Peter & Das ist eine recht interessante Geschichte. Es handelt sich um Leute, die Meetings mit zeichnen. Das passiert analog auf einem Blatt Papier mit Stift. Nehmen wir an da sitzen mehrere Techniker und andere in ein Projekt verwickelte Personen, die Konzepte verbal besprechen und dann gibt es einen Zeichner, der, während die Leute ihre Ideen artikulieren, diese direkt zu Papier bringt und aufzeichnet. Darauf baut dann die Diskussion weiter auf und die Teilnehmer können gleich auf die Skizzen eingehen und sie weiter entwickeln oder verwerfen. Am Ende kann man anhand der Bilder nachvollziehen, worüber gesprochen worden ist. Das wäre sicherlich auch ein Gebiet, bei dem man \scribbler oder ähnliche Anwendungen zum Einsatz bringen könnte.
 		\end{tabularx}
 	}
 	\captionX{Graphic-Recording}
 \end{extract}
 
-\section{Kritisches Feedback}
-Die Tests mit den potentiellen Benutzern haben nicht nur positive, sondern auch kritische Aspekte von \emph{Scribbler} enthüllt. Einige davon waren uns bereits vor dem Testen bewusst und wurden durch die Tests und Interviews bestätigt, andere waren komplett neue Einsichten und haben uns auf wichtige Dinge aufmerksam gemacht. Die einzelnen Punkte haben unterschiedliche Gründe und werden im folgenden verschiedenen Kategorien zugeordnet, um ein besseres Verständnis zu bieten.
+\subsection{Kritisches Feedback}
+Die Tests mit den potentiellen Benutzern haben nicht nur positive, sondern auch kritische Aspekte von \scribbler enthüllt. Einige davon waren uns bereits vor dem Testen bewusst und wurden durch die Tests und Interviews bestätigt, andere waren komplett neue Einsichten und haben uns auf wichtige Dinge aufmerksam gemacht. Die einzelnen Punkte haben unterschiedliche Gründe und werden im folgenden verschiedenen Kategorien zugeordnet, um ein besseres Verständnis zu bieten.
 
-\subsection{Unvollständigkeit des Prototypen}
-Als die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung \emph{Scribbler} in einem kollaborativen Setting beim Meeting einsetzte, war die erste Aktion der Benutzer logischerweise das Zeichnen. Alle griffen sofort zum Stift und wollten loslegen. Die Enttäuschung war groß, als sie realisierten, dass der Prototyp jeweils nur einem Benutzer zu zeichnen erlaubt, andere müssen warten, bis sie dran kommen. Uns war von Anfang an bewusst, dass dies eines der wichtigsten Features von \emph{Scribbler} sein würde, aber leider war es uns nicht möglich, dieses in der kurzen Entwicklungszeit zu implementieren. Dieses Feature erfordert die Implementierung von multiplen Cursor und ist technisch aufwändig. Fehlt es jedoch, kommt es zu einem Flaschenhalseffekt, der die Effizienz von Meetings stark einschränkt. Personen können nicht parallel zeichnen, bzw. arbeiten und sind so ständig gezwungen, die Aktionen der anderen abzuwarten. Hinzu kommt ein erhöhter Aufwand der Absprache untereinander zur Koordination der Tätigkeiten. Der Test hat gezeigt, dass die Teilnehmer des Meetings sich ständig absprechen müssen, wer wann zeichnen kann. Dies ist eine Aktivität, die in herkömmlichen Meetings überhaupt nicht notwendig ist und stellt einen Nachteil gegenüber der Effizienz der Sitzung dar. Die Befürchtung, die wir bereits vor dem Test hatten, wurde sehr schnell bestätigt. Bei einer Weiterentwicklung von \emph{Scribbler} muss diesem kritischen Feature höchste Priorität zugeordnet werden, denn es entscheidet über Erfolg oder Misserfolg des gesamten Systems.
+\subsubsection{Unvollständigkeit des Prototypen}
+Als die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung \scribbler in einem kollaborativen Setting beim Meeting einsetzte, war die erste Aktion der Benutzer logischerweise das Zeichnen. Alle griffen sofort zum Stift und wollten loslegen. Die Enttäuschung war groß, als sie realisierten, dass der Prototyp jeweils nur einem Benutzer zu zeichnen erlaubt, andere müssen warten, bis sie dran kommen. Uns war von Anfang an bewusst, dass dies eines der wichtigsten Features von \scribbler sein würde, aber leider war es uns nicht möglich, dieses in der kurzen Entwicklungszeit zu implementieren. Dieses Feature erfordert die Implementierung von multiplen Cursor und ist technisch aufwändig. Fehlt es jedoch, kommt es zu einem Flaschenhalseffekt, der die Effizienz von Meetings stark einschränkt. Personen können nicht parallel zeichnen, bzw. arbeiten und sind so ständig gezwungen, die Aktionen der anderen abzuwarten. Hinzu kommt ein erhöhter Aufwand der Absprache untereinander zur Koordination der Tätigkeiten. Der Test hat gezeigt, dass die Teilnehmer des Meetings sich ständig absprechen müssen, wer wann zeichnen kann. Dies ist eine Aktivität, die in herkömmlichen Meetings überhaupt nicht notwendig ist und stellt einen Nachteil gegenüber der Effizienz der Sitzung dar. Die Befürchtung, die wir bereits vor dem Test hatten, wurde sehr schnell bestätigt. Bei einer Weiterentwicklung von \scribbler muss diesem kritischen Feature höchste Priorität zugeordnet werden, denn es entscheidet über Erfolg oder Misserfolg des gesamten Systems.
 
-\medskip Häufig kam es vor, dass Testpersonen unabsichtlich den Kippschalter am Stift drückten. Dies führte dazu, dass die letzte Aktion rückgängig gemacht wurde. Dieses Problem war uns schon während der Implementierungsphase bei internen Tests aufgefallen. Gerade Personen, die selten oder nie Tablet und Stift als Eingabegerät verwenden, passiert dieses unabsichtliche Drücken der Undo-Taste immer wieder. Der Produktdesigner, der täglich mit dem Tablet arbeitet, hatte hingegen keine Schwierigkeiten in dieser Hinsicht. Um \emph{Scribbler} für eine breite Masse benutzbar zu machen, muss bei einer Weiterentwicklung darauf geachtet werden, dass den Tasten des Stifts keine Funktionen zugewiesen werden. Stattdessen sollten diese sinnvoll auf den Tasten des Tablets selbst angeordnet werden.
+\medskip Häufig kam es vor, dass Testpersonen unabsichtlich den Kippschalter am Stift drückten. Dies führte dazu, dass die letzte Aktion rückgängig gemacht wurde. Dieses Problem war uns schon während der Implementierungsphase bei internen Tests aufgefallen. Gerade Personen, die selten oder nie Tablet und Stift als Eingabegerät verwenden, passiert dieses unabsichtliche Drücken der Undo-Taste immer wieder. Der Produktdesigner, der täglich mit dem Tablet arbeitet, hatte hingegen keine Schwierigkeiten in dieser Hinsicht. Um \scribbler für eine breite Masse benutzbar zu machen, muss bei einer Weiterentwicklung darauf geachtet werden, dass den Tasten des Stifts keine Funktionen zugewiesen werden. Stattdessen sollten diese sinnvoll auf den Tasten des Tablets selbst angeordnet werden.
 
-\medskip Es wurde sehr schnell deutlich, dass die Einsatzmöglichkeiten von \emph{Scribbler} begrenzt sind. Die wenigen Zeichenfunktionen reichen lediglich für grobe Skizzen und Kritzeleien aus. \emph{Scribbler} muss hier gezielt an Funktionalität angereichert werden und zumindest optional Features wie Strichstärke oder Druckempfindlichkeit anbieten.
+\medskip Es wurde sehr schnell deutlich, dass die Einsatzmöglichkeiten von \scribbler begrenzt sind. Die wenigen Zeichenfunktionen reichen lediglich für grobe Skizzen und Kritzeleien aus. \scribbler muss hier gezielt an Funktionalität angereichert werden und zumindest optional Features wie Strichstärke oder Druckempfindlichkeit anbieten.
 
 \begin{extract}[Die Einsatzmöglichkeiten sind begrenzt.]
 	{
@@ -177,18 +243,18 @@ Als die Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung \emph{
 	\captionX{Fehlende Funktionalität}
 \end{extract}
 
-Der Prototyp war noch anfällig für Fehler und manchmal passierte es, dass das Programm komplett abstürzte oder unerwartetes Verhalten zeigte. Dies wurde zwar von den Teilnehmern bemängelt, jedoch zeigten alle Verständnis für die unfertige Teilimplementierung. Es ist jedoch klar, dass \emph{Scribbler} in einer finalen Releaseversion absolut stabil laufen muss und nie Daten verlieren darf.
+Der Prototyp war noch anfällig für Fehler und manchmal passierte es, dass das Programm komplett abstürzte oder unerwartetes Verhalten zeigte. Dies wurde zwar von den Teilnehmern bemängelt, jedoch zeigten alle Verständnis für die unfertige Teilimplementierung. Es ist jedoch klar, dass \scribbler in einer finalen Releaseversion absolut stabil laufen muss und nie Daten verlieren darf.
 
 
-\subsection{Technische Probleme}
-Eine große technische Hürde stellt für \emph{Scribbler} das Speichern von Daten zur späteren Wiederverwendung dar. \emph{Scribbler} hat natürlich keinen Einfluss auf andere Programme, hängt aber voll und ganz von deren Kontext ab. Das bedeutet, dass Zeichnungen in \emph{Scribbler} nur dann sinnvoll sind, wenn die Fenster von Drittprogrammen darunter liegen. Die Problematik der Abspeicherung wird hier sehr schnell deutlich: \emph{Scribbler} kann die Fenster und Anordnung von Drittprogrammen nicht speichern. Im Prototypen gibt es eine Funktion, die ein Bild vom Desktop mit allen Zeichnungen macht und in einer Datei am Schreibtisch ablegt. Dies ist natürlich ein Rasterbild und kann außer zum Ansehen kaum weiterverwendet werden. Zudem müssen bei längerem Arbeiten mit \emph{Scribbler} sehr viele Bilder angefertigt werden, um alle Zeichnungen abzubilden. Dabei füllt sich der Desktop sehr schnell und zu einem späteren Zeitpunkt müssen Benutzer sich mit unzähligen Dateien plagen. Es muss hier dringend ein passendes Konzept gefunden werden, das die Bedürfnisse besser deckt als einfache Rasterbilder. 
+\subsubsection{Technische Probleme}
+Eine große technische Hürde stellt für \scribbler das Speichern von Daten zur späteren Wiederverwendung dar. \scribbler hat natürlich keinen Einfluss auf andere Programme, hängt aber voll und ganz von deren Kontext ab. Das bedeutet, dass Zeichnungen in \scribbler nur dann sinnvoll sind, wenn die Fenster von Drittprogrammen darunter liegen. Die Problematik der Abspeicherung wird hier sehr schnell deutlich: \scribbler kann die Fenster und Anordnung von Drittprogrammen nicht speichern. Im Prototypen gibt es eine Funktion, die ein Bild vom Desktop mit allen Zeichnungen macht und in einer Datei am Schreibtisch ablegt. Dies ist natürlich ein Rasterbild und kann außer zum Ansehen kaum weiterverwendet werden. Zudem müssen bei längerem Arbeiten mit \scribbler sehr viele Bilder angefertigt werden, um alle Zeichnungen abzubilden. Dabei füllt sich der Desktop sehr schnell und zu einem späteren Zeitpunkt müssen Benutzer sich mit unzähligen Dateien plagen. Es muss hier dringend ein passendes Konzept gefunden werden, das die Bedürfnisse besser deckt als einfache Rasterbilder. 
 
-\medskip Das Schreiben ist eine weitere Schwäche von \emph{Scribbler}. Die prototypische Implementierung ist technisch nicht optimiert und das System zeichnet nur wenige Bewegungspunkte des Stifts am Tablet auf. Dadurch entstehen ungenaue Linien und Handschrift wird deutlich unlesbar. Gerade wenn Benutzer versuchen, auf kleine Flächen zu schreiben, scheitern sie in den meisten Fällen. \emph{Scribbler} und der darunter liegende Code muss soweit optimiert werden, dass es möglich wird, auf Fenster in annehmbarer Größe zu schreiben, da dies ein sehr übliches Szenario darstellt.
+\medskip Das Schreiben ist eine weitere Schwäche von \scribbler. Die prototypische Implementierung ist technisch nicht optimiert und das System zeichnet nur wenige Bewegungspunkte des Stifts am Tablet auf. Dadurch entstehen ungenaue Linien und Handschrift wird deutlich unlesbar. Gerade wenn Benutzer versuchen, auf kleine Flächen zu schreiben, scheitern sie in den meisten Fällen. \scribbler und der darunter liegende Code muss soweit optimiert werden, dass es möglich wird, auf Fenster in annehmbarer Größe zu schreiben, da dies ein sehr übliches Szenario darstellt.
 
-\medskip Die Entscheidung, Tablets ohne integriertes Display als Hardware für \emph{Scribbler} zu benutzen, fiel aus der Annahme heraus, dass Personen in kollaborativen Settings weniger miteinander interagieren würden, wenn jeder auf seinen eigenen Bildschirm starrt. Ziel war der Einsatz eines einzelnen großen Displays, um eine größere Gemeinsamkeit zu schaffen und Teamwork zu fördern. Vielen Benutzern fällt jedoch die Abstraktion von Tablet hin zu einem entfernten Display schwer. Sie schaffen es nur sehr schwer, ihre Bewegungen mit dem Stift am Tablet so zu koordinieren, dass am Display auch tatsächlich die beabsichtigten Striche gezeichnet werden. Bereits das Einkreisen von gewissen Elementen am Bildschirm kann quälend schwierig erscheinen und viel Frust beim Benutzer erzeugen. Diese Problematik verschärft sich, wenn das Display sich nicht frontal, sondern seitlich zum Benutzer befindet. Sitzt dieser dann auch noch schief vor dem Tablet, wird es schier unmöglich \emph{Scribbler} sinnvoll zu nutzen.
+\medskip Die Entscheidung, Tablets ohne integriertes Display als Hardware für \scribbler zu benutzen, fiel aus der Annahme heraus, dass Personen in kollaborativen Settings weniger miteinander interagieren würden, wenn jeder auf seinen eigenen Bildschirm starrt. Ziel war der Einsatz eines einzelnen großen Displays, um eine größere Gemeinsamkeit zu schaffen und Teamwork zu fördern. Vielen Benutzern fällt jedoch die Abstraktion von Tablet hin zu einem entfernten Display schwer. Sie schaffen es nur sehr schwer, ihre Bewegungen mit dem Stift am Tablet so zu koordinieren, dass am Display auch tatsächlich die beabsichtigten Striche gezeichnet werden. Bereits das Einkreisen von gewissen Elementen am Bildschirm kann quälend schwierig erscheinen und viel Frust beim Benutzer erzeugen. Diese Problematik verschärft sich, wenn das Display sich nicht frontal, sondern seitlich zum Benutzer befindet. Sitzt dieser dann auch noch schief vor dem Tablet, wird es schier unmöglich \scribbler sinnvoll zu nutzen.
 
-\subsection{Konzeptionelle Probleme}
-\emph{Scribbler} setzt den Einsatz von spezieller Hardware voraus. Benötigt wird ein großes Display oder ein Beamer, ein starker Rechner mit dem Betriebssystem OS X und mehrere Wacom Tablets. Diese Komponenten sind zum einen teuer und zum anderen keine üblichen Geräte, die die meisten Betriebe im Inventar führen. Daher ist der Einsatz von \emph{Scribbler} nicht ohne weiteres möglich, schon gar nicht vor Ort beim Kunden. Die ganze Ausrüstung dort hin zu transportieren stellt einen Aufwand dar, der in keinem Verhältnis zum effektiven Nutzen innerhalb eines Meetings steht.
+\subsubsection{Konzeptionelle Probleme}
+\scribbler setzt den Einsatz von spezieller Hardware voraus. Benötigt wird ein großes Display oder ein Beamer, ein starker Rechner mit dem Betriebssystem OS X und mehrere Wacom Tablets. Diese Komponenten sind zum einen teuer und zum anderen keine üblichen Geräte, die die meisten Betriebe im Inventar führen. Daher ist der Einsatz von \scribbler nicht ohne weiteres möglich, schon gar nicht vor Ort beim Kunden. Die ganze Ausrüstung dort hin zu transportieren stellt einen Aufwand dar, der in keinem Verhältnis zum effektiven Nutzen innerhalb eines Meetings steht.
 
 \begin{extract}[Notwendige Hardware schränkt ein.]
 	{
@@ -200,7 +266,7 @@ Eine große technische Hürde stellt für \emph{Scribbler} das Speichern von Dat
 	\captionX{Transport und Kosten}
 \end{extract}
 
-Für die Interaction- und User Experience Designer scheint \emph{Scribbler} keine wirklich brauchbaren Szenarios und Einsatzmöglichkeiten zu bieten.
+Für die Interaction- und User Experience Designer scheint \scribbler keine wirklich brauchbaren Szenarios und Einsatzmöglichkeiten zu bieten.
 
 \begin{extract}[Der praktische Nutzen erschließt sich nicht jedem.]
 	{
@@ -212,7 +278,7 @@ Für die Interaction- und User Experience Designer scheint \emph{Scribbler} kein
 	\captionX{Nutzen}
 \end{extract}
 
-Gewisse zusätzliche Features und Optimierungen würden das \emph{Scribbler} Konzept jedoch interessanter für sie erscheinen lassen.
+Gewisse zusätzliche Features und Optimierungen würden das \scribbler Konzept jedoch interessanter für sie erscheinen lassen.
 
 \begin{extract}[Der praktische Nutzen erschließt sich nicht jedem.]
 	{
@@ -225,7 +291,7 @@ Gewisse zusätzliche Features und Optimierungen würden das \emph{Scribbler} Kon
 	\captionX{Nutzen}
 \end{extract}
 
-Die Entscheidung, Linien in \emph{Scribbler} als Vektorobjekte zu speichern, hat auch einige negative Nebenwirkungen mit sich gebracht. So ist zum Beispiel die Radiergummifunktion eingeschränkt. \emph{Scribbler} kann immer nur eine ganze Linie komplett löschen. Das bedeutet, dass Striche mit dem Radiergummi nicht kürzer gemacht, sondern komplett gelöscht werden. Angenommen der Benutzer möchte wirklich nur eine Linie kürzen, die etwas zu lang geworden ist, so muss er sie löschen und neu zeichnen. 
+Die Entscheidung, Linien in \scribbler als Vektorobjekte zu speichern, hat auch einige negative Nebenwirkungen mit sich gebracht. So ist zum Beispiel die Radiergummifunktion eingeschränkt. \scribbler kann immer nur eine ganze Linie komplett löschen. Das bedeutet, dass Striche mit dem Radiergummi nicht kürzer gemacht, sondern komplett gelöscht werden. Angenommen der Benutzer möchte wirklich nur eine Linie kürzen, die etwas zu lang geworden ist, so muss er sie löschen und neu zeichnen. 
 
 \begin{extract}[Der Radierer löscht nur ganze Linien.]
 	{
@@ -238,8 +304,8 @@ Die Entscheidung, Linien in \emph{Scribbler} als Vektorobjekte zu speichern, hat
 	\captionX{Radieren}
 \end{extract}
 
-\subsection{Wünsche der Benutzer}
-Offensichtliche Verbesserungen, wie Druckempfindlichkeit, Strichstärke und generell konkretere Zeichenmöglichkeiten wurden von fast allen Teilnehmern angesprochen. Zusätzlich gab es einige Einwände und Ideen zu Features, die das Nutzungserlebnis von \emph{Scribbler} verbessern könnten. Essenziell für ein effizientes Arbeiten mit \emph{Scribbler} erscheint die Möglichkeit, Zeichnungen nachträglich am Bildschirm noch verschieben zu können. So können erst Ideen generiert und danach Ordnung und Struktur geschaffen werden.
+\subsubsection{Wünsche der Benutzer}
+Offensichtliche Verbesserungen, wie Druckempfindlichkeit, Strichstärke und generell konkretere Zeichenmöglichkeiten wurden von fast allen Teilnehmern angesprochen. Zusätzlich gab es einige Einwände und Ideen zu Features, die das Nutzungserlebnis von \scribbler verbessern könnten. Essenziell für ein effizientes Arbeiten mit \scribbler erscheint die Möglichkeit, Zeichnungen nachträglich am Bildschirm noch verschieben zu können. So können erst Ideen generiert und danach Ordnung und Struktur geschaffen werden.
 
 \begin{extract}[Es wäre gut, wenn man Zeichnungen verschieben könnte.]
 	{
@@ -266,7 +332,7 @@ Pi und Zed hatten die Idee, zusätzlich ein Trackpad anstatt einer Maus zusammen
 	\captionX{Trackpad}
 \end{extract}
 
-Von allen drei Designern wurde der Wunsch nach einer Online-Funktion geäußert. Sie alle haben schon öfter die Erfahrung gemacht, mit anderen Kollegen über das Internet zusammenzuarbeiten und es würde sich anbieten, \emph{Scribbler} dafür zu nutzen. Für die lokale Benutzung würden sich die beiden auch wünschen, dass nicht nur die Zeichnungen des aktiven Fensters sondern jene von inaktiven Fenstern im Hintergrund angezeigt werden. Um Chaos auf dem Bildschirm zu vermeiden könnte man beispielsweise Zeichnungen im Hintergrund in Grau und mit verschiedenen Alpha-Werten, entsprechend dem Z-Index des zugehörigen Fensters anzeigen.
+Von allen drei Designern wurde der Wunsch nach einer Online-Funktion geäußert. Sie alle haben schon öfter die Erfahrung gemacht, mit anderen Kollegen über das Internet zusammenzuarbeiten und es würde sich anbieten, \scribbler dafür zu nutzen. Für die lokale Benutzung würden sich die beiden auch wünschen, dass nicht nur die Zeichnungen des aktiven Fensters sondern jene von inaktiven Fenstern im Hintergrund angezeigt werden. Um Chaos auf dem Bildschirm zu vermeiden könnte man beispielsweise Zeichnungen im Hintergrund in Grau und mit verschiedenen Alpha-Werten, entsprechend dem Z-Index des zugehörigen Fensters anzeigen.
 
 \begin{extract}[Es sollten nicht nur Zeichnungen des aktiven Fensters dargestellt werden.]
 	{
@@ -284,11 +350,16 @@ Von allen drei Designern wurde der Wunsch nach einer Online-Funktion geäußert.
 	\captionX{Inaktive Fenster}
 \end{extract}
 
-Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkeit von Zeichnungen zu Fenstern auf. Eine Idee wäre Farbe dafür einzusetzen, jedoch würde dies wiederum die Freiheit beim Zeichnen einschränken, da keine beliebigen Farben mehr gewählt werden können. Auch eine Darstellung, wer welche Zeichnungen gemacht hat, sollte es geben. Im Testsetting, das die Arbeitsgruppe an der Universität eingesetzt hat, wurde dies so gelöst, dass jedem Tablet eine Farbe zugewiesen wurde. Zu jedem gab es mehrere Stifte, die unterschiedliche Helligkeitswerte mit dem Farbwert des Tablets kombinierten. So konnte zumindest etwas Variation eingebracht werden. Im kollaborativen Setting wäre es ebenfalls wünschenswert, wenn mehrere Benutzer gleichzeitig auf verschiedene Fenster zeichnen könnten und die Zeichnungen dem jeweiligen darunter liegenden Fenster zugeordnet werden könnten. Dies stellt natürlich eine große technische Hürde dar und bei einer Weiterentwicklung von \emph{Scribbler} muss die Machbarkeit erst exploriert werden.
+Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkeit von Zeichnungen zu Fenstern auf. Eine Idee wäre Farbe dafür einzusetzen, jedoch würde dies wiederum die Freiheit beim Zeichnen einschränken, da keine beliebigen Farben mehr gewählt werden können. Auch eine Darstellung, wer welche Zeichnungen gemacht hat, sollte es geben. Im Testsetting, das die Arbeitsgruppe an der Universität eingesetzt hat, wurde dies so gelöst, dass jedem Tablet eine Farbe zugewiesen wurde. Zu jedem gab es mehrere Stifte, die unterschiedliche Helligkeitswerte mit dem Farbwert des Tablets kombinierten. So konnte zumindest etwas Variation eingebracht werden. Im kollaborativen Setting wäre es ebenfalls wünschenswert, wenn mehrere Benutzer gleichzeitig auf verschiedene Fenster zeichnen könnten und die Zeichnungen dem jeweiligen darunter liegenden Fenster zugeordnet werden könnten. Dies stellt natürlich eine große technische Hürde dar und bei einer Weiterentwicklung von \scribbler muss die Machbarkeit erst exploriert werden.
 
 Peter, der Produktdesigner, würde außerdem ein Kontextmenü benötigen, das ihm ein paar Optionen anbietet. Gängige Skizzierprogramme bieten diese Funktion an und ermöglichen so eine sehr hohe Effizienz bei der Arbeit.
 
 \section{Achievements}
+
+\begin{figure}
+	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/scribblerAnforderungsauswertung}}
+		\caption[Anforderungsauswertung für Scribbler]{Anforderungsauswertung für Scribbler. Alle umgesetzten Anforderungen sind in Grün gehalten. (Noch) nicht umgesetzte Anforderungen sind rot markiert.}\label{fig:scribblerAnforderungsauswertung}
+\end{figure}
 
 \section*{Zusammenfassung}
 lorem ipsum
