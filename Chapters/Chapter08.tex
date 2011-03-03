@@ -2,7 +2,7 @@
 \chapter{Scribbler}\label{ch:scribbler}
 %*************************************************************
 
-In den vergangenen Kapitel zeigten wir mit etlichen Beispielen wie und mit welchen Hilfsmitteln Gruppenmeetings abgehalten werden können. Sind es traditionelle Medien wie Papier und Filpcharts, oder elektronische Medien wie computerunterstützte Whiteboardsysteme - sie alle finden Einsatz in Designsessions und bieten verschiedenste Vor- und Nachteile.
+In den vergangenen Kapitel zeigten wir mit etlichen Beispielen wie und mit welchen Hilfsmitteln Gruppenmeetings abgehalten werden können. Sind es traditionelle Medien wie Papier und Flip-Charts, oder elektronische Medien wie computerunterstützte Whiteboardsysteme - sie alle finden Einsatz in Designsessions und bieten verschiedenste Vor- und Nachteile.
 
 \medskip Im Folgenden wollen wir \scribbler vorstellen, ein elektronisches Interface, das die kollaborative Arbeit an virtuellen Artefakten unterstützen soll. Ähnlich wie die Autoren der bereits im ersten Kapitel beschriebenen Systeme, versuchten wir ein System zu kreieren, das die beiden Design-Arbeitswelten - geprägt durch traditionelle und elektronische Medien - mit einander verbindet und ihre Vorteile herausarbeitet. Im Gegensatz zu den bisherigen Ansätzen jedoch, ist \scribbler ein elektronisches Skizziersystem, welches ein barrierefreies Arbeiten ermöglicht.
 
@@ -12,7 +12,7 @@ In den vergangenen Kapitel zeigten wir mit etlichen Beispielen wie und mit welch
 Die Technisierung vieler Berufe führte dazu, dass gewisse Arbeitsgegenstände ein elektronisches Abbild bekamen. Grafikdesigner beispielsweise fertigen heutzutage Präsentationszeichnungen, im Gegensatz zu früher, digital an. Neuere Berufsparten wie Interfacedesign setzen die tagtägliche Arbeit mit digitalen Artefakten vorraus. Wie schon in den vorigen Kapitel erwähnt, ist (im Besonderen) Design eine kollaborative Tätigkeit, wofür sich Gruppen zu Meetings treffen um gemeinsam neue Lösungen zu erarbeiten. Ein bewährtes und wichtiges Instrument dazu sind Stifte zur Erstellung von Skizzen, um Gedanken zu manifestieren.\\
 Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm oder Projektor, der als Präsentationsmittel verwendet wird. Zudem ist meistens eine Zeichenfläche vorhanden, wie z.B. Whiteboards oder Flip-Charts, um kollaborativ erarbeitete Ideen festzuhalten und neue Ideen zu explorieren.
 
-\medskip Das Institut für Gestaltungs- und Wirkungsforschung an der TU Wien verfügt über so einen Meetingraum. Er besteht aus mehreren Tischen, die in der Mitte des Raumes zusammen gestellt wurden und um denen sich Sitzmöglichkeiten befinden. Neben einem Flip-Chart befindet sich ein {52\dq} großer Bildschirm in der Mitte einer Wand, auf den alle Meetingteilnehmer, von ihren Sitzplätzen aus, blicken können. Mit dem Screen ist ein Computer (Apple Mac Mini) verbunden, auf den Daten über ein drahtlos Netzwerk gespielt werden können. Eine zusätzliche drahtlose Tastatur und Maus ermöglichen eine bequeme Steuerung. Zusätzliche Peripherie kann auf der Rückseite des Computers angeschlossen werden.
+\medskip Das Institut für Gestaltungs- und Wirkungsforschung an der TU Wien verfügt über so einen Meetingraum. Er besteht aus mehreren Tischen, die in der Mitte des Raumes zusammen gestellt wurden und um denen sich Sitzmöglichkeiten befinden. Neben einem Flip-Chart befindet sich ein {54\dq} großer Bildschirm in der Mitte einer Wand, auf den alle Meetingteilnehmer, von ihren Sitzplätzen aus, blicken können. Mit dem Screen ist ein Computer (Apple Mac Mini) verbunden, auf den Daten über ein drahtlos Netzwerk gespielt werden können. Eine zusätzliche drahtlose Tastatur und Maus ermöglichen eine bequeme Steuerung. Zusätzliche Peripherie kann auf der Rückseite des Computers angeschlossen werden.
 
 \medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen. \\Was benötigt man aber zur Umsetzung eines solchen Systems? Das wollen wir nun im nächsten Punkt kurz erläutern.
 
@@ -108,10 +108,17 @@ Durch die erstellten Prototypen vor der Implementierung des Programms, war es m�
 \medskip Nach Fertigstellung der Betaversion, konnten wir \scribbler zusätzlich am Beginners's Day\footnote{Der beginners' day ist eine Infoveranstaltung für alle Studienanfängerinnen und Studienanfänger in den Informatik-, Wirtschaftsinformatik- und Lehramtsstudien. \citep{TU:2010}} der TU Wien vorführen und mit vielen erstsemestrigen Studenten testen. Abschließend konnten wir auch ausführliche Tests mit Designer durchführen, welche wir in \autoref{sec:userReview} ausführlicher beschreiben werden.
 
 \section{Scribbler at a Glance}
-Durch die verschiedenen Designmethoden, veränderte sich die Funktionalität von \scribbler öfters. Aus diesem Grund wollen unser Konzept  ordnungshalber erst jetzt anführen. \\
-Unser Ziel war es 
+Durch die verschiedenen Designmethoden, veränderte sich die Funktionalität von \scribbler öfters. Aus diesem Grund wollen unser Konzept  ordnungshalber erst jetzt anführen.
+
+\medskip \scribbler ermöglicht neben der herkömmlichen Arbeit an einem Desktop (\acs{WIMP}) System, mittels Stiften auf jedes beliebige Programmfenster zu zeichnen. Das System läuft dabei im Hintergrund und aktiviert sich bei Bedarf. Wir unterscheiden dafür generell zwei Hauptmodi. Den Zeichen- und den Mausmodus. In letzterem kann die Maus wie gewohnt zur Navigation zwischen Programmfenster eingesetzt werden. Die Verwendung von Tabletstiften hingegen wechselt in den Zeichenmodus. Die Benutzer können so auf das momentan aktive Fenster einer Drittapplikation >>kritzeln<<. Da besonders geübte Tabletbenutzer die Stifte auch als Ersatz für die Maus sehen, ermöglicht \scribbler auch das explizite Wechseln der beiden Modi, durch Drücken einer Tablettaste. \\
+Da beim Skizzieren natürlich auch Fehler auftreten können, bietet \scribbler eine \emph{Undo} bzw. \emph{Redo} Funktion. Versehentliche Änderungen können so rückgängig gemacht oder wieder hergestellt werden. Zudem können einzelne Striche gelöscht bzw. >>ausradiert<< oder der gesamte Zeichenbereich geleert werden.
+
+\medskip
+
 
 \subsection{Hardware}
+Wie bereits erwähnt, setzen wir mit \scribbler auf Grafiktablets in Verbindung mit einem großen Display. Wir passen dabei die Funktionalität der Tablets und der Stifte an unsere Bedürfnisse an. 
+
 \begin{figure}
 	\begin{center}
         {\includegraphics[width=0.8\linewidth]{gfx/scribblerTabletTasten}}
