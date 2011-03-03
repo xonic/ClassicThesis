@@ -184,26 +184,40 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 \subsection{Programmlogik} \label{sec:programmLogik}
 Blicken wir abschließend noch tiefer in die Materie. \scribbler wurde auf das von Apple entwickelte \emph{Cocoa}-Framework aufgebaut und genießt somit alle Vorteile einer objektorierten Programmiersprache. Zusätzlich bietet \emph{Mac OS X} eine Schnittstelle für Bedienungshilfen, sog. Accessibility Daten - aber mehr dazu später. Betrachten wir vorerst die Grundfunktionalität von \emph{Scribbler}.
 
-\medskip \noindent \emph{Warum weiß Scribbler wann er in den Zeichenmodus wechseln soll?} \\
-\scribbler fängt sog. globale und lokale Eingabe-\emph{Events} ab. \emph{Events} sind vom Benutzer hervorgerufene Aktionen, die an Eingabegeräten vorgenommen wurden. So ist ein Druck auf die linke Maustaste beispielsweise ein \emph{LeftMouseDownEvent}, oder das Halten einer Taste auf der Tastatur ein \emph{KeyDownEvent}. Auf die selbe Weise erkennt das System ein \emph{TabletProximityEvent}. Wie bereits im Punkt \pointref{ssec:hardware} ...
-Voraussetzung ist, dass der Zeichenmodus aktiv ist.
+\medskip \noindent \emph{Warum weiß Scribbler wann ein Benutzer zeichnen will?} \\
+\scribbler fängt sog. globale und lokale Eingabe-\emph{Events} ab. \emph{Events} sind vom Benutzer hervorgerufene Aktionen, die an Eingabegeräten vorgenommen wurden. So ist ein Druck auf die linke Maustaste beispielsweise ein \emph{LeftMouseDownEvent}, oder das Halten einer Taste auf der Tastatur ein \emph{KeyDownEvent}. Geschehen die Aktionen im eigenen Programm, spricht man von lokalen Events. Ereignen sich die Aktionen in anderen Programmen, spricht man von globalen Events. Auf die selbe Weise erkennt das System auch \emph{TabletProximityEvents}. Wie bereits im Punkt \pointref{ssec:hardware} erwähnt, entsteht ein \emph{TabletProximityEvent} wenn ein Stift in die Nähe - mit 1-1.5 cm Abstand - zu einem Tablet kommt (vgl. \autoref{fig:scribblerProximity}). Passiert dies, wechselt Scribbler automatisch in den Zeichenmodus. 
 
-\begin{lstlisting}[float,caption=Global and Local Event Monitoring]
-// Start watching global events to figure out when to show the pane
-	
+\bigskip \emph{Anmerkung: \graffito{\(\clubsuit\)} Voraussetzung dafür ist jedoch, dass zuvor nicht explizit in den Mausmodus gewechselt wurde.}
+\bigskip
+
+\autoref{lst:events} zeigt die Aufrufe, die benötigt werden um globale und lokale Events zu empfangen.
+
+\lstset{language=[Objective]C}
+\begin{lstlisting}[float,caption=Global and Local Event Monitoring,label=lst:events]
 [NSEvent addGlobalMonitorForEventsMatchingMask: (NSLeftMouseDraggedMask | NSKeyDownMask | NSKeyUpMask | NSTabletProximityMask | NSMouseEnteredMask | NSLeftMouseDownMask | NSOtherMouseDownMask | NSRightMouseDown | NSOtherMouseDownMask)
     handler:^(NSEvent *incomingEvent) {
 	
     ...
-}];
+}];	
 
-// Start watching local events to figure out when to hide the pane	
-
-[NSEvent addLocalMonitorForEventsMatchingMask: (NSOtherMouseDownMask | NSRightMouseDownMask | NSKeyDownMask | NSKeyUpMask | NSTabletProximityMask)// | NSTabletPointMask)
+[NSEvent addLocalMonitorForEventsMatchingMask: (NSOtherMouseDownMask | NSRightMouseDownMask | NSKeyDownMask | NSKeyUpMask | NSTabletProximityMask)
     handler:^(NSEvent *incomingEvent) {
 
     ...
-}];		
+}];	
+\end{lstlisting}
+
+\medskip \noindent \emph{Wie erkennt Scribbler das aktive Programmfenster?} \\
+
+\begin{lstlisting}[float,caption=Key Window Handling,label=lst:keyWindowHandling]
+// get current key window infos
+NSMutableDictionary* currentInfos = [self getCurrentKeyWindowInfos];
+// get keyWindowID
+NSNumber* keyID = [self getKeyWindowID:currentInfos];
+// get keyWindow App Name
+NSString* appName = [self getKeyWindowsApplicationName:currentInfos];
+// get processID
+int pid = [self getProcessID:currentInfos];
 \end{lstlisting}
 
 \begin{figure}
