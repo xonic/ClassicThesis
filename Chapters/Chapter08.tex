@@ -120,8 +120,8 @@ Da beim Skizzieren natürlich auch Fehler auftreten können, bietet \scribbler e
 \scribbler benötigt ein relativ komplexes Hardware-Setting. Für die Ausgabe wird ein großes Display oder ein Beamer benutzt, während es für die Eingabe erforderlich ist, dass jeder Benutzer über ein Tablet mit Stift verfügt. Diese Tablets und das Ausgabegerät werden mit einem Rechner verbunden, auf dem das Apple Betriebssystem OS X 10.6 >>Snow Leopard<< läuft. Ältere Versionen von OS X werden von \scribbler nicht unterstützt. Für ein optimales Nutzungserlebnis, sollte der Computer über eine gute Rechenleistung verfügen. Bei der Umsetzung des Prototypen haben wir uns für Nutzung von Tablets aus der Modellreihe Intuos3 von Wacom entschieden. Diese Geräte verfügen über jeweils vier Buttons an beiden Seiten neben der Zeichenoberfläche, die mit verschiedenen Funktionen belegt werden können. Über diese Tasten können die folgenden Aktionen durchgeführt werden:
 
 \begin{itemize}
-	\item \emph{Wechsel des Interaktionsmodus}\\
-	Ermöglicht das Umschalten von Zeichen- in den Mausmodus und umgekehrt.
+	\item \emph{Wechsel des Interaktionsmodus für den Tabletstift}\\
+	Ermöglicht das Umschalten von Zeichen- in den Mausmodus und umgekehrt. (Dies betrifft nur den Tabletstift, die Maus selbst ist immer im Mausmodus und kann nicht zum Zeichnen verwendet werden.)
 	\item \emph{Whiteboard}\\
 	Blendet eine weiße Fläche über den gesamten Screen ein oder aus. Auf dieser kann ebenfalls gezeichnet werden.
 	\item \emph{Zurücksetzen}\\
@@ -130,23 +130,29 @@ Da beim Skizzieren natürlich auch Fehler auftreten können, bietet \scribbler e
 	Erstellt einen Schnappschuss des Desktops und der Zeichnungen des aktiven Fensters, der in einer Datei am Schreibtisch abgelegt wird.
 \end{itemize}
 
-
-Wie bereits erwähnt, setzen wir mit \scribbler auf Grafiktablets in Verbindung mit einem großen Display. Wir passen dabei die Funktionalität der Tablets und der Stifte an unsere Bedürfnisse an. 
-
-
 \begin{figure}
 	\begin{center}
         {\includegraphics[width=0.8\linewidth]{gfx/scribblerTabletTasten}}
-		\caption[Tablet Tastenbelegung]{Tablet Tastenbelegung}\label{fig:scribblerTabletTasten}
+		\caption[Tablet Tastenbelegung]{Die Anordnung der \scribbler Funktionen auf den Tasten des Tablets. Der Fotoapparat links oben erstellt ein Bildschirmfoto, das Verbotszeichen auf der rechten, oberen Taste löscht alle Zeichnungen des aktiven Fensters, die Maus auf der genoppten, mittleren Taste wechselt den Interaktionsmodus und das Whiteboard auf der unteren Taste blendet selbiges ein oder aus.}\label{fig:scribblerTabletTasten}
 	\end{center}
 \end{figure}
+
+\autoref{fig:scribblerTabletTasten} zeigt die Anordnung der Buttons auf den Tablets. Die mittlere Taste ist mit einer Noppe versehen und bietet dadurch ein haptisches Feedback. Dadurch kann der Button ertastet werden ohne dass ein Hinsehen von Nöten ist. Sinnvollerweise sollte diese Taste mit der wichtigsten Funktion belegt werden. In \scribbler ist dies der Wechsel des Interaktionsmodus, denn dieser ermöglicht, den vollen Interaktionsumfang mit nur einem Eingabegerät (dem Stift) zu nutzen. Die anderen beiden wichtigen Funktionen, sprich das Bildschirmfoto und das Whiteboard liegen auf den zwei großen Tasten links oben und unten. Das Zurücksetzen aller Zeichnungen wird relativ selten gebraucht und liegt daher auf der kleinen Taste rechts oben. Damit Benutzer diese Anordnung nicht auswendig lernen müssen, haben wir für Tests entsprechende Icons an den Tasten angebracht. Auf der rechten Seite der Zeichenoberfläche des Tablet sind die selben Tasten spiegelverkehrt angebracht, damit auch Linkshänder \scribbler optimal verwenden können.
+
+\medskip Neue Wacom Tablets werden üblicherweise mit nur einem Stift ausgeliefert. In unseren Testsettings haben wir jedem Benutzer mehrere Stifte zur Verfügung gestellt. Diese haben alle eine Hardware-ID und können dadurch von \scribbler eindeutig identifiziert werden. So ist es möglich, dass jedem Stift eine eigene Farbe zugeordnet werden kann. \autoref{fig:scribblerColors} zeigt vier Stifte, denen unterschiedliche Farben zugeordnet sind. Um dies klar zu machen, haben wir jeden mit einem entsprechend gefärbten Sticker versehen. Der Wechsel zwischen Farben ist dadurch so intuitiv wie ein Farbwechsel beim Malen mit Buntstiften.
+
 \begin{figure}
         {\includegraphics[width=1\linewidth]{gfx/scribblerColors}}
-		\caption[Tabletstiftfarben]{Tabletstiftfarben}\label{fig:scribblerColors}
+		\caption[Tabletstiftfarben]{Jeder Stift ist eindeutig vom System identifizierbar und hat eine eigene Farbe zugeordnet. Zur Verdeutlichung, wurde jedem Stift ein entsprechend gefärbter Sticker aufgeklebt.}\label{fig:scribblerColors}
 \end{figure}
+
+Jeder Stift hat einen Kippschalter an der Seite. Dieser erfüllt in \scribbler die Funktionen >>Undo<< und >>Redo<<, welche die letzte Aktion rückgängig machen oder wiederherstellen. 
+%sDie Tests haben gezeigt, dass diese Buttons häufig unabsichtlich gedrückt wurden und daher in einer optimalen Version von \scribbler gar nicht mit Funktionen belegt werden sollten.
+Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis eineinhalb Zentimeter über das Tablet gehalten werden, wie \autoref{fig:scribblerProximity} demonstriert. Dies ist auf die Hardware zurückzuführen und es kann kein Einfluss darauf genommen werden. Ebenso wird das Drücken des Kippschalters am Stift nur dann registriert, wenn der Stift sich in der entsprechenden Entfernung zum Tablet befindet. Am hinteren Ende eines Stiftes befindet sich ein weiterer Button, der üblicherweise eine Radierfunktion bietet, ähnlich einem mit Radiergummi versehenen Bleistift. Auch \scribbler belegt diese Taste mit einer Radierfunktion, jedoch können damit nur komplette Linien gelöscht werden.
+
 \begin{figure}
         {\includegraphics[width=1\linewidth]{gfx/scribblerProximity}}
-		\caption[Proximity Event]{Proximity Event}\label{fig:scribblerProximity}
+		\caption[Proximity Event]{Die Hardware erkennt Stifte erst dann, wenn die Spitze ein bis eineinhalb Zentimeter über das Tablet gehalten wird. Das Betriebssystem empfängt dann ein >>Proximity Event<<, das von \scribbler weiterverarbeitet wird.}\label{fig:scribblerProximity}
 \end{figure}
 
 \subsection{User Interface}
