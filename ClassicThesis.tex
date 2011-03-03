@@ -252,6 +252,14 @@
 \newcommand{\scribbler}{{\emph{Scribbler} }}
 
 %********************************************************************
+% Create custom reference styles
+% - pointref: x.x.x.x chapter/sectionname
+% - picref: Abbildung x.x[a,b,c,d]
+%*******************************************************
+\newcommand{\pointref}[1]{\ref{#1} \nameref{#1}}
+\newcommand{\picref}[1]{ \hyperref[#1]{Abbildung \autoref{#1}} }
+
+%********************************************************************
 % Hyphenation
 %*******************************************************
 %\hyphenation{put special hyphenation here}
