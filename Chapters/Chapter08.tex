@@ -110,11 +110,15 @@ Durch die erstellten Prototypen vor der Implementierung des Programms, war es m�
 \section{Scribbler at a Glance}
 Durch die verschiedenen Designmethoden, veränderte sich die Funktionalität von \scribbler öfters. Aus diesem Grund wollen unser Konzept  ordnungshalber erst jetzt anführen.
 
-\medskip \scribbler ermöglicht neben der herkömmlichen Arbeit an einem Desktop (\acs{WIMP}) System, mittels Stiften auf jedes beliebige Programmfenster zu zeichnen. Das System läuft dabei im Hintergrund und aktiviert sich bei Bedarf. Wir unterscheiden dafür generell zwei Hauptmodi. Den Zeichen- und den Mausmodus. In letzterem kann die Maus wie gewohnt zur Navigation zwischen Programmfenster eingesetzt werden. Die Verwendung von Tabletstiften hingegen wechselt in den Zeichenmodus. Die Benutzer können so auf das momentan aktive Fenster einer Drittapplikation >>kritzeln<<. Da besonders geübte Tabletbenutzer die Stifte auch als Ersatz für die Maus sehen, ermöglicht \scribbler auch das explizite Wechseln der beiden Modi, durch Drücken einer Tablettaste. \\
-Da beim Skizzieren natürlich auch Fehler auftreten können, bietet \scribbler eine \emph{Undo} bzw. \emph{Redo} Funktion. Versehentliche Änderungen können so rückgängig gemacht oder wieder hergestellt werden. Zudem können einzelne Striche gelöscht bzw. >>ausradiert<< oder der gesamte Zeichenbereich geleert werden.
+\medskip \scribbler ermöglicht neben der herkömmlichen Arbeit an einem Desktop (\acs{WIMP}) System, mittels Stiften auf jedes beliebige Programmfenster zu zeichnen. Das System läuft dabei im Hintergrund und aktiviert sich bei Bedarf. Wir unterscheiden dafür generell zwei Hauptmodi. Den Zeichen- und den Mausmodus. In letzterem kann die Maus wie gewohnt zur Navigation zwischen Programmfenster eingesetzt werden. Die Verwendung eines Tabletstifts hingegen wechselt in den Zeichenmodus. Die Benutzer können so auf das momentan aktive Fenster einer Drittapplikation >>kritzeln<<. Da besonders geübte Tabletbenutzer die Stifte auch als Ersatz für die Maus sehen, ermöglicht \scribbler auch das explizite Wechseln der beiden Modi durch Drücken einer Tablettaste.
 
-\medskip
+\medskip Da beim Skizzieren natürlich auch Fehler auftreten können, bietet \scribbler eine \emph{Undo} bzw. \emph{Redo} Funktion. Versehentliche Änderungen können so rückgängig gemacht oder wieder hergestellt werden. Zudem können einzelne Striche gelöscht bzw. >>ausradiert<< oder der gesamte Zeichenbereich geleert werden.
 
+\medskip Diese Grundfunktionalität soll vor allem Designer die Möglichkeit bieten, bestehende Arbeiten und Designs durchzubesprechen, Anmerkungen in direkter Verbindung zu digitalen Artefakten zu verfassen und kontextbezogene Erweiterungen zu zeichnen. Weil natürlich nicht immer schon vorhandene Designs vorliegen, bietet \scribbler aber auch eine Whiteboard Funktion. Dazu wird eine weiße Fläche über den gesamten Bildschirm eingeblendet, auf dem Benutzer Raum zum freien Skizzieren bekommen.
+
+\medskip Um erarbeitete Skizzen zu speichern, besitzt \scribbler eine Screenshotfunktion. Nur durch Speichern eines Bildes, kann aus unserer Sicht der Kontext zu den Zeichnungen bewahrt werden. Will man Scribbler abschließend pausieren aber nicht beenden, kann man dies durch eine integrierte Standbyfunktion.
+
+\medskip Die folgenden Punkte sollen nun nähere Informationen zu der Hardware, dem User Interface und dem logischen Programmaufbau geben. 
 
 \subsection{Hardware}
 Wie bereits erwähnt, setzen wir mit \scribbler auf Grafiktablets in Verbindung mit einem großen Display. Wir passen dabei die Funktionalität der Tablets und der Stifte an unsere Bedürfnisse an. 
