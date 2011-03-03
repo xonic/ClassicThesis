@@ -161,6 +161,11 @@ Wie bereits erwähnt, setzen wir mit \scribbler auf Grafiktablets in Verbindung 
 \end{figure}
 
 \subsection{Programmlogik} \label{sec:programmLogik}
+Blicken wir abschließend noch tiefer in die Materie. \scribbler wurde auf das von Apple entwickelte \emph{Cocoa}-Framework aufgebaut und genießt somit alle Vorteile einer objektorierten Programmiersprache. Zusätzlich bietet \emph{Mac OS X} eine Schnittstelle für Bedienungshilfen, sog. Accessibility Daten - aber mehr dazu später. Betrachten wir vorerst die Grundfunktionalität von \emph{Scribbler}.
+
+\medskip \noindent \emph{Warum weiß Scribbler wann er in den Zeichenmodus wechseln soll?} \\
+\scribbler fängt sog. globale und lokale Eingabe-\emph{Events} ab. \emph{Events} sind vom Benutzer hervorgerufene Aktionen, die an Eingabegeräten vorgenommen wurden. So ist ein Druck auf die linke Maustaste beispielsweise ein \emph{LeftMouseDownEvent}, oder das Halten einer Taste auf der Tastatur ein \emph{KeyDownEvent}. Auf die selbe Weise erkennt das System ein \emph{TabletProximityEvent}.  Betriebssystem bedingte Aktionen  Voraussetzung ist, dass der Zeichenmodus aktiv ist.
+
 \begin{lstlisting}[float,caption=Global and Local Event Monitoring]
 // Start watching global events to figure out when to show the pane
 	
