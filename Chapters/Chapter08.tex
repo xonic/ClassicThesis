@@ -112,6 +112,20 @@ Durch die verschiedenen Designmethoden, veränderte sich die Funktionalität von
 Unser Ziel war es 
 
 \subsection{Hardware}
+\scribbler benötigt ein relativ komplexes Hardware-Setting. Für die Ausgabe wird ein großes Display oder ein Beamer benutzt, während es für die Eingabe erforderlich ist, dass jeder Benutzer über ein Tablet mit Stift verfügt. Diese Tablets und das Ausgabegerät werden mit einem Rechner verbunden, auf dem das Apple Betriebssystem OS X 10.6 >>Snow Leopard<< läuft. Ältere Versionen von OS X werden von \scribbler nicht unterstützt. Für ein optimales Nutzungserlebnis, sollte der Computer über eine gute Rechenleistung verfügen. Bei der Umsetzung des Prototypen haben wir uns für Nutzung von Tablets aus der Modellreihe Intuos3 von Wacom entschieden. Diese Geräte verfügen über jeweils vier Buttons an beiden Seiten neben der Zeichenoberfläche, die mit verschiedenen Funktionen belegt werden können. Über diese Tasten können die folgenden Aktionen durchgeführt werden:
+
+\begin{itemize}
+	\item \emph{Wechsel des Interaktionsmodus}\\
+	Ermöglicht das Umschalten von Zeichen- in den Mausmodus und umgekehrt.
+	\item \emph{Whiteboard}\\
+	Blendet eine weiße Fläche über den gesamten Screen ein oder aus. Auf dieser kann ebenfalls gezeichnet werden.
+	\item \emph{Zurücksetzen}\\
+	Löscht alle Zeichnungen des momentan aktiven Fensters.
+	\item \emph{Sichern}\\
+	Erstellt einen Schnappschuss des Desktops und der Zeichnungen des aktiven Fensters, der in einer Datei am Schreibtisch abgelegt wird.
+\end{itemize}
+
+
 \begin{figure}
 	\begin{center}
         {\includegraphics[width=0.8\linewidth]{gfx/scribblerTabletTasten}}
@@ -333,7 +347,7 @@ Eine große technische Hürde stellt für \scribbler das Speichern von Daten zur
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1.5cm}X}
-			Zed & \emph{[...]} Beim kollaborativen Zusammenarbeiten mit dem Kunden glaub ich nicht dass es funktionieren würde. Der Kunde kann das nicht bedienen, allein der Umgang mit dem Tablett ist eher komplex. Hinzu kommt die notwendige Hardware, die ja auch erst ein mal angeschafft werden muss und transportiert werden muss. Man benötigt dann ja mehrere Tabletts. 
+			Zed & \emph{[...]} Beim kollaborativen Zusammenarbeiten mit dem Kunden glaub ich nicht dass es funktionieren würde. Der Kunde kann das nicht bedienen, allein der Umgang mit dem Tablet ist eher komplex. Hinzu kommt die notwendige Hardware, die ja auch erst ein mal angeschafft werden muss und transportiert werden muss. Man benötigt dann ja mehrere Tablets. 
 		\end{tabularx}
 	}
 	\captionX{Transport und Kosten}
@@ -353,15 +367,15 @@ Für die Interaction- und User Experience Designer scheint \scribbler keine wirk
 
 Gewisse zusätzliche Features und Optimierungen würden das \scribbler Konzept jedoch interessanter für sie erscheinen lassen.
 
-\begin{extract}[Der praktische Nutzen erschließt sich nicht jedem.]
+\begin{extract}[Notwendige Funktionalität.]
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1.5cm}X}
 			Thomas & Was wäre notwendig, um es für dich nutzbar zu machen?\\
-			Zed & Dieser komischer Hovereffekt des Stifts am Tablett bereitet mir Schwierigkeiten. Das müsste man auf jeden Fall irgendwie lösen. Sodass man das Gefühl bekommt, dass man wirklich exakt arbeiten kann mit dem Ding. Das fehlt mir. Schön wäre natürlich auch, wenn man die Übersetzung von Tablett auf Screen lösen könnte, wobei das natürlich nur dann geht, wenn der Screen im Tablett integriert ist. Auch cool wäre, wenn man über das Internet zusammenarbeiten könnte, denn so ist man an dieses Setting im Raum gebunden, nicht mal über ein lokales Netzwerk hat man da irgendwelche Freiheiten.
+			Zed & Dieser komischer Hovereffekt des Stifts am Tablet bereitet mir Schwierigkeiten. Das müsste man auf jeden Fall irgendwie lösen. Sodass man das Gefühl bekommt, dass man wirklich exakt arbeiten kann mit dem Ding. Das fehlt mir. Schön wäre natürlich auch, wenn man die Übersetzung von Tablet auf Screen lösen könnte, wobei das natürlich nur dann geht, wenn der Screen im Tablet integriert ist. Auch cool wäre, wenn man über das Internet zusammenarbeiten könnte, denn so ist man an dieses Setting im Raum gebunden, nicht mal über ein lokales Netzwerk hat man da irgendwelche Freiheiten.
 		\end{tabularx}
 	}
-	\captionX{Nutzen}
+	\captionX{Nutzbar machen}
 \end{extract}
 
 Die Entscheidung, Linien in \scribbler als Vektorobjekte zu speichern, hat auch einige negative Nebenwirkungen mit sich gebracht. So ist zum Beispiel die Radiergummifunktion eingeschränkt. \scribbler kann immer nur eine ganze Linie komplett löschen. Das bedeutet, dass Striche mit dem Radiergummi nicht kürzer gemacht, sondern komplett gelöscht werden. Angenommen der Benutzer möchte wirklich nur eine Linie kürzen, die etwas zu lang geworden ist, so muss er sie löschen und neu zeichnen. 
@@ -397,7 +411,7 @@ Pi und Zed hatten die Idee, zusätzlich ein Trackpad anstatt einer Maus zusammen
 	{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1.5cm}X}
-			Pi & Vielleicht ist die relative Projektion des Tabletts dann sinnvoll, wenn man zwei Eingabegeräte verwendet. Dann setze ich mit der Maus den Zeiger dorthin, wo ich ihn möchte und kann sofort dort los zeichnen, egal wo am Tablett sich mein Stift befindet. \emph{[...]} Oder man könnte auch überhaupt zwei Tablets haben, das eine zur Steuerung mit Gesten und das andere zum Zeichnen.\\
+			Pi & Vielleicht ist die relative Projektion des Tablets dann sinnvoll, wenn man zwei Eingabegeräte verwendet. Dann setze ich mit der Maus den Zeiger dorthin, wo ich ihn möchte und kann sofort dort los zeichnen, egal wo am Tablet sich mein Stift befindet. \emph{[...]} Oder man könnte auch überhaupt zwei Tablets haben, das eine zur Steuerung mit Gesten und das andere zum Zeichnen.\\
 			 & \emph{[...]}\\
 			Zed & Da würde sich doch das Magic Pad von Apple anbieten.
 		\end{tabularx}
