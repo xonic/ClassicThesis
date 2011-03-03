@@ -33,17 +33,17 @@
 \contentsline {captionX}{ {Auszug 33}\hspace *{1cm}Zwei gegen Einen}{106}{captionX.33}
 \contentsline {captionX}{ {Auszug 34}\hspace *{1cm}Gestik in Designmeetings.}{126}{captionX.34}
 \contentsline {captionX}{ {Auszug 35}\hspace *{1cm}Arbeiten an digitalen Tabletop-Systemen.}{131}{captionX.35}
-\contentsline {captionX}{ {Auszug 36}\hspace *{1cm}Traumsituation}{170}{captionX.36}
-\contentsline {captionX}{ {Auszug 37}\hspace *{1cm}Einsatz im Unterricht}{170}{captionX.37}
-\contentsline {captionX}{ {Auszug 38}\hspace *{1cm}Farben}{171}{captionX.38}
-\contentsline {captionX}{ {Auszug 39}\hspace *{1cm}Zugeh\IeC {\"o}rigkeit}{172}{captionX.39}
-\contentsline {captionX}{ {Auszug 40}\hspace *{1cm}Kommunikation}{172}{captionX.40}
-\contentsline {captionX}{ {Auszug 41}\hspace *{1cm}Graphic-Recording}{173}{captionX.41}
-\contentsline {captionX}{ {Auszug 42}\hspace *{1cm}Fehlende Funktionalit\IeC {\"a}t}{175}{captionX.42}
-\contentsline {captionX}{ {Auszug 43}\hspace *{1cm}Transport und Kosten}{177}{captionX.43}
-\contentsline {captionX}{ {Auszug 44}\hspace *{1cm}Nutzen}{177}{captionX.44}
-\contentsline {captionX}{ {Auszug 45}\hspace *{1cm}Nutzen}{177}{captionX.45}
-\contentsline {captionX}{ {Auszug 46}\hspace *{1cm}Radieren}{178}{captionX.46}
-\contentsline {captionX}{ {Auszug 47}\hspace *{1cm}Verschieben}{179}{captionX.47}
-\contentsline {captionX}{ {Auszug 48}\hspace *{1cm}Trackpad}{179}{captionX.48}
-\contentsline {captionX}{ {Auszug 49}\hspace *{1cm}Inaktive Fenster}{180}{captionX.49}
+\contentsline {captionX}{ {Auszug 36}\hspace *{1cm}Traumsituation}{173}{captionX.36}
+\contentsline {captionX}{ {Auszug 37}\hspace *{1cm}Einsatz im Unterricht}{173}{captionX.37}
+\contentsline {captionX}{ {Auszug 38}\hspace *{1cm}Farben}{174}{captionX.38}
+\contentsline {captionX}{ {Auszug 39}\hspace *{1cm}Zugeh\IeC {\"o}rigkeit}{175}{captionX.39}
+\contentsline {captionX}{ {Auszug 40}\hspace *{1cm}Kommunikation}{175}{captionX.40}
+\contentsline {captionX}{ {Auszug 41}\hspace *{1cm}Graphic-Recording}{176}{captionX.41}
+\contentsline {captionX}{ {Auszug 42}\hspace *{1cm}Fehlende Funktionalit\IeC {\"a}t}{178}{captionX.42}
+\contentsline {captionX}{ {Auszug 43}\hspace *{1cm}Transport und Kosten}{180}{captionX.43}
+\contentsline {captionX}{ {Auszug 44}\hspace *{1cm}Nutzen}{180}{captionX.44}
+\contentsline {captionX}{ {Auszug 45}\hspace *{1cm}Nutzen}{180}{captionX.45}
+\contentsline {captionX}{ {Auszug 46}\hspace *{1cm}Radieren}{181}{captionX.46}
+\contentsline {captionX}{ {Auszug 47}\hspace *{1cm}Verschieben}{182}{captionX.47}
+\contentsline {captionX}{ {Auszug 48}\hspace *{1cm}Trackpad}{182}{captionX.48}
+\contentsline {captionX}{ {Auszug 49}\hspace *{1cm}Inaktive Fenster}{183}{captionX.49}

@@ -12,12 +12,12 @@ In den vergangenen Kapitel zeigten wir mit etlichen Beispielen wie und mit welch
 Die Technisierung vieler Berufe führte dazu, dass gewisse Arbeitsgegenstände ein elektronisches Abbild bekamen. Grafikdesigner beispielsweise fertigen heutzutage Präsentationszeichnungen, im Gegensatz zu früher, digital an. Neuere Berufsparten wie Interfacedesign setzen die tagtägliche Arbeit mit digitalen Artefakten vorraus. Wie schon in den vorigen Kapitel erwähnt, ist (im Besonderen) Design eine kollaborative Tätigkeit, wofür sich Gruppen zu Meetings treffen um gemeinsam neue Lösungen zu erarbeiten. Ein bewährtes und wichtiges Instrument dazu sind Stifte zur Erstellung von Skizzen, um Gedanken zu manifestieren.\\
 Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm oder Projektor, der als Präsentationsmittel verwendet wird. Zudem ist meistens eine Zeichenfläche vorhanden, wie z.B. Whiteboards oder Flip-Charts, um kollaborativ erarbeitete Ideen festzuhalten und neue Ideen zu explorieren.
 
-\medskip Das Institut für Gestaltungs- und Wirkungsforschung an der TU Wien verfügt über so einen Meetingraum. Er besteht aus mehreren Tischen, die in der Mitte des Raumes zusammen gestellt wurden und um denen sich Sitzmöglichkeiten befinden. Neben einem Flip-Chart befindet sich ein {52\dq} großer Bildschirm in der Mitte einer Wand, auf den alle Meetingteilnehmer, von ihren Sitzplätzen aus, blicken können. Mit dem Screen ist ein Computer (Apple Mac Mini) verbunden, auf den Daten über ein drahtlos Netzwerk gespielt werden können. Eine zusätzliche drahtlose Tastatur und Maus ermöglichen eine bequeme Steuerung. Zusätzliche Peripherie kann auf der Hinterseite des Computers angeschlossen werden.
+\medskip Das Institut für Gestaltungs- und Wirkungsforschung an der TU Wien verfügt über so einen Meetingraum. Er besteht aus mehreren Tischen, die in der Mitte des Raumes zusammen gestellt wurden und um denen sich Sitzmöglichkeiten befinden. Neben einem Flip-Chart befindet sich ein {52\dq} großer Bildschirm in der Mitte einer Wand, auf den alle Meetingteilnehmer, von ihren Sitzplätzen aus, blicken können. Mit dem Screen ist ein Computer (Apple Mac Mini) verbunden, auf den Daten über ein drahtlos Netzwerk gespielt werden können. Eine zusätzliche drahtlose Tastatur und Maus ermöglichen eine bequeme Steuerung. Zusätzliche Peripherie kann auf der Rückseite des Computers angeschlossen werden.
 
-\medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen.
+\medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel unserer Arbeit war es nun ein Tool zu entwickeln, das es erlaubt, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen. \\Was benötigt man aber zur Umsetzung eines solchen Systems? Das wollen wir nun im nächsten Punkt kurz erläutern.
 
 \section{Anforderungen an kollaborative Skizziersysteme} \label{sec:anforderungen}
-Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren}. \autoref{fig:scribblerKollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren.
+Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren} und bieten eine Art Checkliste für unser System. \autoref{fig:scribblerKollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren. 
 
 \begin{figure}
 	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/scribblerKollaborativesSkizziersystem}}
@@ -108,16 +108,73 @@ Durch die erstellten Prototypen vor der Implementierung des Programms, war es m�
 \medskip Nach Fertigstellung der Betaversion, konnten wir \scribbler zusätzlich am Beginners's Day\footnote{Der beginners' day ist eine Infoveranstaltung für alle Studienanfängerinnen und Studienanfänger in den Informatik-, Wirtschaftsinformatik- und Lehramtsstudien. \citep{TU:2010}} der TU Wien vorführen und mit vielen erstsemestrigen Studenten testen. Abschließend konnten wir auch ausführliche Tests mit Designer durchführen, welche wir in \autoref{sec:userReview} ausführlicher beschreiben werden.
 
 \section{Scribbler at a Glance}
-
-\subsection{Technik} \label{sec:technik}
-\begin{lstlisting}[float,caption=A scribbler code snippet]
-for i:=maxint to 0 do
-begin
-{ do nothing }
-end;
-\end{lstlisting}
+Durch die verschiedenen Designmethoden, veränderte sich die Funktionalität von \scribbler öfters. Aus diesem Grund wollen unser Konzept  ordnungshalber erst jetzt anführen. \\
+Unser Ziel war es 
 
 \subsection{GUI Design}
+
+\begin{figure}
+	\begin{center}
+        \myfloatalign
+        \subfloat[Scribbler Icon]
+        {\includegraphics[width=0.47\linewidth]{gfx/scribblerIcon}} \quad
+        \subfloat[When Magic happens..]
+        {\label{fig:scribblerIcon}
+        \includegraphics[width=0.47\linewidth]{gfx/scribblerMagic}} \quad
+		\subfloat[Scribbler Menu]
+		{\label{fig:scribblerMagic}
+		\includegraphics[width=1\linewidth]{gfx/scribblerMenu}} \\
+        \caption[Scribbler Menu Icon]{Scribbler Menu Icon}\label{fig:scribblerMenuIcon}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+        {\includegraphics[width=1\linewidth]{gfx/scribblerSketching}}
+		\caption[Skizzieren in Scribbler]{Skizzieren in Scribbler}\label{fig:scribblerSketching}
+\end{figure}
+
+\subsection{Technik} \label{sec:technik}
+\begin{lstlisting}[float,caption=Global and Local Event Monitoring]
+// Start watching global events to figure out when to show the pane
+	
+[NSEvent addGlobalMonitorForEventsMatchingMask: (NSLeftMouseDraggedMask | NSKeyDownMask | NSKeyUpMask | NSTabletProximityMask | NSMouseEnteredMask | NSLeftMouseDownMask | NSOtherMouseDownMask | NSRightMouseDown | NSOtherMouseDownMask)
+    handler:^(NSEvent *incomingEvent) {
+	
+    ...
+}];
+
+// Start watching local events to figure out when to hide the pane	
+
+[NSEvent addLocalMonitorForEventsMatchingMask: (NSOtherMouseDownMask | NSRightMouseDownMask | NSKeyDownMask | NSKeyUpMask | NSTabletProximityMask)// | NSTabletPointMask)
+    handler:^(NSEvent *incomingEvent) {
+
+    ...
+}];		
+\end{lstlisting}
+
+\begin{figure}
+	\begin{center}
+        \myfloatalign
+        \subfloat[Mouse Position]
+        {\includegraphics[width=1\linewidth]{gfx/scribblerAccessibility}} \\
+        \subfloat[Accessibility Inspector]
+        {\label{fig:scribblerAccessibilityInspector}
+        \includegraphics[width=0.7\linewidth]{gfx/scribblerAccessibilityInspector}} \\
+        \caption[Accessibility Daten zur aktuellen Mausposition]{Accessibility Daten zur aktuellen Mausposition}\label{fig:scribblerAccessibility}
+	\end{center}
+\end{figure}
+
+\begin{lstlisting}[float,caption=Laden von Accessibility Daten]
+_systemWideElement = AXUIElementCreateSystemWide();
+	
+//Get the app that has the focus
+AXUIElementCopyAttributeValue(_systemWideElement, (CFStringRef)kAXFocusedApplicationAttribute, (CFTypeRef*)&_focusedApp);
+
+//Get the window that has the focus
+if(AXUIElementCopyAttributeValue((AXUIElementRef)_focusedApp, (CFStringRef)NSAccessibilityFocusedWindowAttribute, (CFTypeRef*)&_focusedWindow) == kAXErrorSuccess) {
+    ...
+}		
+\end{lstlisting}
 
 \section{User Review} \label{sec:userReview}
 Der Prototyp von \scribbler wurde von uns mit verschiedenen potenziellen Nutzern getestet. Darunter drei Designer aus den Bereichen Produkt-, Interaction-, und User Experience Design, die sich an \scribbler in einem reduzierten Setting, sprich mit nur einem Tablet versuchten. Zusätzlich setzte eine Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien \scribbler in einem kollaborativen Setting bei einem Projekt-Meeting ein. 
