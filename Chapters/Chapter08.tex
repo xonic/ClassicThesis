@@ -160,7 +160,11 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 \end{figure}
 
 \subsection{Grafisches User Interface}
-\scribbler hat ein sehr subtiles \ac{GUI}, das sich möglichst im Hintergrund hält, um den Benutzer nicht von seinem eigentlichen Vorhaben abzulenken. Bei normaler Interaktion mit Maus und Tastatur durch den Benutzer, zeigt sich \scribbler ausschließlich in der Systemleiste am oberen Rand des Bildschirms als sternförmiges Icon, siehe \autoref{fig:scribblerIcon}.
+\scribbler ist ein Dienst, der im Hintergrund läuft und lediglich das Betriebssystem an Funktionalität anreichert. Daher hat es ein sehr subtiles \ac{GUI}, das nahezu vollständig transparent bleibt und Benutzer nicht von ihrer eigentlichen Arbeit ablenkt. Es besteht nur aus einem sternförmigen Icon in der Systemleiste des Betriebssystems, siehe \picref{fig:scribblerIcon}. Dahinter verbirgt sich ein Menü, dargestellt in \picref{fig:scribblerMenu}, das die Funktionen von \scribbler zur Verfügung stellt. Diese können fast alle auch über die Tasten am Tablett durchgeführt werden. Eine Ausnahme bilden der erste Menüeintrag, der \scribbler temporär in einen Standby-Zustand und somit inaktiv setzt, und der letzte Menüeintrag, der das Programm vollständig beendet.
+
+\medskip Der Benutzer soll das Programm gar nicht bemerken, muss aber dennoch ein gewisses Maß an Feedback erhalten, um sinnvoll mit \scribbler arbeiten zu können. Dass der Zeichenmodus aktiv ist, wird dem Benutzer beispielsweise dadurch mitgeteilt, dass statt dem normalen Pfeil-Cursor ein Fadenkreuz-Cursor angezeigt wird. Zusätzlich markiert \scribbler das aktive Fenster (einer Drittapplikation) mit einem blauen Rahmen. Dem Benutzer wird so kommuniziert, welchem Fenster seine Zeichnungen zugeordnet werden. Er kann sich also vergewissern, ob er tatsächlich auf das gewünschte Fenster zeichnet.
+
+\scribbler hat ein sehr subtiles \ac{GUI}, das sich möglichst im Hintergrund hält, um den Benutzer nicht von seinem eigentlichen Vorhaben abzulenken. Bei normaler Interaktion mit Maus und Tastatur durch den Benutzer, zeigt sich \scribbler ausschließlich in der Systemleiste am oberen Rand des Bildschirms als sternförmiges Icon, siehe \autoref{fig:scribblerIcon}. 
 \begin{figure}
 	\begin{center}
         \myfloatalign
