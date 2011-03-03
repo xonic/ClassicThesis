@@ -155,18 +155,19 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 		\caption[Proximity Event]{Die Hardware erkennt Stifte erst dann, wenn die Spitze ein bis eineinhalb Zentimeter über das Tablet gehalten wird. Das Betriebssystem empfängt dann ein >>Proximity Event<<, das von \scribbler weiterverarbeitet wird.}\label{fig:scribblerProximity}
 \end{figure}
 
-\subsection{User Interface}
-
+\subsection{Grafisches User Interface}
+\scribbler hat ein sehr subtiles \ac{GUI}, das sich möglichst im Hintergrund hält, um den Benutzer nicht von seinem eigentlichen Vorhaben abzulenken. Bei normaler Interaktion mit Maus und Tastatur durch den Benutzer, zeigt sich \scribbler ausschließlich in der Systemleiste am oberen Rand des Bildschirms als sternförmiges Icon, siehe \autoref{fig:scribblerIcon}.
 \begin{figure}
 	\begin{center}
         \myfloatalign
         \subfloat[Scribbler Icon]
-        {\includegraphics[width=0.47\linewidth]{gfx/scribblerIcon}} \quad
+		{\label{fig:scribblerIcon}
+        \includegraphics[width=0.47\linewidth]{gfx/scribblerIcon}} \quad
         \subfloat[When Magic happens..]
-        {\label{fig:scribblerIcon}
+        {\label{fig:scribblerMagic}
         \includegraphics[width=0.47\linewidth]{gfx/scribblerMagic}} \quad
 		\subfloat[Scribbler Menu]
-		{\label{fig:scribblerMagic}
+		{\label{fig:scribblerMenu}
 		\includegraphics[width=1\linewidth]{gfx/scribblerMenu}} \\
         \caption[Scribbler Menu Icon]{Scribbler Menu Icon}\label{fig:scribblerMenuIcon}
 	\end{center}

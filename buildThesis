@@ -25,4 +25,5 @@ rm -rf $BN.nlo
 rm -rf $BN.nls
 rm -rf TUINFDA.aux
 rm -rf texput.log
+rm -rf $BN.ex
 echo "Compiled your thesis man! I'm on a horse."
