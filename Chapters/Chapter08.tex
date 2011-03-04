@@ -187,9 +187,9 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 \end{figure}
 
 \subsection{Programmlogik} \label{sec:programmLogik}
-Blicken wir abschließend noch tiefer in die Materie. \scribbler wurde auf das von Apple entwickelte \emph{Cocoa}-Framework aufgebaut und genießt somit alle Vorteile einer objektorierten Programmiersprache. Zusätzlich bietet \emph{Mac OS X} eine Schnittstelle für Bedienungshilfen, sog. Accessibility Daten - aber mehr dazu später. Betrachten wir vorerst die Grundfunktionalität von \emph{Scribbler}.
+Blicken wir abschließend noch tiefer in die Materie. \scribbler wurde auf das von Apple entwickelte \emph{Cocoa}-Framework aufgebaut und genießt somit alle Vorteile einer objektorierten Programmiersprache. Zusätzlich bietet \emph{Mac OS X} eine Schnittstelle für Bedienungshilfen, sog. Accessibility Daten, die einen wichtigen Teil des Systems ausmachen. Aber mehr dazu später. Betrachten wir vorerst die Grundfunktionalität von \emph{Scribbler}.
 
-\medskip \noindent \emph{Warum weiß Scribbler wann ein Benutzer zeichnen will?} \\
+\subsubsection* {Warum weiß Scribbler wann ein Benutzer zeichnen will?}
 \scribbler fängt sog. globale und lokale Eingabe-\emph{Events} ab. \emph{Events} sind vom Benutzer hervorgerufene Aktionen, die an Eingabegeräten vorgenommen wurden. So ist ein Druck auf die linke Maustaste beispielsweise ein \emph{LeftMouseDownEvent}, oder das Halten einer Taste auf der Tastatur ein \emph{KeyDownEvent}. Geschehen die Aktionen im eigenen Programm, spricht man von lokalen Events. Ereignen sich die Aktionen in anderen Programmen, spricht man von globalen Events. Auf die selbe Weise erkennt das System auch \emph{TabletProximityEvents}. Wie bereits im Punkt \pointref{ssec:hardware} erwähnt, entsteht ein \emph{TabletProximityEvent} wenn ein Stift in die Nähe - mit 1-1.5 cm Abstand - zu einem Tablet kommt (vgl. \autoref{fig:scribblerProximity}). Passiert dies, wechselt Scribbler automatisch in den Zeichenmodus. 
 
 \bigskip \emph{Anmerkung: \graffito{\(\clubsuit\)} Voraussetzung dafür ist jedoch, dass zuvor nicht explizit in den Mausmodus gewechselt wurde.}
@@ -212,17 +212,29 @@ Blicken wir abschließend noch tiefer in die Materie. \scribbler wurde auf das v
 }];	
 \end{lstlisting}
 
-\medskip \noindent \emph{Wie erkennt Scribbler das aktive Programmfenster?} \\
+\subsubsection* {Wie erkennt Scribbler das aktive Programmfenster?} 
+Das >>aktive<< Fenster wird in \emph{Mac OS X} auch \emph{Key Window} genannt und bezeichnet das am weitesten vorne liegende Fenster, das gerade den Fokus hat. Leider bietet \emph{Cocoa} oder auch andere Frameworks keine direkte Abfrage nach dem \emph{Key Window}. Es gibt zwar eine sog. \emph{WindowList}, in der Informationen über alle offenen Programmfenster abgelegt sind, jedoch ohne Kennzeichnung des aktiven Fensters. Deswegen muss \scribbler die Arbeit übernehmen. \\
+Dazu greift es, einfach formuliert, auf die Daten des aktiven Programms zu und sucht in der \emph{WindowList} nach allen dazugehörigen Einträgen. Da die Einträge der \emph{WindowList} stets nach der Reihenfolge ihres Erscheinens sortiert sind, nimmt \scribbler das >>Vorderste<< und hat somit das aktive Fenster gefunden.
+
+\subsubsection* {Woher weiß Scribbler wann und wohin sich ein Fenster verschoben hat?}
+Immer wenn ein Benutzer ein Programmfenster verschiebt, muss er ein Eingabegerät benutzen. Eine Fensterverschiebung wird naturgemäß durch ein Mausevent ausgelöst, um genau zu sein durch ein \emph{LeftMouseDraggedEvent}. Da \scribbler diese Events empfängt, kann im Anschluss eines solchen Events überprüft werden, ob sich das entsprechende \emph{Key Window} verschoben hat. \\
+Dazu bedient sich \scribbler an den Informationen, die zu jedem Fenster in der \emph{WindowList} gespeichert werden. Somit können allgemeine Informationen, wie z.B. der Programmname oder auch spezifische, wie die Fenstergröße und -position (zusammengefasst in sog. \emph{Bounds}) gewonnen werden. \autoref{lst:keyWindowHandling} zeigt die Funktionen zur Gewinnung des Programmnamens und der Windowbounds.
 
 \begin{lstlisting}[float,caption=Key Window Handling,label=lst:keyWindowHandling]
-// get current key window infos
-NSMutableDictionary* currentInfos = [self getCurrentKeyWindowInfos];
-// get keyWindowID
-NSNumber* keyID = [self getKeyWindowID:currentInfos];
 // get keyWindow App Name
-NSString* appName = [self getKeyWindowsApplicationName:currentInfos];
-// get processID
-int pid = [self getProcessID:currentInfos];
+- (NSString*) getKeyWindowsApplicationName: (NSMutableDictionary*)windowInfos {
+	
+    return [windowInfos objectForKey:(id)kCGWindowOwnerName];
+}
+// get keyWindow Bounds
+- (NSRect) getKeyWindowBounds: (NSMutableDictionary*) windowInfos {
+	
+    CGRect rect;
+    CFDictionaryRef ref = (CFDictionaryRef)[windowInfos objectForKey:(id)kCGWindowBounds];
+    CGRectMakeWithDictionaryRepresentation(ref, &rect);
+
+    return *(NSRect *)&rect;
+}
 \end{lstlisting}
 
 \begin{figure}
@@ -237,7 +249,17 @@ int pid = [self getProcessID:currentInfos];
 	\end{center}
 \end{figure}
 
-\begin{lstlisting}[float,caption=Laden von Accessibility Daten]
+\subsubsection* {Und wie können sich die Skizzen beim Scrolling mitbewegen?}
+Im Prinzip ist Scrolling das Selbe wie eine Fensterverschiebung: Digitale Inhalte bewegen sich über den Bildschirm. Scrollingaktionen kann man zwar über die bewährten \emph{Events} ansteuern, jedoch ist es weitaus komplizierter herauszufinden was sich bewegt hat und um wieviel. Aus Sicherheitsgründen darf ein Programm nicht auf Informationen anderer Programme zugreifen. Wie macht dies dann aber \emph{Scribbler}?\\
+Hier kommen die anfangs erwähnten Bedienungshilfen bzw. Accessibility Daten ins Spiel. Bedienungshilfen sind Funktionen, die für behinderte Menschen eingeführt worden sind und ausdrücklich in den Systemeinstellungen\footnote{Erreichbar unter Mac OS X: Systemeinstellungen - Bedienungshilfen - >>Zugriff für Hilfsgeräte aktivieren<<.} aktiviert werden müssen. 
+
+\bigskip \emph{Anmerkung: \graffito{\(\clubsuit\)} \scribbler benötigt den >>Zugriff für Hilfsgeräte<< um Scrollinginformationen handhaben zu können.}
+\bigskip
+
+Unterstützt das aktive Programm Bedienungshilfen, können Accessibility Daten abgerufen werden. Je nach Programmherausgeber unterscheidet sich die Anzahl an verfügbaren Daten. Nicht jedes Programm, das Bedienungshilfen implementiert hat, muss auch essentielle Daten zur Berechnung von Scrollinginformationen bereit stellen. \autoref{lst:accessiblityDaten} zeigt allgemeine Informationen, die jedoch bei jeder Accessibilitykonfiguration vorhanden sind. So kann durch Bedienungshilfen beispielsweise, auf einfachen Weg das aktive Fenster ermittelt werden. Jedoch nur wenn das aktive Programm Accessibility Daten unterstützt. Welche Accessiblity Daten von einem Programm unterstützt werden, kann mittels dem Dienstprogramm \emph{Accessibility Inspector} herausgefunden werden, welches alle verfügbaren Accessibility Daten zu der aktuellen Mausposition anzeigt (siehe \autoref{fig:scribblerAccessibility}). \\
+\picref{fig:scribblerAccessibilityInspector} zeigt außerdem alle für Scrolling relevanten Einträge. Besitzt \emph{AXParent} das Attribut \emph{AXScrollArea}, existiert ein scrollbarer Bereich innerhalb des aktiven Fensters. Aus den \emph{AXPosition} und \emph{AXSize} Einträgen kann man mittels einfacher Mathematik die aktuelle Scrollingposition errechnen und somit die Bewegung innerhalb des Fensters.
+
+\begin{lstlisting}[float,caption=Laden von Accessibility Daten,label=lst:accessiblityDaten]
 _systemWideElement = AXUIElementCreateSystemWide();
 	
 //Get the app that has the focus
