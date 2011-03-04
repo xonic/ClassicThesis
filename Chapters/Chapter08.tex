@@ -162,16 +162,21 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 \subsection{Grafisches User Interface}
 \scribbler ist ein Dienst, der im Hintergrund läuft und lediglich das Betriebssystem an Funktionalität anreichert. Daher hat es ein sehr subtiles \ac{GUI}, das nahezu vollständig transparent bleibt und Benutzer nicht von ihrer eigentlichen Arbeit ablenkt. Es besteht nur aus einem sternförmigen Icon in der Systemleiste des Betriebssystems, siehe \picref{fig:scribblerIcon}. Dahinter verbirgt sich ein Menü, dargestellt in \picref{fig:scribblerMenu}, das die Funktionen von \scribbler zur Verfügung stellt. Diese können fast alle auch über die Tasten am Tablett durchgeführt werden. Eine Ausnahme bilden der erste Menüeintrag, der \scribbler temporär in einen Standby-Zustand und somit inaktiv setzt, und der letzte Menüeintrag, der das Programm vollständig beendet.
 
-\medskip Der Benutzer soll das Programm gar nicht bemerken, muss aber dennoch ein gewisses Maß an Feedback erhalten, um sinnvoll mit \scribbler arbeiten zu können. Dass der Zeichenmodus aktiv ist, wird dem Benutzer beispielsweise dadurch mitgeteilt, dass statt dem normalen Pfeil-Cursor ein Fadenkreuz-Cursor angezeigt wird. Zusätzlich markiert \scribbler das aktive Fenster (einer Drittapplikation) mit einem blauen Rahmen. Dem Benutzer wird so kommuniziert, welchem Fenster seine Zeichnungen zugeordnet werden. Er kann sich also vergewissern, ob er tatsächlich auf das gewünschte Fenster zeichnet.
+\medskip Der Benutzer soll das Programm gar nicht bemerken, muss aber dennoch ein gewisses Maß an Feedback erhalten, um sinnvoll mit \scribbler arbeiten zu können. Dass der Zeichenmodus aktiv ist, wird dem Benutzer beispielsweise dadurch mitgeteilt, dass statt dem normalen Pfeil-Cursor (vgl. \picref{fig:scribblerMousePosition}) ein Fadenkreuz-Cursor (vgl. \autoref{fig:scribblerSketching}) angezeigt wird. Zusätzlich markiert \scribbler das aktive Fenster (einer Drittapplikation) mit einem blauen Rahmen. Dem Benutzer wird so kommuniziert, welchem Fenster seine Zeichnungen zugeordnet werden. Er kann sich also vergewissern, ob er tatsächlich auf das gewünschte Fenster zeichnet.
 
-\scribbler hat ein sehr subtiles \ac{GUI}, das sich möglichst im Hintergrund hält, um den Benutzer nicht von seinem eigentlichen Vorhaben abzulenken. Bei normaler Interaktion mit Maus und Tastatur durch den Benutzer, zeigt sich \scribbler ausschließlich in der Systemleiste am oberen Rand des Bildschirms als sternförmiges Icon, siehe \autoref{fig:scribblerIcon}. 
+\medskip \emph{Scribblers} herausragendstes Feature, das es von allen bisherigen ähnlichen Systemen abhebt, ist der >>Sticky Mode<<. Dieser bewirkt, dass Zeichnungen immer dort bleiben, wo sie hingehören. Wenn ein Benutzer auf ein Fenster zeichnet und dieses nachträglich verschiebt, erkennt \scribbler die Änderung der Fensterposition und verschiebt die Zeichnungen ebenfalls, sodass sie wieder genau dort über dem Fenster liegen, wo sie ursprünglich gezeichnet wurden.
+
+Neben der Fensterposition kann \scribbler auch erkennen, wenn der Benutzer in einem Fenster die Scrollposition ändert. Zeichnet der Benutzer beispielsweise auf ein Element einer Webseite und scrollt dann nach unten oder oben auf der Seite, verschiebt \scribbler wiederum automatisch die Zeichnungen, sodass sie immer an der selben Stelle, relativ zum Inhalt bleiben.
+
+Der Benutzer erhält direktes Feedback vom GUI, da die Zeichnungen in Echtzeit neu positioniert werden und so scheinbar am Fenster haften. Außerdem färbt sich das Programm-Icon in der Systemleiste schwarz (siehe \picref{fig:scribblerMagic}), sobald diese spektakulären Funktionen zum Einsatz kommen; ein kleines Detail im Sinne einer besseren User Experience. 
+
 \begin{figure}
 	\begin{center}
         \myfloatalign
         \subfloat[Scribbler Icon]
 		{\label{fig:scribblerIcon}
         \includegraphics[width=0.47\linewidth]{gfx/scribblerIcon}} \quad
-        \subfloat[When Magic happens..]
+        \subfloat[When magic happens]
         {\label{fig:scribblerMagic}
         \includegraphics[width=0.47\linewidth]{gfx/scribblerMagic}} \quad
 		\subfloat[Scribbler Menu]
@@ -241,7 +246,8 @@ Dazu bedient sich \scribbler an den Informationen, die zu jedem Fenster in der \
 	\begin{center}
         \myfloatalign
         \subfloat[Mouse Position]
-        {\includegraphics[width=1\linewidth]{gfx/scribblerAccessibility}} \\
+        {\label{fig:scribblerMousePosition}
+		\includegraphics[width=1\linewidth]{gfx/scribblerAccessibility}} \\
         \subfloat[Accessibility Inspector]
         {\label{fig:scribblerAccessibilityInspector}
         \includegraphics[width=0.7\linewidth]{gfx/scribblerAccessibilityInspector}} \\
