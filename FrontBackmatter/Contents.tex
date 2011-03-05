@@ -44,6 +44,8 @@
     \refstepcounter{dummy}
     %\addcontentsline{toc}{chapter}{\listfigurename}
     \pdfbookmark[1]{\listfigurename}{lof}
+	\setlength{\cftfignumwidth}{3cm}
+	\setlength{\cfttabnumwidth}{3cm}
     \listoffigures
 
     \vspace*{8ex}
@@ -79,7 +81,11 @@
     \pdfbookmark[1]{Akronyme}{acronyms}
     \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
     \chapter*{Akronyme}
-    \begin{acronym}[UML]
+    \begin{acronym}[XXXXXXX]
+	\setlength{\itemsep}{-\parsep}
+	%\setlength{\labelsep}{1cm}
+	%\addtolength{\labelwidth}{1cm}
+	%\addtolength{\leftmargin}{1cm}
 		\acro{CSCW}{Computer Supported Cooperative Work}
         \acro{HCI}{Human-Computer Interaction}
 		\acro{PDF}{Portable Document Format}
@@ -91,7 +97,7 @@
 		\acro{CAD}{Computer-Aided Design}
     \end{acronym}
 
-	\vspace*{8ex}
+	%\vspace*{8ex}
        
     %*******************************************************
     % Extracts

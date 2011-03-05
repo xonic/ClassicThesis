@@ -93,8 +93,18 @@
 						listings,dottedtoc,listsseparated,%pdfspacing,%listings,
 						subfig,beramono,eulermath,parts]{classicthesis}
 
-% use chapter.numberOfFigure for figure numbering
+
+%*******************************************************
+% tweak to show chapternumbers in listings,figures and tables
+%*******************************************************
+\AtBeginDocument{\numberwithin{lstlisting}{chapter}}
 \numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+
+%*******************************************************
+% tweak to color the dots in the toc gray
+%*******************************************************
+\renewcommand{\cftdot}{\textcolor{Gray}{.}}
 
 %*******************************************************
 % Some font experiments
@@ -122,6 +132,8 @@
 \makeatletter 
 \MakeRobustCommand\caption@xref 
 \makeatother 
+
+\usepackage{bookmark}
 
 %*******************************************************            
 %\usepackage[section,below]{placeins} <--- not everybody wants this
@@ -208,33 +220,58 @@
 %*******************************************************
 \usepackage{tocloft}
 %\newenvironment{extract}{\par\tiny}{\par}
-\newcounter{extract}
-\newlength{\extlength}
-\newenvironment{extract}[2][]{
-	\refstepcounter{extract}
-	\par\bigskip\bigskip\noindent%
-	\framebox[\textwidth]{\makebox[\textwidth]{#2}}
-	\noindent
-	\settowidth{\extlength}{Auszug~\arabic{extract}:}
-	%\addtolength{\extlength}{5pt}
-	\begin{tabularx}{\textwidth}{@{}p{\extlength}@{}X@{}}%
-		\\ [-13pt]
-	\small{Auszug~\arabic{extract}:} & \small{#1}
-	\end{tabularx}
-	\rmfamily 
-}{\bigskip}
-\newcommand{\extref}[1]{\hyperref[#1]{Auszug \ref{#1}}}
 
 \newcommand{\listXname}{Ausz\"uge}
 \newlistof{captionX}{ex}{\listXname}
+
+\newcounter{extract}
+\newcounter{curchapter}
+\setcounter{curchapter}{\thechapter}
+\newlength{\extlength}
+\newenvironment{extract}[2][]{
+	\ifnum \thecurchapter=\thechapter
+		\refstepcounter{extract}
+	\else
+		\setcounter{extract}{1}
+	\fi
+	%
+	\par\bigskip\bigskip\noindent%
+	\framebox[\textwidth]{\makebox[\textwidth]{#2}}
+	\noindent
+	\settowidth{\extlength}{Auszug~\arabic{chapter}.\arabic{extract}:}
+	%\addtolength{\extlength}{5pt}
+	\begin{tabularx}{\textwidth}{@{}p{\extlength}@{}X@{}}%
+		\\ [-13pt]
+	\small{Auszug~\arabic{chapter}.\arabic{extract}:} & \small{#1}
+	\end{tabularx}
+	\rmfamily 
+	
+	\setcounter{curchapter}{\thechapter}
+}{\bigskip}
+
+\newcommand{\extref}[1]{\hyperref[#1]{Auszug \ref{#1}}}
+
 \newcommand{\captionX}[1]{%
+\renewcommand{\thecaptionX}{\thechapter.\theextract}
 \refstepcounter{captionX}
 %\par\noindent\textbf{optionale Unterschrift vom Auszug}
+%\texorpdfstring{$\arab{captionX}$}{\thechapter.\theextract}
+\ifnum \theextract=1
+	\addtocontents{ex}{\vspace{0.5cm}}
+\fi
 \protect\addcontentsline{ex}{captionX}{
-{Auszug \theextract}\hspace*{1cm}#1}\par
+{Auszug \thechapter.\theextract}
+\ifnum \theextract >9
+\hspace*{0.81cm}
+\else
+\hspace*{1cm}
+\fi
+#1
+}\par
 }
 
 \newcommand{\listofextracts}{\listofcaptionX}
+
 
 
 %********************************************************************
@@ -314,6 +351,7 @@
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************
+\bookmarksetup{startatroot} % refresh pdf-bookmark stage
 \cleardoublepage\include{FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Glossary}
 %\cleardoublepage\include{FrontBackmatter/Colophon}
