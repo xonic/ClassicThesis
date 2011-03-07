@@ -1,5 +1,5 @@
 %*************************************************************
-\chapter{Scribbler}\label{ch:scribbler}
+\chapter{Scribbler}\label{ch:scribbler} \index{Scribbler}
 %*************************************************************
 
 Die vergangenen Kapitel zeigen viele Beispiele, wie und mit welchen Hilfsmitteln Gruppenmeetings abgehalten werden können. Seien es traditionelle Medien wie Papier und Flip-Charts, oder elektronische Medien wie computerunterstützte Whiteboardsysteme - sie alle finden Einsatz in Designsessions und bieten verschiedenste Vor- und Nachteile.
@@ -8,7 +8,7 @@ Die vergangenen Kapitel zeigen viele Beispiele, wie und mit welchen Hilfsmitteln
 
 \medskip Um dies zu zeigen, wird zuerst kurz die Ausgangssituation geschildert und danach die Anforderungen an ein kollaboratives Skizziersystem, die sich aus der Literaturrecherche ergeben haben, präsentiert. Danach wird die Vorgehensweise zur Erstellung des Prototyps erklärt, welche selbst einige Designmethoden aus \autoref{ch:designTheorie} beinhaltet. Anschließend folgt eine Präsentation der simplen Oberfläche von \scribbler und dessen Funktionsumfang mitsamt technischer Hintergründe. Schlussendlich werden die Anforderungen und Merkmale gegenübergestellt und die aus User-Tests gewonnenen Erkenntnisse beschrieben.
 
-\section{Ausgangssituation \& Rahmenbedingungen} \label{sec:ausgangssituation}
+\section{Ausgangssituation \& Rahmenbedingungen} \label{sec:ausgangssituation} \index{Scribbler!Ausgangssituation}
 Die Technisierung vieler Berufe führte dazu, dass gewisse Arbeitsgegenstände ein elektronisches Abbild bekamen. Im Gegensatz zu früher, fertigen Grafikdesigner heutzutage Präsentationszeichnungen oft an einem digitalen Medium an. Neuere Berufssparten wie Interfacedesign setzen die tagtägliche Arbeit mit digitalen Artefakten voraus. Wie schon in den vorigen Kapiteln erwähnt, ist (im Besonderen) Design eine kollaborative Tätigkeit, wofür sich Gruppen in Meetings treffen, um gemeinsam neue Lösungen zu erarbeiten. Ein bewährtes und wichtiges Instrument dazu sind Stifte zur Erstellung von Skizzen, um Gedanken zu manifestieren.\\
 Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm oder Projektor, der als Präsentationsmedium eingesetzt wird. Zudem ist meistens eine Zeichenfläche vorhanden, wie z.B. Whiteboards oder Flip-Charts, um kollaborativ erarbeitete Ideen festzuhalten und neue Ideen zu explorieren.
 
@@ -16,7 +16,7 @@ Ein wesentlicher Bestandteil moderner Meetingräume ist ein zentraler Bildschirm
 
 \medskip Das Kerngebiet des Instituts ist \ac{HCI}, wodurch der Meetingraum oft dazu verwendet wird, Designs für interaktive Systeme, Applikationen oder Webinhalte zu erarbeiten. Ein Problem, das dabei erwartungsgemäß entsteht ist, dass bereits umgesetzte Inhalte nur digital vorhanden sind, was den Einsatz der wichtigsten Designmethode - Skizzieren - auf dem Artefakt fast unmöglich macht. Ziel der Arbeit war es nun ein Tool zu entwickeln, das es ermöglicht, auf jegliche präsentierte Inhalte - seien es Webseiten, Programmoberflächen oder Bilder - >>kritzeln<< zu können. \scribbler soll so die Barriere zwischen der realen Welt und der digitalen Welt aufbrechen.
 
-\section{Anforderungen an kollaborative Skizziersysteme} \label{sec:anforderungen}
+\section{Anforderungen an kollaborative Skizziersysteme} \label{sec:anforderungen} \index{Skizziersysteme!Anforderungen}
 Die letzten Kapitel gaben Aufschluss über das Verbesserungspotential vieler existierender Systeme. Wichtige literarische Größen auf diesem Gebiet, wie z.B. Lee, Olsen, Tang, Larsson, Johnson oder Prante, wiesen auf wesentliche Erkenntnisse hin, die ein solches System formen. Diese Erkenntnisse können vier großen Einflussfaktoren zugeordnet werden: \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren} und bieten eine Art Checkliste für kollaborative Systeme. \autoref{fig:scribblerKollaborativesSkizziersystem} zeigt eine Aufstellung dieser Erkenntnisse, in Verbindung zu ihren Einflussfaktoren. 
 
 \begin{figure}
@@ -34,7 +34,7 @@ Will man ein universelles Annotierungstool schaffen, das über alle verwendeten 
 
 \subsubsection*{Skizzieren} Das Zeichnen mit einem strukturierten Softwaretool kommt nicht an die Schnelligkeit von unstrukturierten Papier- und-Stift Skizzen heran. Eine >>auf dem Bildschirm kritzeln<< Metapher ist somit einfach und universell einsetzbar. Skizzen verlieren außerhalb des Kontextes ihre Bedeutung. Daher muss darauf geachtet werden, dass der Kontext stets bewahrt wird. Scrolling befördert z.B. einen Teil des Annotierungskontextes aus dem Blickfeld und benötigt somit zusätzliche Aufmerksamkeit bei der Umsetzung. Zudem könnte eine zusätzliche, private Zeichenfläche mögliche Zeichenhemmungen von Teilnehmern nehmen. Alles in Allem haben die Benutzer das kreative Potential - ein Skizziersystem muss sich entsprechend adaptieren können.
 
-\section{Vorgehensweise}
+\section{Vorgehensweise} \index{Scribbler!Vorgehensweise}
 Aufgrund des Bedarfs nach einem elektronischen Skizziersystem, wurde zuerst eine Suche nach vergleichbaren Systemen veranlasst. Eine Brainstorming-Sitzung diente dazu, verschiedene Begriffe zu sammeln und zu explorieren. In diversen wissenschaftlichen Datenbanken fanden sich Unmengen an Literatur und so Hinweise zu bestehenden kollaborativen Skizziertools. Nach der Lektüre und Analyse der gesammelten Werke, konnte ein vorläufiges Anforderungsprofil an solche Systeme erstellt werden. \\
 Eine wichtige Designfrage stellte sich schon zu diesem Zeitpunkt: Welche Eingabetechnologie sollte für \scribbler eingesetzt werden? \autoref{fig:scribblerVorgehensweise} zeigt Aufzeichnungen zu der wohl wichtigsten hardwarespezifischen Frage. Würden Skizzen erst nachträglich digitalisiert, wäre das System unabhängig von notwendigen Gerätschaften, was der Flexibilität des Systems zu Gute käme. Jedoch ist es technisch aufwändig und fehleranfällig, gezeichnete Objekte nachträglich zu erkennen. Es müsste Mustererkennung zum Einsatz kommen, und das Ergebnis könnte unter Umständen nicht zufriedenstellend ausfallen. Würden Zeichnungen direkt auf digitalem Wege angefertigt, z.B. via Tablets, wäre die Flexibilität des Systems zwar eingeschränkt, das Ergebnis jedoch besser. \\
 Für \scribbler wurde zusammen mit dem Institut entschieden, auf die zweite Variante zu setzen, da Tablets bereits vorhanden waren und für einen ersten Prototypen ausreichen sollten.
@@ -107,7 +107,7 @@ Durch die erstellten Prototypen vor der Implementierung des Programms, war es m�
 
 \medskip Nach Fertigstellung der Betaversion konnte \scribbler zusätzlich am Beginners-Day\footnote{Der Beginners-Day ist eine Infoveranstaltung für alle Studienanfängerinnen und Studienanfänger in den Informatik-, Wirtschaftsinformatik- und Lehramtsstudien. \citep{TU:2010}} der TU Wien vorgeführt und mit vielen erstsemestrigen Studenten getestet werden. Abschließend konnten auch ausführliche Tests mit Designern durchgeführt werden, welche in \autoref{sec:userReview} ausführlich beschrieben sind.
 
-\section{Scribbler at a Glance}
+\section{Scribbler at a Glance} \index{Scribbler!at a Glance}
 Durch die verschiedenen Designmethoden veränderte sich die Funktionalität von \scribbler öfters. Aus diesem Grund soll das Konzept ordnungshalber erst jetzt angeführt werden.
 
 \medskip \scribbler ermöglicht neben der herkömmlichen Arbeit an einem Desktop (\acs{WIMP}) System, mittels Stiften auf jedes beliebige Programmfenster zu zeichnen. Das System läuft im Hintergrund und aktiviert sich bei Bedarf. Es unterscheidet dabei generell zwei Hauptmodi: den Zeichen- und den Mausmodus. In letzterem kann die Maus wie gewohnt zur Navigation zwischen Programmfenster eingesetzt werden. Die Verwendung eines Tabletstifts hingegen wechselt in den Zeichenmodus. Die Benutzer können so auf das momentan aktive Fenster einer Drittapplikation >>kritzeln<<. Da besonders geübte Tabletbenutzer die Stifte auch als Ersatz für die Maus verwenden, ermöglicht \scribbler auch das explizite Wechseln der beiden Modi durch Drücken einer Tablettaste.
@@ -120,7 +120,7 @@ Durch die verschiedenen Designmethoden veränderte sich die Funktionalität von 
 
 \medskip Die folgenden Punkte sollen nun nähere Informationen zur Hardware, dem grafischen User Interface und dem logischen Programmaufbau geben. 
 
-\subsection{Hardware} \label{ssec:hardware}
+\subsection{Hardware} \label{ssec:hardware} \index{Scribbler!Hardware}
 \scribbler benötigt ein relativ komplexes Hardware-Setting. Für die Ausgabe wird ein großes Display oder ein Beamer benutzt, während es für die Eingabe erforderlich ist, dass jeder Benutzer über ein Tablet mit Stift verfügt. Diese Tablets und das Ausgabegerät werden mit einem Rechner verbunden, auf dem das Apple Betriebssystem OS X 10.6 >>Snow Leopard<< läuft. Ältere Versionen von OS X werden von \scribbler nicht unterstützt. Für ein optimales Nutzungserlebnis, sollte der Computer über eine gute Rechenleistung verfügen. Bei der Umsetzung des Prototypen fiel die Entscheidung auf die Nutzung von Tablets aus der Modellreihe Intuos3 von Wacom. Diese Geräte verfügen über jeweils vier Buttons an beiden Seiten neben der Zeichenoberfläche, die mit verschiedenen Funktionen belegt werden können. Über diese Tasten können die folgenden Aktionen durchgeführt werden:
 
 \begin{itemize}
@@ -159,7 +159,7 @@ Stifte werden vom System erst dann wahrgenommen, wenn die Stiftspitze ein bis ei
 		\caption[Proximity Event]{Die Hardware erkennt Stifte erst dann, wenn die Spitze ein bis eineinhalb Zentimeter über das Tablet gehalten wird. Das Betriebssystem empfängt dann ein >>Proximity Event<<, das von \scribbler weiterverarbeitet wird.}\label{fig:scribblerProximity}
 \end{figure}
 
-\subsection{Grafisches User Interface}
+\subsection{Grafisches User Interface} \index{Scribbler!GUI}
 \scribbler ist ein Dienst, der im Hintergrund läuft und lediglich das Betriebssystem an Funktionalität anreichert. Daher hat es ein sehr subtiles \ac{GUI}, das nahezu vollständig transparent bleibt und Benutzer nicht von ihrer eigentlichen Arbeit ablenkt. Es besteht nur aus einem sternförmigen Icon in der Systemleiste des Betriebssystems, siehe \picref{fig:scribblerIcon}. Dahinter verbirgt sich ein Menü, dargestellt in \picref{fig:scribblerMenu}, das die Funktionen von \scribbler zur Verfügung stellt. Diese können fast alle auch über die Tasten am Tablett durchgeführt werden. Eine Ausnahme bilden der erste Menüeintrag, der \scribbler temporär in einen Standby-Zustand und somit inaktiv setzt, und der letzte Menüeintrag, der das Programm vollständig beendet.
 
 \medskip Benutzer sollen das Programm gar nicht bemerken, müssen aber dennoch ein gewisses Maß an Feedback erhalten, um sinnvoll mit \scribbler arbeiten zu können. Dass der Zeichenmodus aktiv ist, wird Benutzern beispielsweise dadurch mitgeteilt, dass statt dem normalen Pfeil-Cursor (vgl. \picref{fig:scribblerMousePosition}) ein Fadenkreuz-Cursor (vgl. \autoref{fig:scribblerSketching}) angezeigt wird. Zusätzlich markiert \scribbler das aktive Fenster (einer Drittapplikation) mit einem blauen Rahmen. Den Benutzern wird so kommuniziert, welchem Fenster ihre Zeichnungen zugeordnet werden. Man kann sich also vergewissern, ob tatsächlich auf das gewünschte Fenster gezeichnet wird.
@@ -191,7 +191,7 @@ Benutzer erhalten so direktes Feedback vom GUI, da die Zeichnungen in Echtzeit n
 		\caption[Skizzieren in Scribbler]{Skizzieren in Scribbler}\label{fig:scribblerSketching}
 \end{figure}
 
-\subsection{Programmlogik} \label{sec:programmLogik}
+\subsection{Programmlogik} \label{sec:programmLogik} \index{Scribbler!Programmlogik}
 \scribbler wurde auf das von Apple entwickelte \emph{Cocoa}-Framework aufgebaut und genießt somit alle Vorteile einer objektorientierten Programmiersprache. Zusätzlich bietet \emph{Mac OS X} eine Schnittstelle für Bedienungshilfen, sog. Accessibility Daten, die einen wichtigen Teil des Systems ausmachen. Aber mehr dazu später. Vorerst wird näher auf die Grundfunktionalität von \scribbler eingegangen.
 
 \subsubsection* {Warum weiß Scribbler wann ein Benutzer zeichnen will?}
@@ -277,7 +277,7 @@ if(AXUIElementCopyAttributeValue((AXUIElementRef)_focusedApp, (CFStringRef)NSAcc
 }		
 \end{lstlisting}
 
-\section{User Review} \label{sec:userReview}
+\section{User Review} \label{sec:userReview} \index{Scribbler!User Review}
 Der Prototyp von \scribbler wurde mit verschiedenen potenziellen Nutzern getestet. Darunter drei Designer aus den Bereichen Produkt-, Interaction-, und User Experience Design, die sich an \scribbler in einem reduzierten Setting, sprich mit nur einem Tablet versuchten. Zusätzlich setzte eine Arbeitsgruppe am Institut für Gestaltungs- und Wirkungsforschung der technischen Universität Wien \scribbler in einem kollaborativen Setting bei einem Projekt-Meeting ein. 
 
 Bei allen drei Sitzungen wurden die Aktionen der Testpersonen durch eine Videokamera gefilmt und ihre Kommentare auf einem Tonträger festgehalten. Die drei Designer wurden zusätzlich interviewt, und die Transkripte sind im Appendix im Kapitel \nameref{ch:interviews} zu finden.
@@ -514,7 +514,7 @@ Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkei
 
 Peter, der Produktdesigner, würde außerdem ein Kontextmenü benötigen, das ihm ein paar Optionen anbietet. Gängige Skizzierprogramme bieten diese Funktion an und ermöglichen so eine sehr hohe Effizienz bei der Arbeit.
 
-\section{Achievements}
+\section{Achievements} \index{Scribbler!Achievements}
 Abschließend werden nun kurz die im Abschnitt \pointref{sec:anforderungen} beschriebenen Anforderungen an ein kollaboratives Skizziertool, den umgesetzten Merkmalen von \scribbler gegenübergestellt. Die Merkmale von \scribbler werden wiederum in die vier Einflussfaktoren \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren} eingeteilt.  \autoref{fig:scribblerAnforderungsauswertung} veranschaulicht diese durch eine farbliche Kennzeichnung der ursprünglichen Erkenntnisse aus der Literatur. In Grün gehaltene Erkenntnisse wurden in der Betaversion von \scribbler bereits behandelt, rot eingefärbte konnten (noch) nicht umgesetzt werden.
 
 \medskip Wie die Abbildung erkennen lässt, konnte ein Großteil der Anforderungen umgesetzt werden - um genau zu sein 17 (77,27\%). Die restlichen 5 (22,73\%) blieben vorwiegend durch technische Probleme bis dato ungelöst.
