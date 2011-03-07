@@ -1,0 +1,90 @@
+%% Driver file to produce myBibStyle.bst from merlin.mbs
+%% Generated with makebst, version 4.1 (2003/09/08)
+%% Produced on 2011/03/06 at 15:42
+%% 
+\input docstrip
+
+\preamble
+----------------------------------------
+*** Diplomarbeit ***
+
+\endpreamble
+
+\postamble
+End of customized bst file
+\endpostamble
+
+\keepsilent
+
+\askforoverwritefalse
+\def\MBopts{\from{merlin.mbs}{%
+%EXTERNAL FILES:
+%Name of language file: \cfile=.
+%No included files.
+%INTERNAL LANGUAGE SUPPORT (if no external language file)
+%   %: (def) English
+  babel,%: Babel
+%--------------------
+%STYLE OF CITATIONS:
+%   %: (def) Numerical
+  ay,%: Author-year
+% alph,%: Alpha style, Jon90 or JWB90
+% alph,alf-1,%: Alpha style, Jon90
+% alph,alf-f,%: Alpha style, Jones90
+% cite,%: Cite key
+%--------------------
+%HTML OUTPUT (if non author-year citations)
+%   %: (def) Normal LaTeX
+% html,%: Hypertext
+% html,htlist,%: Hypertext list
+% html,htdes,%: Hypertext with keys
+%--------------------
+%AUTHOR--YEAR SUPPORT SYSTEM (if author-year citations)
+  nat,%: Natbib
+%   %: (def) Older Natbib
+% alk,%: Apalike
+% har,%: Harvard
+% ast,%: Astronomy
+% cay,%: Chicago
+% nmd,%: Named
+% cn,%: Author-date
+%--------------------
+%HARVARD EXTENSIONS INCLUDED (if Harvard support selected)
+% harnm,%: With Harvard extensions
+%   %: (def) Older Harvard
+%--------------------
+%LANGUAGE FIELD
+%   %: (def) No language field
+  lang,%: Add language field
+%--------------------
+%ANNOTATIONS:
+    %: (def) No annotations
+% annote,%: Annotations
+%--------------------
+%PRESENTATIONS:
+    %: (def) Do not add presentation type
+% pres,%: Add presentation, speaker not highlighted
+% pres,pres-bf,%: Presentation, speaker bold face
+% pres,pres-it,%: Presentaion, speaker italic
+% pres,pres-sc,%: Presentaion, speaker in small caps
+%--------------------
+%ORDERING OF REFERENCES (if non-author/year and non-alph)
+%   %: (def) Alphabetical
+% seq-no,%: Citation order
+% seq-yr,%: Year ordered
+% seq-yrr,%: Reverse year ordered
+%--------------------
+%ORDERING OF REFERENCES (if author-year citations)
+    %: (def) Alphabetical
+% seq-lab,%: By label
+% seq-labc,%: By label and cite order
+% seq-key,%: By label and cite key
+% seq-yr,%: Year ordered
+% seq-yrr,%: Reverse year ordered
+% seq-no,%: Citation order
+%--------------------
+%ORDER ON VON PART (if not citation order)
+    %: (def) Sort on von part
+% vonx,%: Sort without von part
+%--------------------
+%IGNORE FIRST NAMES (if author-year citations)
