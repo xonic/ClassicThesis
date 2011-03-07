@@ -55,7 +55,9 @@
 % Re-usable information
 % ********************************************************************
 \newcommand{\myTitle}{Scribbler\xspace}
-\newcommand{\myDegree}{An Interface to Support Collaborative Work on Virtual Artifacts\xspace} %entwicklung kollaborativer interaktionsformen für die arbeit auf gemeinsam genutzten displays. 
+\newcommand{\myDegree}{Ein Interface zur Unterst\"utzung kollaborativer Interaktionsformen f\"ur die Arbeit auf gemeinsam genutzten Displays\xspace} 
+%entwicklung kollaborativer interaktionsformen für die arbeit auf gemeinsam genutzten displays. 
+%An Interface to support Collaborative Work on Virtual Artifacts
 \newcommand{\myNameA}{Clemens Sagmeister\xspace}
 \newcommand{\myNameB}{Thomas N{\"a}gele\xspace}
 \newcommand{\myProf}{ao.Univ-Prof. Dr. Peter Purgathofer\xspace}
@@ -94,6 +96,12 @@
 						subfig,beramono,eulermath,parts]{classicthesis}
 
 
+%**************************************
+% Package for indexing
+%**************************************
+\usepackage{makeidx}
+\makeindex
+
 %*******************************************************
 % tweak to show chapternumbers in listings,figures and tables
 %*******************************************************
@@ -105,6 +113,33 @@
 % tweak to color the dots in the toc gray
 %*******************************************************
 \renewcommand{\cftdot}{\textcolor{Gray}{.}}
+
+%*******************************************************
+% tweak to use large initialletters in the index
+%*******************************************************
+\index{1-9@{\Large {1-9}}\phantom|phantom}
+\index{A@{\Large {A}}\phantom|phantom}
+\index{B@{\Large {B}}\phantom|phantom}
+\index{C@{\Large {C}}\phantom|phantom}
+\index{D@{\Large {D}}\phantom|phantom}
+\index{E@{\Large {E}}\phantom|phantom}
+\index{F@{\Large {F}}\phantom|phantom}
+\index{G@{\Large {G}}\phantom|phantom}
+\index{H@{\Large {H}}\phantom|phantom}
+\index{I@{\Large {I}}\phantom|phantom}
+\index{J@{\Large {J}}\phantom|phantom}
+\index{K@{\Large {K}}\phantom|phantom}
+\index{L@{\Large {L}}\phantom|phantom}
+\index{M@{\Large {M}}\phantom|phantom}
+\index{N@{\Large {N}}\phantom|phantom}
+\index{P@{\Large {P}}\phantom|phantom}
+\index{R@{\Large {R}}\phantom|phantom}
+\index{S@{\Large {S}}\phantom|phantom}
+\index{T@{\Large {T}}\phantom|phantom}
+\index{U@{\Large {U}}\phantom|phantom}
+\index{V@{\Large {V}}\phantom|phantom}
+\index{W@{\Large {W}}\phantom|phantom}
+\index{X@{\Large {X}}\phantom|phantom}
 
 %*******************************************************
 % Some font experiments
@@ -211,11 +246,6 @@
 \defcitealias{Johnson:2006}{Flow Selection}
 
 %********************************************************************
-% Glossar
-%*******************************************************
-%\usepackage{glossary}%{glosstex}
-
-%********************************************************************
 % Extract environment
 %*******************************************************
 \usepackage{tocloft}
@@ -294,7 +324,7 @@
 % - picref: Abbildung x.x[a,b,c,d]
 %*******************************************************
 \newcommand{\pointref}[1]{\ref{#1} \nameref{#1}}
-\newcommand{\picref}[1]{ \hyperref[#1]{Abbildung \autoref{#1}} }
+\newcommand{\picref}[1]{\hyperref[#1]{Abbildung\autoref{#1}}}
 
 %********************************************************************
 % Hyphenation
@@ -317,7 +347,8 @@
 %\include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Titleback}
-\cleardoublepage\include{FrontBackmatter/Dedication}
+\include{FrontBackmatter/Dedication}
+\cleardoublepage\include{FrontBackmatter/Declaration}
 \cleardoublepage\include{FrontBackmatter/Abstract}
 \cleardoublepage\include{FrontBackmatter/Publication}
 \cleardoublepage\include{FrontBackmatter/Acknowledgments}
@@ -328,8 +359,8 @@
 %*******************************************************
 \pagenumbering{arabic}
 % use \cleardoublepage here to avoid problems with pdfbookmark
-%\cleardoublepage\part{Some Kind of Manual}
-%\include{Chapters/Chapter01}
+%\cleardoublepage\part{Einleitung}
+\include{FrontBackmatter/Introduction}
 \cleardoublepage\part{Theorie}
 \include{Chapters/Chapter02}
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
@@ -340,7 +371,8 @@
 \include{Chapters/Chapter07}
 \cleardoublepage\part{Praxis}
 \include{Chapters/Chapter08}
-\include{Chapters/Epilog}
+\bookmarksetup{startatroot} % refresh pdf-bookmark stage
+\include{FrontBackmatter/Epilog}
 %\include{multiToC} % <--- just debug stuff, ignore for your documents
 % ********************************************************************
 % Backmatter
@@ -353,9 +385,9 @@
 %*******************************************************
 \bookmarksetup{startatroot} % refresh pdf-bookmark stage
 \cleardoublepage\include{FrontBackmatter/Bibliography}
+\cleardoublepage\include{FrontBackmatter/Index}
 %\cleardoublepage\include{FrontBackmatter/Glossary}
 %\cleardoublepage\include{FrontBackmatter/Colophon}
-\cleardoublepage\include{FrontBackmatter/Declaration}
 % ********************************************************************
 % Game Over: Restart, Restore or Quit?
 %*******************************************************

@@ -2,6 +2,7 @@
 BN=ClassicThesis
 pdflatex -interaction=nonstopmode $BN.tex
 bibtex $BN.aux
+makeindex $BN.idx
 makeindex $BN.idx -s index.ist -o $BN.ind
 makeindex $BN.nlo -s nomencl.ist -o $BN.nls
 pdflatex $BN.tex

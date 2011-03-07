@@ -1,5 +1,8 @@
 \cleardoublepage
-\pdfbookmark[-1]{Epilog}{Epilog}
+%\pdfbookmark[-1]{Epilog}{Epilog}
+\phantomsection
+\addtocontents{toc}{\protect\vspace{\beforebibskip}} % to have the bib a bit from the rest in the toc
+\addcontentsline{toc}{chapter}{\tocEntry{Epilog}}
 \begin{quote}
 	\begin{flushright}{\slshape    
 	    Never doubt that a small group of thoughtful, committed people can change the world.\\
@@ -7,7 +10,7 @@
 	    --- Margaret Mead \citep{Buxton:2007}
 	\end{flushright}
 \end{quote}
-\pagestyle{empty}
+%\pagestyle{empty}
 
 \hfill
 
