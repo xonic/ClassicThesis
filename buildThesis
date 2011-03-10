@@ -27,4 +27,52 @@ rm -rf $BN.nls
 rm -rf TUINFDA.aux
 rm -rf texput.log
 rm -rf $BN.ex
+
+for i in $*; do
+	echo "$i"
+    if [ "$i" == "brnas" ]
+	then
+		echo "creating deckblatt for brnas... "
+		pdflatex deckblatt_brnas.tex
+		echo "created deckblatt for brnas."
+		rm -rf deckblatt*.aux
+		rm -rf deckblatt*.log
+		echo "concat ClassicThesis to deckblatt... "
+		gs -dBATCH -dNOPAUSE -r300 -q -sDEVICE=pdfwrite -sOutputFile=ThesisBrnas.pdf deckblatt_brnas.pdf $BN.pdf
+		rm -rf deckblatt_*.pdf
+	fi
+	if [ "$i" == "xonic" ]
+	then
+		echo "creating deckblatt for xonic... "
+		pdflatex deckblatt_xonic.tex
+		echo "created deckblatt for xonic."
+		rm -rf deckblatt*.aux
+		rm -rf deckblatt*.log
+		echo "concat ClassicThesis to deckblatt... "
+		gs -dBATCH -dNOPAUSE -r300 -q -sDEVICE=pdfwrite -sOutputFile=ThesisXonic.pdf deckblatt_xonic.pdf $BN.pdf
+		rm -rf deckblatt_*.pdf
+	fi
+	if [ "$i" == "title" ]
+	then
+		echo "creating deckblaetter... "
+		pdflatex deckblatt_brnas.tex
+		pdflatex deckblatt_xonic.tex
+		echo "created deckblaetter."
+		rm -rf deckblatt*.aux
+		rm -rf deckblatt*.log
+	fi
+	if [ "$i" == "all" ]
+	then
+		echo "creating deckblaetter... "
+		pdflatex deckblatt_brnas.tex
+		pdflatex deckblatt_xonic.tex
+		echo "created deckblaetter."
+		rm -rf deckblatt*.aux
+		rm -rf deckblatt*.log
+		echo "concat ClassicThesis to deckblaetter... "
+		gs -dBATCH -dNOPAUSE -r300 -q -sDEVICE=pdfwrite -sOutputFile=ThesisBrnas.pdf deckblatt_brnas.pdf $BN.pdf 
+		gs -dBATCH -dNOPAUSE -r300 -q -sDEVICE=pdfwrite -sOutputFile=ThesisXonic.pdf deckblatt_xonic.pdf $BN.pdf
+	fi
+done
+
 echo "Compiled your thesis man! I'm on a horse."
