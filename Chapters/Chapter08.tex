@@ -526,9 +526,9 @@ Zudem kam bei ihnen der Wunsch nach einer besseren Darstellung der Zugehörigkei
 Peter, der Produktdesigner, würde außerdem ein Kontextmenü benötigen, das ihm ein paar Optionen anbietet. Gängige Skizzierprogramme bieten diese Funktion an und ermöglichen so eine sehr hohe Effizienz bei der Arbeit.
 
 \section{Achievements} \index{Scribbler!Achievements}
-Abschließend werden nun kurz die im Abschnitt \pointref{sec:anforderungen} beschriebenen Anforderungen an ein kollaboratives Skizziertool, den umgesetzten Merkmalen von \scribbler gegenübergestellt. Die Merkmale von \scribbler werden wiederum in die vier Einflussfaktoren \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren} eingeteilt.  \autoref{fig:scribblerAnforderungsauswertung} veranschaulicht diese durch eine farbliche Kennzeichnung der ursprünglichen Erkenntnisse aus der Literatur. In Grün gehaltene Erkenntnisse wurden in der Betaversion von \scribbler bereits behandelt, rot eingefärbte konnten (noch) nicht umgesetzt werden.
+Abschließend werden kurz die im Abschnitt \pointref{sec:anforderungen} beschriebenen Anforderungen an ein kollaboratives Skizziertool, den umgesetzten Merkmalen von \scribbler gegenübergestellt. Die Merkmale von \scribbler werden wiederum in die vier Einflussfaktoren \emph{Hardware}, \emph{Software}, \emph{Kollaboration} und \emph{Skizzieren} eingeteilt.  \autoref{fig:scribblerAnforderungsauswertung} veranschaulicht diese durch eine farbliche Kennzeichnung der ursprünglichen Erkenntnisse aus der Literatur. In Grün gehaltene Erkenntnisse wurden in der Betaversion von \scribbler bereits behandelt, rot eingefärbte konnten (noch) nicht umgesetzt werden.
 
-\medskip Wie die Abbildung erkennen lässt, konnte ein Großteil der Anforderungen umgesetzt werden - um genau zu sein 17 (77,27\%). Die restlichen 5 (22,73\%) blieben vorwiegend durch technische Probleme bis dato ungelöst.
+\medskip Wie die Abbildung erkennen lässt, konnte ein Großteil der Anforderungen umgesetzt werden, konkret 17 Punkte (77,27\%). Die restlichen 5 Punkte (22,73\%) blieben vorwiegend durch technische Probleme bis dato ungelöst.
 
 \subsubsection*{Hardware} 
 Durch das Benutzen von Grafiktablets in Verbindung mit einem Flatscreen, wurde laut Lee ein solides Setting für das System geschaffen und die Weichen für eine Whiteboardfunktion gelegt. Die zwei Hauptmodi von \scribbler, der \emph{Zeichenmodus} und der \emph{Mausmodus}, können explizit durch Tabletbuttons gewechselt werden. Beobachtungen zeigten, dass dies den Arbeitsfluss beschleunigte.
@@ -538,20 +538,21 @@ Das derzeit schwerwiegenste Problem von \scribbler ist jedoch die Tatsache, dass
 Ebenso wurde deutlich, dass besonders Benutzer mit wenig Tableterfahrung, Probleme bei der Benutzung der Buttons an den Tabletstiften haben.
 
 \begin{figure}
-	        {\includegraphics[bb=0cm 0cm 14.39cm 23.01cm]{gfx/scribblerAnforderungsauswertung}}
+	        {\includegraphics[bb=2cm 0cm 14.39cm 23.01cm]{gfx/scribblerAnforderungsauswertung}}
 		\caption[Anforderungsauswertung für Scribbler]{Anforderungsauswertung für Scribbler. Alle umgesetzten Anforderungen sind in Grün gehalten. (Noch) nicht umgesetzte Anforderungen sind rot markiert.}\label{fig:scribblerAnforderungsauswertung}
 \end{figure}
 
 \subsubsection*{Software}
-\scribbler sollte so simpel wie möglich aufgebaut sein und verzichtet auf einen großen Funtionsumfang. Daher beschränkt es sich auf einfache Freihandzeichnungen. So soll sichergestellt sein, dass die Aufmerksamkeit bei der Benutzung auf das Designproblem an sich und nicht auf das System selbst gerichtet wird. 
+\scribbler sollte so simpel wie möglich aufgebaut sein und verzichtet auf einen großen Funktionsumfang. Daher beschränkt es sich auf einfache Freihandzeichnungen. So soll sichergestellt sein, dass die Aufmerksamkeit bei der Benutzung auf das Designproblem an sich und nicht auf das System selbst gerichtet wird. 
 
-Durch die \emph{Accessibility} Funktion von \emph{Mac OS X} (vgl. \pointref{sec:programmLogik}) konnte \scribbler zu einem universellen Medium werden, das ermöglicht, auf beliebigen Content zu zeichnen. Es konnte ein universelles Annotierungsprogramm entwickelt werden, das es in dieser Form noch nie zuvor gegeben hat. \\ 
-Das Umschalten der Modi kann wie vorher beschrieben explizit durch Tabletbuttons geschehen, oder auch implizit durch das Wechseln zwischen der Maus und einem Tabletstift. Die implizite Methode führte zu keinerlei Problemen. Für den expliziten Wechsel wurde die Kennzeichnung des Modus durch eine farbliche Fensterumrandung eingeführt. Da die Umrandung aber erst erschien, wenn ein Stift in der Nähe des Tablets war, kam es trotzdem zu Verwirrungen. 
+Durch die \emph{Accessibility} Funktion von \emph{Mac OS X} (vgl. \pointref{sec:programmLogik}) konnte \scribbler zu einem universellen Medium werden, das ermöglicht, auf beliebigen Content zu zeichnen. Es konnte ein Annotierungsprogramm entwickelt werden, das es in dieser Form noch nie zuvor gegeben hat. 
+
+Das Umschalten der Modi kann wie vorher beschrieben explizit durch Tabletbuttons geschehen, oder auch implizit durch das Wechseln zwischen der Maus und einem Tabletstift. Die implizite Methode verursachte keine Probleme. Für den expliziten Wechsel wurde die Kennzeichnung des Modus durch eine farbliche Fensterumrandung eingeführt. Da die Umrandung aber erst erschien, wenn ein Stift in der Nähe des Tablets war, kam es trotzdem zu Verwirrungen. 
 
 Schlussendlich bietet \scribbler eine Undofunktion die sich im Gegensatz zur Radierfunktion als äußerst hilfreich herausstellte.
 
 \subsubsection*{Kollaboration} 
-Durch die hardwarespezifischen Einschränkungen war es unmöglich, die Bedürfnisse jeglicher Benutzer einen abzudecken. Die Koordinationsaufwände stiegen dadurch ebenfalls. Aus diesem Grund war es aber stets klar, wer gerade auf einem digitalen Artefakt zeichnet, wodurch alle über die Tätigkeiten der anderen im Bilde waren.
+Durch die hardwarespezifischen Einschränkungen war es unmöglich, die Bedürfnisse aller Benutzer abzudecken. Die Koordinationsaufwände stiegen dadurch ebenfalls. Aus diesem Grund war es aber stets klar, wer gerade auf einem digitalen Artefakt zeichnet. Folglich waren alle über die Tätigkeiten der anderen im Bilde.
 
 Durch das Fehlen unnötiger Paletten oder Menüs konnte ebenfalls ein flüssigerer Ablauf von Aktivitäten gesichert werden. Da sich alle Mitglieder der jeweiligen Testsessions im selben Raum aufhielten und durchgehend Sichtkontakt behielten, waren Gesten fortwährend vorhanden und konnten so zur Lösung eines Problems beitragen.
 
