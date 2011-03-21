@@ -301,8 +301,6 @@
 
 \newcommand{\listofextracts}{\listofcaptionX}
 
-
-
 %********************************************************************
 % Create Name Logograms
 %*******************************************************
@@ -324,6 +322,16 @@
 %*******************************************************
 \newcommand{\pointref}[1]{\ref{#1} \nameref{#1}}
 \newcommand{\picref}[1]{\hyperref[#1]{Abbildung\autoref{#1}}}
+
+
+% Disable single lines at the start of a paragraph (Schusterjungen)
+\clubpenalty = 10000
+%
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty = 10000 \displaywidowpenalty = 10000
+%
+% - End of 'SCHUSTER.STY' -
+
 
 %********************************************************************
 % Hyphenation
