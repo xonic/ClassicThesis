@@ -152,7 +152,7 @@ Sie kamen zur Erkenntnis, dass die Studenten Stifteingaben bevorzugten und \graf
 \begin{figure}[bth]
 	\begin{center}
 	
-	{\includegraphics[width=0.28\linewidth]{gfx/accotCrossY}}
+	{\includegraphics[width=0.3\linewidth]{gfx/accotCrossY}}
 	\caption[CrossY \newline \citep{Johnson:2009}]{CrossY Interface Widgets erlauben Benutzer mehrere Parameter mit einer einzigen Bewegung zu ändern -- in diesem Beispiel die Stiftfarbe und -stärke.}
 	\label{fig:accotCrossY}
 	\end{center}
@@ -163,6 +163,8 @@ Eine Alternative, um gegen die Mehrdeutigkeit vorzugehen, ist, sie im Voraus zu 
 Tsang et al. benutzten ein Empfehlungssystem in ihrem Programm, das Formen wie Flugzeugaußenhüllen modellieren kann \citep{Tsang:2004}. Das System bietet ein Overlay, das den Benutzer durch zusätzlichen Skizzierinput leitet. Benutzer zufolge führt dies zu präziseren Input. Das System benutzt die angefangenen Skizzen als Vorlagen, vergleicht diese mit Datenbankeinträgen um ähnliche Zeichnungen zu finden und empfielt zusätzliche Geometrie, die vielleicht dazu passen könnte.
 
 \medskip Bae's 3D Kurvenmodellierungsystem zeigt wie verschiedene kaligraphische Interaktionstechniken zusammen benutzt werden können um eine flüssige Skizzierumgebung zu schaffen \citep{Bae:2008}. Das sog. \emph{ILoveSketch}\index{ILoveSketch} System imitiert ein physikalisches Skizzierbuch. Die Eingaben erfolgen per Stift und können optional durch Drücken von physikalischen Buttons durch die andere Hand verändert werden (siehe \autoref{fig:baeILoveSketch}). Das Interface verzichtet auf herkömmliche on-screen Buttons, Scrollbars und Menüs. Stattdessen gibt der Benutzer Kommandos durch Gesten, die oft vom Kontext abhängen. Zum Beispiel kann der Benutzer zu älteren Zeichnungen zurück >>blättern<<, in dem er an einer Ecke zieht. Um ein Objekt zu löschen, muss der Benutzer eine >>Durchstreichen<<-Geste anwenden. Viele Techniken in ILoveSketch betreffen Herausforderungen beim Skizzieren von 3D Objekten. Zum Beispiel errechnet das System automatisch aus der Arbeit des Benutzers die richtige Blickrichtung durch Drehungen und Verschiebungen.
+
+\clearpage
 
 \begin{figure}[bth]
 	\begin{center}
@@ -186,9 +188,11 @@ Alvarado fasste in \citep{Alvorado:2004} eine Liste aus sieben Designguidelines\
 \end{enumerate}
 
 Während WIMP Interfaces seit Mitte der 1980er Jahre weit verbreitet benutzt werden, müssen stiftbasierte Interfaces erst Fuß fassen. Um bessere Interaktionsrichtlinien, Interface Design Patterns und Toolkits zu entwickeln, muss die Forschung weiterhin Skizzierapplikationen entwickeln und evaluieren.
-
+\clearpage
 \subsection{Das Modusproblem}\label{sec:ModusProblem} \index{Modus} \index{Modus!- problem}
-Oft interpretiert das User Interface Eingaben unterschiedlich, je nach dem in welchen Modus sich das Programm gerade befindet. Zum Beispiel hat ein Zeichenprogramm Eingabemodi wie \emph{Auswahl}, \emph{Linie zeichnen} oder \emph{Füllwerkzeug}. So ein Programm erlaubt dem Benutzer beispielsweise rechteckige Bereiche zu selektieren oder, wenn das Stifttool ausgewählt ist, zu zeichnen - beides indem der Benutzer eine Maustaste drückt und die Maus bewegt. Das Programm interpretiert die Eingaben hinsichtlich dem ausgewählten Werkzeug. \\ Manchmal ist sich der Benutzer jedoch nicht im Klaren, in welchen Modus er sich befindet oder weiß nicht, wie er in einen anderen Modus umschalten kann. \graffito{Mehrere Programmmodi führen oft zu kognitiver Überlastung.} Die Handhabung der Modi führt oft zu kognitiver Überlastung der Benutzer, da sich diese auf das ausgewählte Tool konzentrieren, anstatt auf ihre Arbeit. Dabei spricht man auch vom sog. \emph{Modusproblem} \citep{Tesler:1981}, welches seit den Anfängen interaktiver Systemen besteht und nicht nur auf Skizziersoftware beschränkt ist.
+Oft interpretiert das User Interface Eingaben unterschiedlich, je nach dem in welchen Modus sich das Programm gerade befindet. Zum Beispiel hat ein Zeichenprogramm Eingabemodi wie \emph{Auswahl}, \emph{Linie zeichnen} oder \emph{Füllwerkzeug}. So ein Programm erlaubt dem Benutzer beispielsweise rechteckige Bereiche zu selektieren oder, wenn das Stifttool ausgewählt ist, zu zeichnen - beides indem der Benutzer eine Maustaste drückt und die Maus bewegt. Das Programm interpretiert die Eingaben hinsichtlich dem ausgewählten Werkzeug. 
+
+Manchmal ist sich der Benutzer jedoch nicht im Klaren, in welchen Modus er sich befindet oder weiß nicht, wie er in einen anderen Modus umschalten kann. \graffito{Mehrere Programmmodi führen oft zu kognitiver Überlastung.} Die Handhabung der Modi führt oft zu kognitiver Überlastung der Benutzer, da sich diese auf das ausgewählte Tool konzentrieren, anstatt auf ihre Arbeit. Dabei spricht man auch vom sog. \emph{Modusproblem} \citep{Tesler:1981}, welches seit den Anfängen interaktiver Systemen besteht und nicht nur auf Skizziersoftware beschränkt ist.
 
 \medskip \emph{Sketchpad}\index{Sketchpad}\footnote{Sketchpad war ein interaktives Designsystem aus dem Jahr 1963, das Technikern erlaubte Modelle mit Hilfe eines Lichtstiftes auf einem Display zu erstellen. Der Benutzer konnte dabei verschiedene Bedingungen (wie z.B. >>erstelle eine Linie parallel zu dieser Linie und erhalte das Verhältnis) auf das Gezeichnete anwenden. \citep{Sutherland:1964}}, das wohl erste nennenswerte elektronische Skizziersystem, behalf sich mit physikalischen Steuerelementen (Knöpfe, Schalter, Regler), durch die der Benutzer mit seiner linken Hand zu den verschiedenen Modi schalten konnte (siehe \autoref{fig:ellisSketchpad}) \citep{Sutherland:1964}. 
 
@@ -212,7 +216,7 @@ Oft interpretiert das User Interface Eingaben unterschiedlich, je nach dem in we
 
 \medskip Diese zwei früh entwickelten Systeme stellen zwei Extreme gegenüber, die zeigen, wie man mit dem Modusproblem umgehen kann. Sketchpad's Ansatz baut auf explizite Modiwechsel abseits des Stiftes auf, GRAIL's Ansatz auf implizite Modiwechsel, errechnet durch Stifteingaben.
 
-\medskip Es scheint keinen >>richtigen<< Weg geben, um dem Modusproblem entgegenzuwirken. Implizite Modiwechsel scheinen natürlicher, aber nur wenn das System die Benutzereingaben richtig interpretiert. Interpretationstechniken sind fehleranfällig. Viele Systeme ermöglichen deswegen eine Kombination dieser zwei Arten oder verhängen Zeichenkonventionen.
+\clearpage Es scheint keinen >>richtigen<< Weg geben, um dem Modusproblem entgegenzuwirken. Implizite Modiwechsel scheinen natürlicher, aber nur wenn das System die Benutzereingaben richtig interpretiert. Interpretationstechniken sind fehleranfällig. Viele Systeme ermöglichen deswegen eine Kombination dieser zwei Arten oder verhängen Zeichenkonventionen.
 
 \medskip Saund and Lank erforschten automatische Interpretationen und Modiwechsel, basierend auf Eingaben von Benutzern und bereits Gezeichneten \citep{Saund:2003p66}. Ihr \emph{Inferred-Mode Protocol} beschreibt einen Ansatz zur Analyse des Gezeichneten, um herauszufinden, ob Aktionen mit Absicht durchgeführt wurden oder nicht. War eine Aktion unklar, wird ein Mediator eingesetzt, der Methoden vorschlägt, um die Unklarheit zu beseitigen.
 
@@ -245,7 +249,7 @@ Interessanterweise \graffito{Explizite Modiwechsel durch physikalische Buttons s
          \includegraphics[width=.22\linewidth]{gfx/johnsonFlowSelection4}} \quad
         \caption[Modiwechsel \newline \citep{Johnson:2009}]{Modiwechsel der Flow Selection geschehen durch Halten und Bewegen des Stiftes \citep{Johnson:2006}. Der Benutzer positioniert dazu den Stift am gewünschten Objekt (a), bewegt es (b) ohne dabei den Stift zu heben (c). Der Benutzer hält den Stift anschließend an der Position bis die Kurve geglättet wurde (d) bevor er den Prozess durch heben des Stiftes abschließt.}\label{fig:johnsonFlowSelection3}
 \end{figure}
-\clearpage
+
 \section{Die Bedeutung von Gestik}\label{sec:Gestik}\index{Gestik}
 
 \begin{quote}
@@ -257,10 +261,15 @@ Interessanterweise \graffito{Explizite Modiwechsel durch physikalische Buttons s
 
 Die Kombination von Gesten und Sprache bilden die Grundlage zur menschlichen dialogorientierten Interaktion. Sie sind sie somit auch ein wichtiger Bestandteil von Design (vgl. obiges Zitat von Wilson). Um diese Modalitäten auch richtig in \ac{HCI} anwenden zu können, man ihre Wechselwirkung zur Kommunikation verstehen.
 
-\medskip Was sind eigentlich Gesten? Wenn ein Student mit einer Krawatte in die Klasse kommt und der Professor keine trägt, geben beide eine Aussage über ihre Einstellung zu der Klasse ab. \\ Solche Handlungen nennt man auch >>Nonverbale Kommunikation<<. Ein breites Spektrum an Verhaltensweisen zählt dazu: die Wohn- und Arbeitsumgebungen, die wir schaffen; den Abstand, den wir zwischen uns und unseren Gegenüber einnehmen; ob wir unseren Körper bewegen, Augenkontakt herstellen, oder unsere Stimme erheben; all dies spielt zusammen und sendet Signale aus. \\
+\medskip Was sind eigentlich Gesten? Wenn ein Student mit einer Krawatte in die Klasse kommt und der Professor keine trägt, geben beide eine Aussage über ihre Einstellung zu der Klasse ab. 
+
+Solche Handlungen nennt man auch >>Nonverbale Kommunikation<<. Ein breites Spektrum an Verhaltensweisen zählt dazu: die Wohn- und Arbeitsumgebungen, die wir schaffen; den Abstand, den wir zwischen uns und unseren Gegenüber einnehmen; ob wir unseren Körper bewegen, Augenkontakt herstellen, oder unsere Stimme erheben; all dies spielt zusammen und sendet Signale aus.
+
 Die traditionelle Sicht auf Kommunikation teilt sich in die verbale und nonverbale Komponente bzw. ihr Zusammenspiel. Adam Kendon (1980) war einer der ersten, der sich mit dieser Ansicht beschäftigte. Er behauptet, dass sich mindestens eine Form des nonverbalen Verhaltens - Gestik - von einer Konverstation nicht trennen lässt. David McNeill zeigte 1992 in seinen bahnbrechenden Studien über Gestik und Sprache, dass Handbewegungen, die wir beim Sprechen produzieren, fest mit dem Gesprochenen, bezüglich Timing, Bedeutung und Funktion verstrickt sind. Wenn man Gestik ignoriert, ignoriert man einen Teil der Konversation.
 
-\medskip Gestik ist ein Begriff\index{Gestik!Begriff}, der für einen großen Bereich steht. Betrachtet man z.B. lediglich Handbewegungen, kann man nicht einmal von einer eigenen Kategorie sprechen. \citep{Goldin:2003} \\ Ekman und Friesen veröffentlichten 1969 einen Entwurf um nonverbales Verhalten zu klassifizieren und identifizierten dabei fünf Typen:
+\medskip Gestik ist ein Begriff\index{Gestik!Begriff}, der für einen großen Bereich steht. Betrachtet man z.B. lediglich Handbewegungen, kann man nicht einmal von einer eigenen Kategorie sprechen. \citep{Goldin:2003}
+
+\medskip Ekman und Friesen veröffentlichten 1969 einen Entwurf um nonverbales Verhalten zu klassifizieren und identifizierten dabei fünf Typen:
 \begin{itemize}
 	\item \emph{Illustratoren}, dies sind Verhaltensweisen, die das Gesagte untermalen, illustrieren oder verdeutlichen;
 	\item \emph{Adaptoren}, dies sind Verhaltensweisen, die der Erregungsabfuhr oder der Selbststimulierung dienen können;
@@ -284,13 +293,6 @@ Die traditionelle Sicht auf Kommunikation teilt sich in die verbale und nonverba
 
 \medskip Handgesten können in VideoDraw beispielsweise eingesetzt werden, um einem Teilnehmer die geplante Bedienung eines User Interfaces zu erklären. Die Effektivität dieser Art von Gesten hängt von der Aufrechterhaltung der Verbindung zwischen den Händen und den Skizzen am VideoDraw Screen ab.
 
-\medskip
-\begin{figure}[bth]
-	{\includegraphics[width=\linewidth]{gfx/dantecGestures}}
-	\caption[Beispiel von Gestik in einem Designmeeting. \citep{Dantec:2009}]{Ein Teilnehmer gestikuliert um Gebäudemerkmale zu beschreiben.}
-	\label{fig:dantecGestures}
-\end{figure}
-
 \begin{extract}[Transkript eines Designmeetings. Skizzen und Gestik dienen als Ausdrucksmittel.]{
 		\myfloatalign
 		\begin{tabularx}{\textwidth}{p{1cm}X}
@@ -306,9 +308,15 @@ Die traditionelle Sicht auf Kommunikation teilt sich in die verbale und nonverba
 			Anna & yes they will probably want to know how [points] how + how far that is from the because they’re going to be possibly carry the coffins in and most of the men are sort of in their seventies and eighties [laughs] carrying the coffin \\
 		\end{tabularx}
 	}
-	\label{ext:dantecGestures}
 	\captionX{Gestik in Designmeetings.}
+	\label{ext:dantecGestures}
 \end{extract}
+
+\begin{figure}[bth]
+	{\includegraphics[width=\linewidth]{gfx/dantecGestures}}
+	\caption[Beispiel von Gestik in einem Designmeeting. \citep{Dantec:2009}]{Ein Teilnehmer gestikuliert um Gebäudemerkmale zu beschreiben.}
+	\label{fig:dantecGestures}
+\end{figure}
 
 \begin{figure}[bth]
 	{\includegraphics[width=\linewidth]{gfx/tangVideoDraw}}
@@ -317,7 +325,7 @@ Die traditionelle Sicht auf Kommunikation teilt sich in die verbale und nonverba
 \end{figure}
 
 %instead of newpage use \\[4cm]
-\newpage Zusätzlich übermittelt VideoDraw auch Gesten mehrerer Hände und/oder Finger. Diese Kommunikation der Gesten ist reichhaltiger als die der meisten Computersysteme (typischerweise stellen diese lediglich einen mausgesteuerten Cursor zu Verfügung). VideoDraw überträgt ebenso das Gefühl von Dreidimensionalität.
+Zusätzlich übermittelt VideoDraw auch Gesten mehrerer Hände und/oder Finger. Diese Kommunikation der Gesten ist reichhaltiger als die der meisten Computersysteme (typischerweise stellen diese lediglich einen mausgesteuerten Cursor zu Verfügung). VideoDraw überträgt ebenso das Gefühl von Dreidimensionalität.
 Benutzer verfügen über >>räumliche<< Gesten und können sogar alltägliche Gegenstände ins Kamerabild holen, wodurch eine dreidimensionale Wahrnehmung von Raumverhältnissen den anderen Teilnehmern vermittelt werden kann.
 
 \medskip Durch Observationen von Tang \& Minnemans System lassen sich vier Hauptmerkmale zusammenfassen.
@@ -331,7 +339,7 @@ Benutzer verfügen über >>räumliche<< Gesten und können sogar alltägliche Ge
 \end{itemize}
 
 VideoDraw erlaubt Teilnehmern gewohnte Tätigkeiten auf eine neue Art zu erleben. Es ermöglicht Benutzern ihre Zeichenoberfläche mit anderen Teilnehmern am selben oder an einem anderen Ort zu teilen - ohne dass dabei Verwirrungen in der Interaktion entstehen. Es ermöglicht zudem die Hände der Teilnehmer näher aneinander zubringen, als es in der Realität je möglich wäre, ohne die Teilnehmer gegenseitig zu behindern. \citep{Tang:1991p28}
-\clearpage
+
 \section{Case Study - Digital and Paper Media}
 
 2010 führten Hinckley et al. eine Studie durch, in der sie mittels Observationen herausfinden wollten, wie Personen mit Papier, Stiften und Hilfsmittel arbeiten. Sie stellten den Probanden die Aufgabe, Ideen zu einem hypothetischen Kurzfilm zu illustrieren. Zur Verfügung standen ihnen Notizblöcke, Scheren, Stifte, Klebeband und 20 Seiten an inspirierendem Material. Acht Personen nahmen an der Studie teil und unterstützten so Hinchley et al. auf der Suche nach Verhaltensmustern in Sachen Gestik und Arbeitsplatzstrukturierung. Neun Verhaltensweisen (V\itshape 1\upshape-V\itshape 9\upshape) stachen besonders hervor:
